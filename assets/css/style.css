@@ -1,3 +1,4 @@
 div.displayline {
-    display: inline-block;
+    display: inline;
+    margin-top: 3rem;
 }
