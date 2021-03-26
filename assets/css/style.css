@@ -1,4 +1,3 @@
-.card.displayline {
-    display: inline;
-    margin-top: 3rem;
+div.product {
+    display: inline-block;
 }
