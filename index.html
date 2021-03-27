@@ -17,26 +17,6 @@
     <!-- Argon CSS -->
     <link type="text/css" href="https://files.slix.ml/assets/css/argon-design-system.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <style type="text/css">
-        footer {
-            background-color: #e9ecef;
-            padding-top: 10px;
-        }
-        
-        footer>div,
-        footer>h6 {
-            position: relative;
-            left: 30%;
-        }
-        
-        #getapp {
-            position: absolute;
-            bottom: 10px;
-            right: 0px;
-        }
-        
-        
-    </style>
 </head>
 
 <body>
@@ -163,32 +143,46 @@
         
     </div>
 
-    <footer class="container-fluid">
-        <div>
-            <span>About Us &nbsp;</span>
-            <span>Support &nbsp;</span>
-            <span>Privacy Policy &nbsp;</span>
-            <span>Return & Refund Policy &nbsp;</span>
-            <span>Shipping Policy &nbsp;</span>
+    <footer class="container-fluid" style="margin-top: 4rem;">
+        <div class="d-flex justify-content-center">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Privacy Policy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Shipping Policy</a>
+                </li>
+            </ul>
         </div>
 
-        <address>
-            <div>Email: <a href="mailto:stygix_shop@gmail.com">stygix_shop@gmail.com</a></div>
-            <div>Contact No: +603-259 8496</div>           
+        <address class="d-flex justify-content-between"> 
+            <div>
+                <div>Email: <a href="mailto:stygix_shop@gmail.com">stygix_shop@gmail.com</a></div>
+                <div>Contact No: +603-259 8496</div>  
+                <div>
+                    <span><i class="fab fa-twitter"></i></span>
+                    <span><i class="fab fa-instagram"></i></span>
+                    <span><i class="fab fa-facebook-square"></i></span>
+                </div> 
+            </div>
+            
+            <div>
+                <div>Get Apps </div>
+                <div>
+                    <a href="#"><i class="fab fa-app-store-ios fa-4x"></i></a>
+                    <a href="#"><i class="fab fa-google-play fa-4x"></i></a>
+                </div>
+                
+            </div>
         </address>
 
-        <div>
-            <span><i class="fab fa-twitter"></i></span>
-            <span><i class="fab fa-instagram"></i></span>
-            <span><i class="fab fa-facebook-square"></i></span>
-        </div>
-
-        <div id="getapp">
-            Get Apps <br>
-
-        </div>
-
-        <h6>Stygix Computer Shop Sdn. Bhd.(CA-0025647-M) &copy; 2021 All Rights Reserved</h6>
+        <h6 class="d-flex justify-content-center">Stygix Computer Shop Sdn. Bhd.(CA-0025647-M) &copy; 2021 All Rights Reserved</h6>
     </footer>
 
     <!--jQuery 3.6-->
