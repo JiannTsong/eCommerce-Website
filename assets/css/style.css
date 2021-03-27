@@ -2,10 +2,8 @@ div.product {
     display: inline-block;
     margin: 25px;
 }
-.search-box {
-    border-radius: 3rem;
-}
 
-.btn .search-btn {
-    position: absolute;right: 2rem; border-radius: 3rem;
+
+@media (min-width: 992px) { 
+
 }
