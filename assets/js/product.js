@@ -8,7 +8,7 @@ $(function () {
                 '<div class="card-body">' +
                 '<h5>' + data.product[i].name + '</h5>' + ' RM' + data.product[i].price +
                 '<p class="card-text">' + data.product[i].desc.substring(0, 105) + '...' + '</p>' +
-                '<a href="' + '/product.html?id=' + i + '" class="btn btn-primary" target="_blank">View More</a>' +
+                '<a href="' + '/product.html?id=' + i + '" class="btn btn-info" target="_blank">View More</a>' +
                 '</div></div>');
         }
     });
