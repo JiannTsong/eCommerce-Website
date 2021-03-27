@@ -1,0 +1,19 @@
+{
+    "product": [
+        {
+            "name" : "Acer Swift 5",
+            "desc" : "",
+            "price" : 2999,
+            "quantity" : "",
+            "brand" : "",
+            "type" : "",
+            ""
+        },
+        {
+            "name" : "Acer Swift 7",
+            "desc" : "",
+            "price" : 3999,
+            "quantity" : ""
+        }
+    ]
+}
