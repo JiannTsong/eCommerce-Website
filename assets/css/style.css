@@ -22,8 +22,8 @@ form > button.search-btn {
         position: absolute;
         border-radius: 3rem;
     }
-    
-    a > .fad,.fa-user-circle,.fa-3x {
+
+    a > .clwhite {
         color: #f4f5f7;
     }
 }
@@ -42,7 +42,7 @@ form > button.search-btn {
         border-radius: 3rem;
     }
 
-    a > .fad,.fa-user-circle,.fa-3x {
+    a > .clwhite {
         color: #f4f5f7;
     }
 }
@@ -64,7 +64,7 @@ form > button.search-btn {
         position: absolute;
         border-radius: 3rem;
     }
-    a > .fad,.fa-user-circle,.fa-3x {
+    a > .clwhite {
         color: white;
     }
 }
