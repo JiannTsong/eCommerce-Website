@@ -83,6 +83,7 @@
                         <a href="#cart">
                             <i class="fad fa-shopping-cart clwhite" style="font-size: 2rem;padding-top: 20%;"></i>
                         </a>
+                        <span class="badge" id="cart-count" style="font-size: 0.85rem;">0</span>
                     </div>
 
                 </ul>
@@ -186,12 +187,19 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
     <!-- Core -->
-    <!--script src="https://files.slix.ml/assets/js/core/jquery.min.js"></script>
-    <script src="https://files.slix.ml/assets/js/core/popper.min.js"></script>
-    <script src="https://files.slix.ml/assets/js/core/bootstrap.min.js"></script--->
+    <!--script src="./assets/js/core/jquery.min.js"></script>
+    <script src="./assets/js/core/popper.min.js"></script>
+    <script src="./assets/js/core/bootstrap.min.js"></script--->
     <!-- Argon JS -->
     <script src="./assets/js/argon-design-system.js"></script>
     <script src="./assets/js/product.js"></script>
+    <script>
+        $(function () {
+            if(typeof (Storage) !== "undefined") {
+                //$("#cart-count").text(localStorage.getItem(""));//retrieve
+            }
+        })
+    </script>
 </body>
 
 </html>

@@ -73,6 +73,7 @@ footer > address.addrwidth {
     a > .clwhite {
         color: #777777;
     }
+
 }
 
 @media (min-width: 992px) {
@@ -88,12 +89,16 @@ footer > address.addrwidth {
     }
 
     form>button.search-btn {
-        right: 8.5rem;
+        right: 9.75rem;
         position: absolute;
         border-radius: 3rem;
     }
 
     a>.clwhite {
-        color: white;
+        color: #ffffff;
+    }
+    
+    #cart-count {
+        color: #ffffff;
     }
 }
