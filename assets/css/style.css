@@ -24,8 +24,13 @@ a>i.setgsize {
     padding-bottom: 2px;
 }
 
-span>i.logowidth {
-    padding-left: 7px;
+a>i.logowidth {
+    padding-right: 10px;
+    margin-top: 10px;
+}
+
+footer>address.addrwidth {
+    margin-top: 1rem;
 }
 
 @media (min-width: 576px) {
