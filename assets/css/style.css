@@ -6,6 +6,6 @@ div.product {
     border-radius: 3rem;
 }
 
-.search-btn {
+.btn .search-btn {
     position: absolute;right: 2rem; border-radius: 3rem;
 }
