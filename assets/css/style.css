@@ -7,24 +7,8 @@ form > button.search-btn {
     border-radius: 3rem;
 }
 
-@media (min-width: 320px) { 
-    div > .product {
-        display: inline-block;
-        margin: 1rem;
-        margin-top: 3rem;
-        width: 100%;
-        max-height: 450px;
-    }
-    form > button.search-btn {
-        right: 2rem;
-        position: absolute;
-        border-radius: 3rem;
-    }
-
-    a > .clwhite {
-        color: #777777;
-    }
-
+a > .clwhite {
+    color: #777777;
 }
 
 @media (min-width: 576px) { 
