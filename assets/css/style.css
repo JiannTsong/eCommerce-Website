@@ -7,6 +7,10 @@ form > button.search-btn {
     border-radius: 3rem;
 }
 
+a > .clwhite {
+    color: #777777;
+}
+
 
 
 @media (min-width: 576px) { 
@@ -23,9 +27,6 @@ form > button.search-btn {
         border-radius: 3rem;
     }
 
-    a > .clwhite {
-        color: #f4f5f7;
-    }
 }
 
 @media (min-width: 768px) { 
@@ -40,10 +41,6 @@ form > button.search-btn {
         right: 2rem;
         position: absolute;
         border-radius: 3rem;
-    }
-
-    a > .clwhite {
-        color: #f4f5f7;
     }
 }
 
@@ -64,6 +61,7 @@ form > button.search-btn {
         position: absolute;
         border-radius: 3rem;
     }
+
     a > .clwhite {
         color: white;
     }
