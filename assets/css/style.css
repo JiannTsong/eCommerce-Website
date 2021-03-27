@@ -9,6 +9,7 @@ form > button.search-btn {
 
 a > .clwhite {
     color: #777777;
+    display: flex;
 }
 
 @media (min-width: 576px) { 
@@ -64,7 +65,7 @@ a > .clwhite {
     }
 
     form > button.search-btn {
-        right: 5rem;
+        right: 8.5rem;
         position: absolute;
         border-radius: 3rem;
     }
