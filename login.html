@@ -78,7 +78,7 @@
                         </button>
                     </form>
                     <div style="display: flex;">
-                        <a href="#user" class="form-inline">
+                        <a href="/login.html" class="form-inline">
                             <i class="fad fa-user-circle fa-3x clwhite"></i>
                         </a>
                         <a href="#cart">
@@ -96,7 +96,7 @@
 
     <!--Content-->
     <div class="container" style="margin-top: 5rem; margin-bottom: 5rem;">
-        <div class="card bg-secondary shadow border-0 mb-0" style="max-width: 425px;margin: auto;">
+        <div class="card bg-secondary shadow border-0 mb-0" style="max-width: 425px; margin: auto;">
             <div class="card-header bg-white pb-5">
                 <div class="text-muted text-center mb-3">
                     <small>Sign in with</small>
@@ -106,13 +106,13 @@
                         <span class="btn-inner--icon">
                             <img src="./assets/img/icons/common/github.svg">
                         </span>
-                        <span class="btn-inner--text">Github</span>
+                        <span class="btn-inner--text" style="color: #000000;">Github</span>
                     </a>
                     <a href="javascript:;" class="btn btn-neutral btn-icon">
                         <span class="btn-inner--icon">
                             <img src="./assets/img/icons/common/google.svg">
                         </span>
-                        <span class="btn-inner--text">Google</span>
+                        <span class="btn-inner--text" style="color: #000000;">Google</span>
                     </a>
                 </div>
             </div>
@@ -126,7 +126,8 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                             </div>
-                            <input class="form-control" placeholder="Email" type="text" kl_ab.original_type="email">
+                            <input class="form-control" id="email" placeholder="Email" type="email"
+                                kl_ab.original_type="email">
                         </div>
                     </div>
                     <div class="form-group">
@@ -134,7 +135,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                             </div>
-                            <input class="form-control" placeholder="Password" type="password">
+                            <input class="form-control" id="password" placeholder="Password" type="password">
                         </div>
                     </div>
                     <div class="custom-control custom-control-alternative custom-checkbox">
@@ -144,9 +145,23 @@
                         </label>
                     </div>
                     <div class="text-center">
-                        <button type="button" class="btn btn-primary my-4">Sign in</button>
+                        <button type="button" onclick="login()" class="btn btn-info my-4">Sign in</button>
                     </div>
                 </form>
+            </div>
+            <div class="card-footer">
+                <div class="row mt-1" style="margin: auto; text-align: center;">
+                    <div class="col-6" >
+                        <a href="#" class="text-light">
+                          <small>Forgot password?</small>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="/signup.html" class="text-light">
+                          <small>Create new account</small>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -236,12 +251,18 @@
     <!-- Argon JS -->
     <script src="./assets/js/argon-design-system.js"></script>
 
+    <script src="./assets/js/product.js"></script>
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
 
     <script>
         // Your web app's Firebase configuration
@@ -255,13 +276,33 @@
             appId: "1:134638878836:web:dd4a4c4ccd2ed69823d121",
             measurementId: "G-D6NGWRG38M"
         };
+
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
-    </script>
 
-    <script src="./assets/js/product.js"></script>
-    <script>
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                // User is signed in. redirect to user profile page.
+                //window.location.href = "/account.html";
+            }
+        });
+
+        function login() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            firebase.auth().signInWithEmailAndPassword(email, password).then((userCredential) => {
+                // Signed in
+                var user = userCredential.user;
+                // ...
+            }).catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                alert("Error : " + errorMessage);
+            });
+        }
+
         $(function () {
             if (typeof (Storage) !== "undefined") {
                 //$("#cart-count").text(localStorage.getItem(""));//retrieve
