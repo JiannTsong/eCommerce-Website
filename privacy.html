@@ -263,8 +263,6 @@
     <!-- Argon JS -->
     <script src="./assets/js/argon-design-system.js"></script>
 
-    <script src="./assets/js/product.js"></script>
-
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 
@@ -276,51 +274,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
 
-    <script>
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        var firebaseConfig = {
-            apiKey: "AIzaSyBUI47vHCW6nF-wKjyKRZJUyM__ijNFxvE",
-            authDomain: "stygix-1d87b.firebaseapp.com",
-            projectId: "stygix-1d87b",
-            storageBucket: "stygix-1d87b.appspot.com",
-            messagingSenderId: "905203629267",
-            appId: "1:905203629267:web:6f3ad8103aee3c2a586826",
-            measurementId: "G-S3BZGPK1SN"
-        };
-
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-
-        firebase.auth().onAuthStateChanged(function(user) {
-            if (user) {
-                // User is signed in. redirect to user profile page.
-                //window.location.href = "/account.html";
-            }
-        });
-
-        function login() {
-            let email = document.getElementById("email").value;
-            let password = document.getElementById("password").value;
-
-            firebase.auth().signInWithEmailAndPassword(email, password).then((userCredential) => {
-                // Signed in
-                var user = userCredential.user;
-                // ...
-            }).catch((error) => {
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                alert("Error : " + errorMessage);
-            });
-        }
-
-        $(function() {
-            if (typeof(Storage) !== "undefined") {
-                //$("#cart-count").text(localStorage.getItem(""));//retrieve
-            }
-        })
-    </script>
+    <script src="./assets/js/product.js"></script>
+    <script src="/assets/js/firebase/firebase.js"></script>
 </body>
 
 </html>
