@@ -122,7 +122,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
                                     </div>
-                                    <input class="form-control" placeholder="Name" type="text">
+                                    <input class="form-control" id="username" placeholder="Name" type="text">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -130,7 +130,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                                     </div>
-                                    <input class="form-control" placeholder="Email" type="email">
+                                    <input class="form-control" id="email" placeholder="Email" type="email">
                                 </div>
                             </div>
                             <div class="form-group focused">
@@ -138,7 +138,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                     </div>
-                                    <input class="form-control" placeholder="Password" type="password">
+                                    <input class="form-control" id="password" placeholder="Password" type="password">
                                 </div>
                             </div>
                             <div class="text-muted font-italic"><small>password strength: <span
@@ -146,14 +146,15 @@
                             <div class="row my-4">
                                 <div class="col-12">
                                     <div class="custom-control custom-control-alternative custom-checkbox">
-                                        <input class="custom-control-input" id="customCheckRegister" type="checkbox">
-                                        <label class="custom-control-label" for="customCheckRegister"><span>I agree with
-                                                the <a href="#">Privacy Policy</a></span></label>
+                                        <input class="custom-control-input" id="checkPolicy" type="checkbox">
+                                        <label class="custom-control-label" for="checkPolicy"><span>I agree with
+                                                the <a href="/privacy.html">Privacy Policy</a></span></label>
                                     </div>
                                 </div>
                             </div>
                             <div class="text-center">
-                                <button type="button" class="btn btn-info mt-4">Create account</button>
+                                <button type="button" onclick="signup()" class="btn btn-info mt-4">Create
+                                    account</button>
                             </div>
                         </form>
                     </div>
@@ -183,10 +184,10 @@
                     <a class="nav-link active" href="#">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Support</a>
+                    <a class="nav-link" href="/support.html">Support</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Privacy Policy</a>
+                    <a class="nav-link" href="/privacy.html">Privacy Policy</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Shipping Policy</a>
@@ -287,27 +288,76 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
+        var db = firebase.firestore();//firestore database connection
 
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
                 // User is signed in. redirect to user profile page.
+                //alert(user.uid);
                 //window.location.href = "/account.html";
             }
         });
+
+        function writeUserData(userId, name) {
+            db.collection("users").doc(userId).set({
+                "username" : name
+            })
+                .then(() => {
+                    ///console.log("Document successfully written!");
+                    window.location.href = "/login.html";
+                })
+                .catch((error) => {
+                    console.error("Error writing document: ", error);
+                });
+
+        }
+
+
+        function signup() {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            var username = document.getElementById("username").value;
+
+            let checkPolicy = document.getElementById("checkPolicy").checked;
+            if(checkPolicy){
+                firebase.auth().createUserWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    // Signed in 
+                    var user = userCredential.user;
+                    
+                    //write username into users profile
+                    writeUserData(user.uid, username);
+                })
+                .catch((error) => {
+                    let errorCode = error.code;
+                    let errorMessage = error.message;
+                    // ..
+                    alert("Error : " + errorMessage);
+                });
+            }else {
+                alert("Please agree the privacy policy to continue !");
+            }
+
+            
+
+            
+        }
 
         function login() {
             let email = document.getElementById("email").value;
             let password = document.getElementById("password").value;
 
-            firebase.auth().signInWithEmailAndPassword(email, password).then((userCredential) => {
-                // Signed in
-                var user = userCredential.user;
-                // ...
-            }).catch((error) => {
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                alert("Error : " + errorMessage);
-            });
+            firebase.auth().signInWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    // Signed in
+                    var user = userCredential.user;
+                    // ...
+                })
+                .catch((error) => {
+                    let errorCode = error.code;
+                    let errorMessage = error.message;
+                    alert("Error : " + errorMessage);
+                });
         }
 
         $(function () {
