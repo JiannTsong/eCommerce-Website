@@ -18,7 +18,7 @@ function signup() {
     let username = document.getElementById("username").value;
 
     let checkPolicy = document.getElementById("checkPolicy").checked;
-    if(checkPolicy || email != "" || password != ""){
+    if(checkPolicy && email != "" && password != "" && username != ""){
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
             // Signed in 
@@ -36,6 +36,10 @@ function signup() {
     }else {
         if(!checkPolicy){
             alert("Please agree the privacy policy to continue !");
+        }
+
+        if(username == ""){
+            alert("Please key in the username.");
         }
 
         if(email == ""){
