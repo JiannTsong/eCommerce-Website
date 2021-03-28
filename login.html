@@ -145,7 +145,7 @@
                         </label>
                     </div>
                     <div class="text-center">
-                        <button type="button" onclick="login()" class="btn btn-info my-4">Sign in</button>
+                        <button type="button" id="login" class="btn btn-info my-4">Sign in</button>
                     </div>
                 </form>
             </div>
@@ -263,9 +263,17 @@
     <!-- Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
-    
+
     <script src="./assets/js/product.js"></script>
-    <script src="/assets/js/user.js"></script>
+    <script src="/assets/js/firebase/firebase.js"></script>
+    <script src="/assets/js/firebase/login.js"></script>
+    <script>
+        $(function(){
+            $("#login").click(function(){
+                login();
+            })
+        });
+    </script>
 </body>
 
 </html>
