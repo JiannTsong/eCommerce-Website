@@ -192,6 +192,12 @@
     <script src="/assets/js/firebase/firebase.js"></script>
     <script>
         $(function () {
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (!user) {
+                    // User is not signed in. redirect to login page
+                    window.location.href = "/login.html";
+                }
+            });
             $("#sign-out").click(function () {
                 firebase.auth().signOut().then(() => {
                     // Sign-out successful.
