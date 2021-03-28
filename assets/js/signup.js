@@ -21,7 +21,7 @@ function signup() {
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
             // Signed in 
-            var user = userCredential.user;
+            let user = userCredential.user;
             
             //write username into users profile
             writeRecord(user.uid, username);
