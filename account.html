@@ -90,7 +90,7 @@
     </nav>
 
     <div class="container">
-        
+        <button type="button" class="btn btn-info" id="sign-out">Sign Out</button>
     </div>
 
     <footer class="container-fluid" style="margin-top: 4rem;">
@@ -115,7 +115,7 @@
             <div>
                 <div>Email: <a href="mailto:stygix_shop@gmail.com">stygix_shop@gmail.com</a></div>
                 <div>
-                    Contact No: 
+                    Contact No:
                     <a href="https://api.whatsapp.com/send?phone=+6013-259 8496" target="_blank">
                         +6013-25984966
                     </a>
@@ -164,9 +164,12 @@
 
 
     <!--jQuery 3.6-->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!--Bootstrap 4.6.0-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
     <!-- Core -->
     <!--script src="./assets/js/core/jquery.min.js"></script>
     <script src="./assets/js/core/popper.min.js"></script>
@@ -187,5 +190,20 @@
 
     <script src="./assets/js/product.js"></script>
     <script src="/assets/js/firebase/firebase.js"></script>
+    <script>
+        $(function () {
+            $("#sign-out").click(function () {
+                firebase.auth().signOut().then(() => {
+                    // Sign-out successful.
+                    window.location.href ="/login.html";
+                }).catch((error) => {
+                    // An error happened.
+                    alert("Sign out error: " + error.message);
+                });
+            });
+        });
+
+
+    </script>
 
 </html>
