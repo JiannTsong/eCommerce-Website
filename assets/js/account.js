@@ -20,6 +20,7 @@ $(function () {
                 console.log(email);
                 //alert(uid);
             }
+            $("#acc_profile").append()
         }
     });
 
