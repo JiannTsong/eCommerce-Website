@@ -51,6 +51,23 @@ div>div.privacyinfo {
     padding-left: 10px;
 }
 
+div>div.contactstyle {
+    padding-left: 2rem;
+}
+
+body>div.contactbody {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.contactwidth {
+    margin-top: 10px;
+}
+
+bold {
+    font-weight: bold;
+}
+
 @media (min-width: 576px) {
     div>.product {
         display: inline-block;
