@@ -93,11 +93,11 @@
         </div>
     </nav>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="mainslider" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#mainslider" data-slide-to="0" class="active"></li>
+            <li data-target="#mainslider" data-slide-to="1"></li>
+            <li data-target="#mainslider" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -112,11 +112,11 @@
                     alt="Third slide">
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#mainslider" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#mainslider" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
@@ -145,25 +145,36 @@
         <address class="d-flex justify-content-between addrwidth">
             <div>
                 <div>Email: <a href="mailto:stygix_shop@gmail.com">stygix_shop@gmail.com</a></div>
-                <div>Contact No: <a href="https://api.whatsapp.com/send?phone=+6013-259 8496" target="_blank">+6013-25984966</a></div>
+                <div>
+                    Contact No:
+                    <a href="https://api.whatsapp.com/send?phone=+6013-259 8496" target="_blank">+6013-25984966</a>
+                </div>
                 <div></div>
                 <div>
                     <span><a href="https://twitter.com/" target="_blank"><i
                                 class="fab fa-twitter fa-2x logowidth"></i></a></span>
-                    <span><a href="https://www.instagram.com/" target="_blank"><i
-                                class="fab fa-instagram fa-2x logowidth"></i></a></span>
-                    <span><a href="https://www.facebook.com/" target="_blank"><i
-                                class="fab fa-facebook-square fa-2x logowidth"></i></a></span>
+                    <span>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <iclass="fab fa-instagram fa-2x logowidth"></i>
+                        </a>
+                    </span>
+                    <span>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <iclass="fab fa-facebook-square fa-2x logowidth"></i>
+                        </a>
+                    </span>
                 </div>
             </div>
 
             <div>
                 <div>Get Apps </div>
                 <div>
-                    <a href="https://www.apple.com/my/app-store/" target="_blank"><i
-                            class="fab fa-app-store-ios setasize"></i></a>
-                    <a href="https://play.google.com/store" target="_blank"><i
-                            class="fab fa-google-play setgsize"></i></a>
+                    <a href="https://www.apple.com/my/app-store/" target="_blank">
+                        <i class="fab fa-app-store-ios setasize"></i>
+                    </a>
+                    <a href="https://play.google.com/store" target="_blank">
+                        <i class="fab fa-google-play setgsize"></i>
+                    </a>
                 </div>
 
             </div>
@@ -191,10 +202,35 @@
     <script src="./assets/js/core/bootstrap.min.js"></script--->
     <!-- Argon JS -->
     <script src="./assets/js/argon-design-system.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBV4425RVBJXjqi0qpAmRMfiZKxPakGW_8",
+            authDomain: "uccd2223-login.firebaseapp.com",
+            projectId: "uccd2223-login",
+            storageBucket: "uccd2223-login.appspot.com",
+            messagingSenderId: "134638878836",
+            appId: "1:134638878836:web:dd4a4c4ccd2ed69823d121",
+            measurementId: "G-D6NGWRG38M"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
     <script src="./assets/js/product.js"></script>
     <script>
         $(function () {
-            if(typeof (Storage) !== "undefined") {
+            if (typeof (Storage) !== "undefined") {
                 //$("#cart-count").text(localStorage.getItem(""));//retrieve
             }
         })
