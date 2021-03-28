@@ -36,7 +36,7 @@ function signup() {
     }else {
         alert("Please agree the privacy policy to continue !");
     }  
-    
+    /*
     let testuser = db.collection("users").doc("user.uid");
     testuser.get().then((doc) => {
         if (doc.exists) {
@@ -47,6 +47,6 @@ function signup() {
         }
     }).catch((error) => {
         console.log("Error getting document:", error);
-    });
+    });*/
     
 }
