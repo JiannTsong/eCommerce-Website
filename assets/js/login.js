@@ -2,7 +2,7 @@ $(function(){
 
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
-          // User is signed in.
+          // User is signed in. redirect to profile
           window.location.href = "/account.html";
         } else {
           // No user is signed in.
