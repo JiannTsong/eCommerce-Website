@@ -67,14 +67,14 @@
                 </ul>
 
                 <ul class="navbar-nav ml-lg-auto">
-                    <form class="form-inline my-2 my-lg-0" action="/">
+                    <form class="form-inline my-2 my-lg-0" action="/search.html">
                         <input class="search-form form-control mr-sm-2" style="border-radius: 3rem;width: 100%;" name="q" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn search-btn" style="position: absolute; border-radius: 3rem;" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
                     </form>
                     <div style="display: flex;">
-                        <a href="/login.html" class="form-inline">
+                        <a href="./login.html" class="form-inline">
                             <i class="fad fa-user-circle fa-3x clwhite"></i>
                         </a>
                         <a href="#cart">
@@ -206,62 +206,19 @@
 
             <script src="./assets/js/product.js"></script>
 
-            <!-- The core Firebase JS SDK is always required and must be listed first -->
-            <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 
-            <!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-            <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
 
-            <!-- Add Firebase products that you want to use -->
-            <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
-            <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
 
-            <script>
-                // Your web app's Firebase configuration
-                // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-                var firebaseConfig = {
-                    apiKey: "AIzaSyBUI47vHCW6nF-wKjyKRZJUyM__ijNFxvE",
-                    authDomain: "stygix-1d87b.firebaseapp.com",
-                    projectId: "stygix-1d87b",
-                    storageBucket: "stygix-1d87b.appspot.com",
-                    messagingSenderId: "905203629267",
-                    appId: "1:905203629267:web:6f3ad8103aee3c2a586826",
-                    measurementId: "G-S3BZGPK1SN"
-                };
-
-                // Initialize Firebase
-                firebase.initializeApp(firebaseConfig);
-                firebase.analytics();
-
-                firebase.auth().onAuthStateChanged(function(user) {
-                    if (user) {
-                        // User is signed in. redirect to user profile page.
-                        //window.location.href = "/account.html";
-                    }
-                });
-
-                function login() {
-                    let email = document.getElementById("email").value;
-                    let password = document.getElementById("password").value;
-
-                    firebase.auth().signInWithEmailAndPassword(email, password).then((userCredential) => {
-                        // Signed in
-                        var user = userCredential.user;
-                        // ...
-                    }).catch((error) => {
-                        var errorCode = error.code;
-                        var errorMessage = error.message;
-                        alert("Error : " + errorMessage);
-                    });
-                }
-
-                $(function() {
-                    if (typeof(Storage) !== "undefined") {
-                        //$("#cart-count").text(localStorage.getItem(""));//retrieve
-                    }
-                })
-            </script>
+    <script src="./assets/js/product.js"></script>
+    <script src="./assets/js/firebase/firebase.js"></script>
 </body>
 
 </html>
