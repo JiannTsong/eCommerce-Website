@@ -90,6 +90,12 @@
     </nav>
 
     <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 4rem;">
+        <h3>Profile</h3>
+        <table>
+            <tbody id="acc_profile">
+
+            </tbody>
+        </table>
         <button type="button" class="btn btn-info" style="right: -5rem;" id="sign-out">Sign Out</button>
     </div>
 
@@ -190,27 +196,6 @@
 
     <script src="./assets/js/product.js"></script>
     <script src="./assets/js/firebase/firebase.js"></script>
-    <script>
-        $(function () {
-            firebase.auth().onAuthStateChanged(function(user) {
-                if (!user) {
-                    // User is not signed in. redirect to login page
-                    window.location.href = "./login.html?logout=success";
-                }
-            });
-            
-            $("#sign-out").click(function () {
-                firebase.auth().signOut().then(() => {
-                    // Sign-out successful.
-                    window.location.href ="./login.html";
-                }).catch((error) => {
-                    // An error happened.
-                    alert("Sign out error: " + error.message);
-                });
-            });
-        });
-
-
-    </script>
+    <script src="./assets/js/account.js"></script>
 
 </html>

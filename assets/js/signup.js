@@ -1,24 +1,14 @@
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // User is signed in. redirect to profile
-      window.location.href = "/account.html";
-    } else {
-      // No user is signed in.
-    }
-});
-
-function writeUserData(userId, name) {
+function writeRecord(userId, username){
     db.collection("users").doc(userId).set({
-        "username" : name
+        "username" : username
     })
         .then(() => {
-            ///console.log("Document successfully written!");
-            window.location.href = "/login.html";
+            console.log("Document successfully written!");
+            //window.location.href = "/login.html";
         })
         .catch((error) => {
             console.error("Error writing document: ", error);
         });
-
 }
 
 function signup() {
@@ -34,7 +24,7 @@ function signup() {
             var user = userCredential.user;
             
             //write username into users profile
-            writeUserData(user.uid, username);
+            writeRecord(user.uid, username);
         })
         .catch((error) => {
             let errorCode = error.code;
@@ -59,6 +49,7 @@ function signup() {
             alert("Please key in the password.");
         }
     }  
+
     /*
     let testuser = db.collection("users").doc("user.uid");
     testuser.get().then((doc) => {
@@ -73,3 +64,14 @@ function signup() {
     });*/
     
 }
+
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in. redirect to profile, redirect after 1 second to avoid the firebase have store the user id to extra table
+      window.setTimeout(function(){
+        window.location.href = "./account.html";
+      }, 1000);
+    } else {
+      // No user is signed in.
+    }
+});
