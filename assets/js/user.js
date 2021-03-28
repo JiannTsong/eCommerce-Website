@@ -25,7 +25,7 @@ $(function () {
             if (user) {
                 // User is signed in. redirect to user profile page.
                 //alert(user.uid);
-                window.location.href = "/account.html";
+                //window.location.href = "/account.html";
             }
         });
 
@@ -43,6 +43,9 @@ $(function () {
 
         }
 
+        document.getElementById("sign-up").addEventListener("click", function(){
+            signup();
+        });
 
         function signup() {
             let email = document.getElementById("email").value;
@@ -67,10 +70,19 @@ $(function () {
                 });
             }else {
                 alert("Please agree the privacy policy to continue !");
-            }
-
+            }  
             
-
+            let testuser = db.collection("users").doc("user.uid");
+            testuser.get().then((doc) => {
+                if (doc.exists) {
+                    console.log("Document data:", doc.data());
+                } else {
+                    // doc.data() will be undefined in this case
+                    console.log("No such document!");
+                }
+            }).catch((error) => {
+                console.log("Error getting document:", error);
+            });
             
         }
 
