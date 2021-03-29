@@ -1,10 +1,10 @@
-function writeRecord(userId, username){
+function writeRecord(userId, username) {
+
     db.collection("users").doc(userId).set({
-        "username" : username
+        "username": username
     })
         .then(() => {
-            console.log("Document successfully written!");
-            //window.location.href = "/login.html";
+            window.location.href = "./account.html";
         })
         .catch((error) => {
             console.error("Error writing document: ", error);
@@ -17,38 +17,41 @@ function signup() {
     let username = document.getElementById("username").value;
 
     let checkPolicy = document.getElementById("checkPolicy").checked;
-    if(checkPolicy && email != "" && password != "" && username != ""){
+    if (checkPolicy && email != "" && password != "" && username != "") {
         firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            // Signed in 
-            let user = userCredential.user;
-            
-            //write username into users profile
-            writeRecord(user.uid, username);
-        })
-        .catch((error) => {
-            let errorCode = error.code;
-            let errorMessage = error.message;
-            // ..
-            alert("Error : " + errorMessage);
-        });
-    }else {
-        if(!checkPolicy){
+            .then((userCredential) => {
+                // Signed in 
+                let user = userCredential.user;
+                //write username into users profile
+                writeRecord(user.uid, username);
+
+                return user.updateProfile({
+                    displayName: username
+                })
+            })
+            .catch((error) => {
+                let errorCode = error.code;
+                let errorMessage = error.message;
+                // ..
+                alert("Error : " + errorMessage);
+            });
+    } else {
+        if (!checkPolicy) {
             alert("Please agree the privacy policy to continue !");
         }
 
-        if(username == ""){
+        if (username == "") {
             alert("Please key in the username.");
         }
 
-        if(email == ""){
+        if (email == "") {
             alert("Please key in an email.");
         }
 
-        if(password == ""){
+        if (password == "") {
             alert("Please key in the password.");
         }
-    }  
+    }
 
     /*
     let testuser = db.collection("users").doc("user.uid");
@@ -62,16 +65,16 @@ function signup() {
     }).catch((error) => {
         console.log("Error getting document:", error);
     });*/
-    
+
 }
 
-firebase.auth().onAuthStateChanged(function(user) {
+firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
-      // User is signed in. redirect to profile, redirect after 1 second to avoid the firebase have store the user id to extra table
-      window.setTimeout(function(){
-        window.location.href = "./account.html";
-      }, 1000);
+        // User is signed in. redirect to profile, redirect after 1 second to avoid the firebase have store the user id to extra table
+        window.setTimeout(function () {
+            window.location.href = "./account.html";
+        }, 1000);
     } else {
-      // No user is signed in.
+        // No user is signed in.
     }
 });

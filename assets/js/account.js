@@ -18,6 +18,7 @@ $(function () {
                 // this value to authenticate with your backend server, if
                 // you have one. Use User.getToken() instead.
                 console.log(email);
+                console.log(name);
                 //alert(uid);
             }
             $("#acc_profile").append()
