@@ -20,5 +20,8 @@ firebase.auth().onAuthStateChanged(function (user) {
         // User is signed in. redirect to user profile page.
         //alert(user.uid);
         //window.location.href = "/account.html";
+        $("#user_icon").attr("href", "./account.html");
+    }else{
+        $("#user_icon").attr("href", "./login.html");
     }
 });
