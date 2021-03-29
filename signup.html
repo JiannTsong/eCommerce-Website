@@ -129,9 +129,9 @@
                                 </div>
                             </div>
                             <div class="text-muted font-italic">
-                                <small>
+                                <small id="pass_strength">
                                     password strength: 
-                                    <span class="text-success font-weight-700">strong</span>
+                                    <span class="text-danger font-weight-700" id="pass_strength">weak</span>
                                 </small>
                             </div>
                             <div class="row my-4">
@@ -270,7 +270,29 @@
                 signup();
             });
 
-            $("#password").keyup(function(){})
+            $("#password").keyup(function(){
+                let regExpWeak = /[a-z]/;
+                let regExpMedium = /\d+/;
+                let regExpStrong = /.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/;
+                let pass = $("#password").val();
+
+                if(pass.length <= 3 && (pass.match(regExpWeak) || pass.match(regExpMedium) || pass.match(regExpStrong)))no=1;
+                if(pass.length >= 6 && ((pass.match(regExpWeak) && pass.match(regExpMedium)) || (pass.match(regExpMedium) && pass.match(regExpStrong)) || (pass.match(regExpWeak) && pass.match(regExpStrong))))no=2;
+                if(pass.length >= 6 && pass.match(regExpWeak) && pass.match(regExpMedium) && pass.match(regExpStrong))no=3;
+
+                if(no==1){
+                    $("#pass_strength").html('password strength: <span class="text-danger font-weight-700" id="pass_strength">weak</span>');
+                }
+
+                if(no==2){
+                    $("#pass_strength").html('password strength: <span class="text-warning font-weight-700" id="pass_strength">medium</span>');
+                }
+
+                if(no==3){
+                    $("#pass_strength").html('password strength: <span class="text-success font-weight-700" id="pass_strength">strong</span>');
+                }
+
+            });
        });
     </script>
 </body>
