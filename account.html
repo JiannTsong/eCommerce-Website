@@ -17,6 +17,17 @@
     <!-- Argon CSS -->
     <link type="text/css" href="./assets/css/argon-design-system.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        table {
+            border-collapse: separate;
+            border-spacing: 50px 0;
+            margin-bottom: 10rem;
+        }
+        .acc_profile > tr > td {
+            padding-bottom: 2rem;
+            vertical-align: top;
+        }
+    </style>
 </head>
 
 <body>
@@ -93,12 +104,80 @@
         <h3>Profile</h3>
         <table>
             <tbody id="acc_profile" class="acc_profile">
-                <tr><td>Username</td><td> : </td> <td></td></tr>
-                <tr><td>Email</td><td> : </td> <td></td></tr>
-                <tr><td>Passwrod</td><td> : </td> <td><button class="btn btn-info">Change Password</button></td></tr>
+                <tr>
+                    <td>Name</td>
+                    <td> : </td>
+                    <td>
+                        <input type="text" class="form-control" id="uname" placeholder="Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td> : </td> 
+                    <td id="uemail">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td> : </td> 
+                    <td><button class="btn btn-info" data-toggle="modal" data-target="#change-pass">Change Password</button></td>
+                </tr>
+                <tr>
+                    <td>Shipping Address</td>
+                    <td> : </td>
+                    <td>
+                        <textarea class="form-control" name="shipping_address" id="ushipping"  rows="3" cols="70" placeholder="Shipping Address Here" ></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: right;">
+                        <button type="submit" id="save_profile" class="btn btn-info">
+                            <i class="fal fa-user-edit"></i> Save Profile
+                        </button>
+                    </td>
+                </tr>
             </tbody>
         </table>
-        <button type="button" class="btn btn-info" style="right: 5rem; bottom: 2rem; position: absolute;" id="sign-out">Sign Out</button>
+        <button type="button" class="btn btn-info" style="right: 5rem; bottom: 2rem; position: absolute;" id="sign-out">
+            <i class="fal fa-sign-out"></i> Sign Out
+        </button>
+        
+        <!-- Change Password -->
+
+        <div class="modal fade bd-example-modal-lg show" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: block; padding-right: 17px;" aria-modal="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Old Password</td>
+
+                                <td>
+                                    <input type="password" class="form-control" name="old_password" id="old_password">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>New Password</td>
+                                <td> : </td>
+                                <td>
+                                    <input type="password" class="form-control" name="new_password" id="new_password">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
     </div>
 
     <footer class="container-fluid" style="margin-top: 4rem;">

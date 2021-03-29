@@ -81,9 +81,11 @@ bold {
         position: absolute;
         border-radius: 3rem;
     }
+
     a>.clwhite {
         color: #777777;
     }
+    
 }
 
 @media (min-width: 768px) {
