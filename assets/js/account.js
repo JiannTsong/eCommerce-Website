@@ -18,7 +18,7 @@ $(function () {
                 // this value to authenticate with your backend server, if
                 // you have one. Use User.getToken() instead.
             }
-            $("#acc_profile").append()
+            $("#acc_profile").append("")
         }
     });
 

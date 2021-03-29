@@ -89,14 +89,16 @@
         </div>
     </nav>
 
-    <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 4rem;">
+    <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 4rem;position: relative;">
         <h3>Profile</h3>
         <table>
-            <tbody id="acc_profile">
-
+            <tbody id="acc_profile" class="acc_profile">
+                <tr><td>Username</td><td> : </td> <td></td></tr>
+                <tr><td>Email</td><td> : </td> <td></td></tr>
+                <tr><td>Passwrod</td><td> : </td> <td><button class="btn btn-info">Change Password</button></td></tr>
             </tbody>
         </table>
-        <button type="button" class="btn btn-info" style="right: -5rem;" id="sign-out">Sign Out</button>
+        <button type="button" class="btn btn-info" style="right: 5rem; bottom: 2rem; position: absolute;" id="sign-out">Sign Out</button>
     </div>
 
     <footer class="container-fluid" style="margin-top: 4rem;">
@@ -106,7 +108,7 @@
                     <a class="nav-link" href="./about.html">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Support</a>
+                    <a class="nav-link" href="./contact.html">Contact Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./privacy.html">Privacy Policy</a>
