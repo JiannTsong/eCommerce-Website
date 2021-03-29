@@ -128,8 +128,12 @@
                                     <input class="form-control" id="password" placeholder="Password" type="password" requried>
                                 </div>
                             </div>
-                            <div class="text-muted font-italic"><small>password strength: <span
-                                        class="text-success font-weight-700">strong</span></small></div>
+                            <div class="text-muted font-italic">
+                                <small>
+                                    password strength: 
+                                    <span class="text-success font-weight-700">strong</span>
+                                </small>
+                            </div>
                             <div class="row my-4">
                                 <div class="col-12">
                                     <div class="custom-control custom-control-alternative custom-checkbox">
@@ -260,9 +264,13 @@
     <script src="./assets/js/firebase/firebase.js"></script>
     <script src="./assets/js/signup.js"></script>
     <script>
-       $("#sign-up").click(function(e){
-           e.preventDefault();
-           signup();
+       $(function(){
+            $("#sign-up").click(function(e){
+                e.preventDefault();
+                signup();
+            });
+
+            $("#password").keyup(function(){})
        });
     </script>
 </body>
