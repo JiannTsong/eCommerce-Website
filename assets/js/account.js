@@ -52,7 +52,7 @@ $(function () {
                     username : new_username,
                     address : new_addr
                 }).then(() => {
-                        console.log("Success to save");
+                        $("#profile_updated").addClass("show");
                     })
                     .catch((error) => {
                         console.error("Error writing document: ", error.message);
