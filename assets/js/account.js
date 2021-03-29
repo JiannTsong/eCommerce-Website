@@ -42,7 +42,6 @@ $(function () {
             $("#save_profile").click(function () {
                 let new_addr = $("#ushipping").val();
                 let new_username = $("#uname").val();
-                let new_email = $("#uemail").val();
         
                 firebase.auth().currentUser.updateProfile({
                     displayName: new_username,
@@ -58,6 +57,29 @@ $(function () {
                     .catch((error) => {
                         console.error("Error writing document: ", error.message);
                     });
+            });
+
+            $("#save_new_pass").click(function(){
+                let user = firebase.auth().currentUser;
+                $("#success_pass_result").css("display", "none");
+                $("#fail_pass_result").css("display", "none");
+                let old_pass = $("input[type='password'][name='old_pass']").val();
+                let new_pass = $("input[type='password'][name='new_pass']").val();
+
+                let credential = firebase.auth.EmailAuthProvider.credential(
+                    user.email, 
+                    old_pass
+                );
+                // Now you can use that to reauthenticate
+                user.reauthenticateWithCredential(credential);
+
+                user.updatePassword(new_pass).then(function() {
+                    // Update successful.
+                    $("#success_pass_result").css("display", "block");
+                  }).catch(function(error) {
+                    // An error happened.
+                    $("#fail_pass_result").css("display", "block");
+                  });
             });
         
             $("#sign-out").click(function () {
