@@ -101,7 +101,7 @@
                 <div class="text-center text-muted mb-4">
                     <h3>Sign In</h3>
                 </div>
-                <form role="form">
+                <form role="form" id="login_form" autocomplete="off">
                     <div class="form-group mb-3">
                         <div class="input-group input-group-alternative">
                             <div class="input-group-prepend">
@@ -164,7 +164,7 @@
                 </div>
                 <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="request_reset">Request Reset</button>
+                <button type="button" class="btn btn-warning" id="request_reset">Request Reset</button>
                 </div>
             </div>
             </div>
@@ -271,7 +271,9 @@
 
     <script src="./assets/js/product.js"></script>
     <script src="./assets/js/firebase/firebase.js"></script>
+    <script src="./assets/js/cookie.manage.js"></script>
     <script src="./assets/js/login.js"></script>
+    <script src="./assets/js/remember_me.js"></script>
     <script src="./assets/js/password_reset.js"></script>
 </body>
 
