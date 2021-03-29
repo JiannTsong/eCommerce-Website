@@ -59,8 +59,6 @@ $(function () {
                         console.error("Error writing document: ", error.message);
                     });
             });
-
-            $("#change_pass");
         
             $("#sign-out").click(function () {
                 firebase.auth().signOut().then(() => {
