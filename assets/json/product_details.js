@@ -403,36 +403,39 @@ var product = [{
 
     {
         "id": 16,
-        "name": "2021 ASUS TUF Gaming A15",
-        "desc": "The astoundingly beautiful Vivo AiO V222 all-in-one PC has a near-invisible 2mm display bezel giving you edge-to-edge visuals and an incredible 87% screen-to-body ratio. Featuring a 21.5-inch Full HD LED display and advanced ASUS SonicMaster audio with a bass-reflex speaker system, Vivo AiO V222 immerses you in stunning visuals and superb sound for the ultimate entertainment experience.",
+        "name": "ASUS ROG Strix G17 G713",
+        "desc": "Focused firepower streamlines and elevates the core Windows 10 Home gaming experience in the ROG Strix G17. With up to a powerful AMD Ryzen™ 9 5900HX CPU and GeForce RTX™ 3070 GPU, everything from gaming to multitasking is fast and fluid. Go full-throttle on esports speed with a competition-grade display up to 300Hz/3ms, or immerse in rich detail on a WQHD 165Hz/3ms panel. Adaptive-Sync makes gameplay ultrasmooth, while advanced thermal upgrades help you stay cool under pressure. No matter what your game is, you can achieve your perfect play.",
         "extra-desc": {
-            "Color": "White",
+            "Color": "Black",
             "Operating System": "Windows 10 Home - ASUS recommends Windows 10 Pro for business",
-            "Processor": "Intel® Core™ i3-10110U Processor 2.1 GHz (4M Cache, up to 4.1 GHz, 2 cores)",
-            "Graphics": "Intel® UHD 630",
-            "Display" : "21.5-inch, FHD (1920 x 1080) 16:9, IPS-level Panel, Anti-glare display, LED Backlit, 250nits, sRGB: 100%, Screen-to-body ratio87%",
-            "Memory": "4GB DDR4 SO-DIMM",
-            "Storage": '256GB M.2 SATA SSD, Without HDD Without HDD, 512GB M.2 NVMe™ PCIe® 3.0 SSD',
-            "Network & Communication": "Wi-Fi 5(802.11ac)+Bluetooth 5.0 (Dual band) 1*1",
-            "Interfaces": "1x HDMI out 1x DC-in 1x RJ45 Gigabit Ethernet 1x HDMI out 1.4 4x USB 3.2 Gen 1 Type-A",
-            "Power Supply": "ø5.5, 90W AC Adapter, Output: 19V DC, 4.74A, 90W, Input: 100~240V AC 50/60Hz universal",
-            "Dimensions" : '48.9 x 38.7 x 5.1 ~ 16.4 cm (19.25" x 15.24" x 2.01" ~ 6.46")',
-            "Weight" : "04.80 kg (10.58 lbs)"
+            "Processor": "AMD Ryzen™ 9 5900HX Processor 3.3 GHz (16M Cache, up to 4.6 GHz)",
+            "Graphics": "NVIDIA® GeForce RTX™ 3060 Laptop GPU With ROG Boost up to 1802MHz at 115W (130W with Dynamic Boost) 6GB GDDR6",
+            "Display" : "17.3-inch FHD (1920 x 1080) 16:9 anti-glare display sRGB: 62.50% Adobe: 47.34% Refresh Rate: 144Hz Value IPS-level Adaptive-Sync",
+            "Memory": "8GB DDR4-3200 SO-DIMM x 2",
+            "Storage": '1TB M.2 NVMe™ PCIe® 3.0 SSD',
+            "Network & Communication": "Wi-Fi 6(802.11ax)+Bluetooth 5.1 (Dual band) 2*2;(*BT version may change with OS upgrades.) -RangeBoost",
+            "Interfaces": "1x 3.5mm Combo Audio Jack 1x HDMI 2.0b 3x USB 3.2 Gen 1 Type-A 1x USB 3.2 Gen 2 Type-C support DisplayPort / power delivery / G-SYNC 1x RJ45 LAN port",
+            "Power Supply": "ø6.0, 240W AC Adapter, Output: 20V DC, 12A, 240W, Input: 100~240C AC 50/60Hz universal",
+            "Battery" : "90WHrs, 4S1P, 4-cell Li-ion",
+            "Dimensions" : '39.5 x 28.2 x 2.34 ~ 2.83 cm (15.55" x 11.10" x 0.92" ~ 1.11")',
+            "Weight" : "2.70 Kg (5.95 lbs)"
         },
         "img": [
-            "./assets/img/product/ASUS_VivoAiOV222/ss253qz0da8sfemc_setting_xxx_0_90_end_800.png",
-            "./assets/img/product/ASUS_VivoAiOV222/ceu07aufys6hyahc_setting_xxx_0_90_end_800.png",
-            "./assets/img/product/ASUS_VivoAiOV222/yjg6aspvmrvcjijh_setting_xxx_0_90_end_800.png",
-            "./assets/img/product/ASUS_VivoAiOV222/jbxxpzopapkgxdi2_setting_xxx_0_90_end_800.png"
+            "./assets/img/product/ROGStrixG17G713/h732.png",
+            "./assets/img/product/ROGStrixG17G713/2.png",
+            "./assets/img/product/ROGStrixG17G713/3.png",
+            "./assets/img/product/ROGStrixG17G713/4.png",
+            "./assets/img/product/ROGStrixG17G713/5.png",
+
 
         ],
-        "price": 2399,
+        "price": 8399,
         "stock": 8,
         "brand": "Asus",
         "type": [
             "Desktop",
             "PC",
-            "All in one"
+            "Gaming"
         ]
     },
 
