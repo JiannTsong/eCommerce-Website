@@ -169,10 +169,17 @@ var product = [
         "name" : "Logitech G102 LIGHTSYNC",
         "desc" : "Make the most of your game time with G102 gaming mouse, featuring LIGHTSYNC technology, a gaming-grade sensor and a classic 6-button design. Light up your game … and your desk.",
         "extra-desc": {
-            "PHYSICAL SPECS" : "Height: 116.6 mm, Width: 62.15 mm, Depth: 38.2 mm, Weight: 85 g, (mouse only), Cable Length: 2.1 m",
-            "TECHNICAL SPECIFICATIONS" : "LIGHTSYNC RGB lighting, 6 programmable buttons, Resolution: 200 – 8,000 DPI",
-            "RESPONSIVENESS" : "USB data format: 16 bits/axis, USB report rate: 1000 Hz (1ms), Microprocessor: 32-bit ARM",
-            "WARRANTY INFORMATION" : "2-Year Limited Hardware Warranty"
+            "Operating System" : "Windows 10 Pro",
+            "Processor" : "	Intel® Core™ i5-9500 with Intel® UHD Graphics 630 (3 GHz base frequency, up to 4.4 GHz with Intel® Turbo Boost Technology, 9 MB cache, 6 cores)",
+            "Graphics" : "Intel® UHD Graphics 630",
+            "Memory" : "4 GB DDR4-2666 SDRAM (1 X 4 GB)",
+            "Storage" : "1 TB 7200 rpm SATA HDD",
+            "I/O Ports" : "1 audio-in; 1 audio-out; 1 DisplayPort™ 1.2; 1 power connector; 1 RJ-45; 1 VGA; 2 USB 3.1 Gen 1; 4 USB 2.0",
+            "Expansion slots" : "1 M.2 2230; 1 M.2 2230/2280; 1 PCIe 3 x16; 2 PCIe 3 x1; One 4-in-1 media card reader",
+            "Keyboard" : "HP USB Wired Keyboard",
+            "Pointing device" : "	Universal USB wired optical mouse",
+            "Power Supply" : "180 W internal power supply, up to 90% efficiency, active PFC",
+            "Weight" : "5.47KG"
         },
         "img" : [
                 "./assets/img/product/logitech_g102/g203-black-gallery-1.webp",
@@ -180,6 +187,29 @@ var product = [
                 "./assets/img/product/logitech_g102/g203-black-gallery-3.webp",
                 "./assets/img/product/logitech_g102/g203-black-gallery-4.webp",
                 "./assets/img/product/logitech_g102/g102-black-gallery-5.webp"
+
+        ],
+        "price" : 109,
+        "stock" : 16,
+        "brand" : "Logitech",
+        "type" : [
+            "Mouse",
+            "Mice"
+        ]
+    },
+
+    {
+        "id" : 7,
+        "name" : "HP ProDesk 400 G6",
+        "desc" : "HP Business laptops and desktops are built for security and collaboration. With Military Grade (Mil) Specs and the latest security, it's the Business device your business needs. Designed to fit the modern workspace, the stylish and reliable HP ProDesk 400 MT is equipped with strong security features and performance that’s scalable to grow with your business.",
+        "extra-desc": {
+            "PHYSICAL SPECS" : "Height: 116.6 mm, Width: 62.15 mm, Depth: 38.2 mm, Weight: 85 g, (mouse only), Cable Length: 2.1 m",
+            "TECHNICAL SPECIFICATIONS" : "LIGHTSYNC RGB lighting, 6 programmable buttons, Resolution: 200 – 8,000 DPI",
+            "RESPONSIVENESS" : "USB data format: 16 bits/axis, USB report rate: 1000 Hz (1ms), Microprocessor: 32-bit ARM",
+            "WARRANTY INFORMATION" : "2-Year Limited Hardware Warranty"
+        },
+        "img" : [
+                "./assets/img/product/HPProDesk400G6/g203-black-gallery-1.webp",
 
         ],
         "price" : 109,
