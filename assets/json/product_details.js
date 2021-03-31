@@ -2,8 +2,15 @@ var product = [
     {
         "id" : 1,
         "name" : "Acer Swift 5",
-        "desc" : "Today’s environment calls for a new kind of laptop with fully-featured antimicrobial4 solutions (the chassis and Antimicrobial Corning® Gorilla® Glass4 touch display). At around 1 kg1, 14.951 mm thin and an incredible 90% screen-to-body ratio, it also has the latest 11th Gen Intel® Core™ Processors1, powerful NVIDIA® GeForce® MX350 graphics1 and up to 17 hours of battery1.",
-        "extra-desc": "",
+        "desc" : "Today’s environment calls for a new kind of laptop with fully-featured antimicrobial4 solutions (the chassis and Antimicrobial Corning® Gorilla® Glass4 touch display). At around 1 kg, 14.951 mm thin and an incredible 90% screen-to-body ratio, it also has the latest 11th Gen Intel® Core™ Processors, powerful Intel® Iris Xe® graphics and up to 17 hours of battery.",
+        "extra-desc": {
+            "Operating System" : "Windows 10 Home",
+            "Processor" : "Intel® Core™ i5 i5-1135G7 2.40 GHz Quad-core (4 Core™)",
+            "Graphics" : "Intel® Iris Xe Graphics",
+            "Screen" : 'Full HD 1920 x 1080 14" LCD CineCrystal (Glare) In-plane Switching (IPS) Technology',
+            "Memory" : "8GB LPDDR4X",
+            "Storage" : "512GB PCIe SSD"
+        },
         "img" : [
                 "./assets/img/product/swift5/swift_5_SF514-54.png",
                 "./assets/img/product/Acer-Swift-5_SF514-55_FP_Green_gallery_01.png",
@@ -14,7 +21,7 @@ var product = [
                 "./assets/img/product/Acer-Swift-5_SF514-55_FP_Green_gallery_06.png"
         ],
         "price" : 2999,
-        "stock" : "5",
+        "stock" : 15,
         "brand" : "Acer",
         "type" : [
             "Laptop",
@@ -37,7 +44,7 @@ var product = [
                 "./assets/img/product/Acer-Swift-7-SF714-52T-Black-photogallery-06.png"
         ],
         "price" : 3999,
-        "stock" : "5",
+        "stock" : 5,
         "brand" : "Acer",
         "type" : [
             "Laptop",
@@ -55,7 +62,7 @@ var product = [
                 "./assets/img/product/Monitor_KG1.png"
         ],
         "price" : 799,
-        "stock" : "6",
+        "stock" : 6,
         "brand" : "Acer",
         "type" : [
             "Monitor",
@@ -78,7 +85,7 @@ var product = [
                 "./assets/img/product/Predator-Helios-700/Predator-Helios-700_PH717-72_RGB_gallery_06.png"
         ],
         "price" : 17999,
-        "stock" : "5",
+        "stock" : 5,
         "brand" : "",
         "type" : [
             "Laptop",
@@ -96,7 +103,7 @@ var product = [
                 ""
         ],
         "price" : 2999,
-        "stock" : "8",
+        "stock" : 8,
         "brand" : "",
         "type" : "Monitor"
     }
