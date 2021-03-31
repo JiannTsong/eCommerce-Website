@@ -218,7 +218,7 @@ var product = [{
             "Mouse",
             "Mice"
         ]
-    }
+    },
 
     {
         "id": 8,
