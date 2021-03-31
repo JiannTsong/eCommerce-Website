@@ -17,21 +17,10 @@
     <!-- Argon CSS -->
     <link type="text/css" href="./assets/css/argon-design-system.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <style>
-        table {
-            border-collapse: separate;
-            border-spacing: 50px 0;
-            margin-bottom: 10rem;
-        }
-        
-        .acc_profile>tr>td {
-            padding-bottom: 2rem;
-            vertical-align: top;
-        }
-    </style>
 </head>
 
 <body>
+    <!--Navigation Here-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-default mt4">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">
@@ -101,11 +90,16 @@
         </div>
     </nav>
 
-    <!--content-->
-    <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 4rem; position: relative;">
-
-
+    <!--Content-->
+    <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 50px;">
+        <div class="row">
+            <div class="col-sm-4">col-sm-4</div>
+            <div class="col-sm-8">col-sm-8</div>
+        </div>
     </div>
+
+
+    <!--Footer-->
 
     <footer class="container-fluid" style="margin-top: 4rem;">
         <div class="d-flex justify-content-center">
@@ -114,7 +108,7 @@
                     <a class="nav-link" href="./about.html">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./contact.html">Contact Us</a>
+                    <a class="nav-link active" href="./contact.html">Contact Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./privacy.html">Privacy Policy</a>
@@ -152,6 +146,7 @@
                     </span>
                 </div>
             </div>
+
             <div>
                 <div>Get Apps </div>
                 <div>
@@ -186,6 +181,8 @@
     <!-- Argon JS -->
     <script src="./assets/js/argon-design-system.js"></script>
 
+    <script src="./assets/js/product.js"></script>
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 
@@ -197,7 +194,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
 
+    <script src="./assets/js/product.js"></script>
     <script src="./assets/js/firebase/firebase.js"></script>
-    <script src="./assets/js/account.js"></script>
+</body>
 
 </html>
