@@ -36,7 +36,7 @@ function updateResult (products) {
     $("#result").append('<div class="card product">' +
                 '<img src="' + products[i].img[0] + '" alt="' + products[i].name + '">' +
                 '<div class="card-body">' +
-                '<h5>' + products[i].name + '</h5>' + ' RM' + products[i].price +
+                '<h5>' + products[i].name.substring(0, 25) + '</h5>' + ' RM ' + products[i].price +
                 '<p class="card-text">' + products[i].desc.substring(0, 105) + '...' + '</p>' +
                 '<a href="' + './product.html?id=' + products[i].id + '" class="btn btn-info" target="_blank">View More</a>' +
                 '</div></div>');
