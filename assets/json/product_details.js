@@ -396,7 +396,8 @@ var product = [{
         "brand": "Asus",
         "type": [
             "Desktop",
-            "PC"
+            "PC",
+            "All in one"
         ]
     },
 
