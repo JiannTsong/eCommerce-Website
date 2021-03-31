@@ -241,7 +241,7 @@ var product = [{
 
     {
         "id": 9,
-        "name": "Logitech M190 Full-Size Wireless Mouse",
+        "name": "Logitech M190",
         "desc": "Logitech M190 is a full-size wireless mouse with a comfortable contoured design that follows the natural curve of medium to large hands. You’ll work wirelessly and move freely – from up to 10 meters1Wireless range and battery life may vary based on user, environmental and computing conditions. away – with virtually no delays or dropouts. You’ll get great quality with 18-month2Wireless range and battery life may vary based on user, environmental and computing conditions. battery life, precision tracking, and line-by-line scrolling at an affordable price.",
         "extra-desc": "",
         "img": [
@@ -252,12 +252,15 @@ var product = [{
         "price": 55,
         "stock": "15",
         "brand": "Logitech",
-        "type": "Mouse"
+        "type": [
+            "Mouse",
+            "Wireless"
+        ]
     },
 
     {
         "id": 10,
-        "name": "HP OMEN Photon Wireless Gaming Mouse",
+        "name": "HP OMEN Photon",
         "desc": "This mouse is designed to adapt to all hand sizes, with different grips including claw, palm and tip. With built-in pivot hinges you can expect copious clean, consistent takedowns, er, clicks. Play all day for days with a power-saving system that makes the battery last up to 70 hours. The mouse is durable, easy to recharge and comes with a compatible Qi charging mousepad. ",
         "extra-desc": "",
         "img": [
@@ -267,12 +270,16 @@ var product = [{
         "price": 359,
         "stock": "15",
         "brand": "HP",
-        "type": "Mouse"
+        "type": [
+            "Mouse",
+            "Wireless",
+            "Gaming"
+        ]
     },
 
     {
         "id": 11,
-        "name": "Logitech B170 Wireless Mouse",
+        "name": "Logitech B170",
         "desc": "M170 is ready when you are. Simply plug the receiver into a USB port on your device to start working in seconds. The small size and smooth cursor control make it great for tight workspaces and busy desks. Enjoy the world of wireless!",
         "extra-desc": "",
         "img": [
@@ -282,13 +289,16 @@ var product = [{
         "price": 30,
         "stock": "20",
         "brand": "Logitech",
-        "type": "Mouse"
+        "type": [
+            "Mouse",
+            "Wireless"
+        ]
     },
 
 
     {
         "id": 12,
-        "name": "Razer Deathadder Essential Gaming Mouse (RZ01-02540100-R3M1)",
+        "name": "Razer Deathadder Essential",
         "desc": "The #1 Best-Selling Gaming Peripherals Manufacturer in the US: Source - The NPD Group, Inc. U.S. Retail Tracking Service, Keyboards, Mice, PC Headset/Pc Microphone, Gaming Designed, based on dollar sales, 2017-2021. High-Precision 6,400 DPI Optical Sensor: Offers on-the-fly sensitivity adjustment through dedicated DPI buttons (reprogrammable) for gaming and creative work. Durable Mechanical Switches: Supports up to 10 million clicks, backed by a 2 year warranty. Ridged, Rubberized Scroll Wheel for Maximum Accuracy: Small, tactile bumps increases grip and allows for more controlled scrolling in high-stakes gaming situations. 5 Programmable Buttons: Allows for button remapping and assignment of complex macro functions through Razer Synapse",
         "extra-desc": "",
         "img": [
@@ -304,7 +314,7 @@ var product = [{
 
     {
         "id": 13,
-        "name": "MSI Interceptor DS B1 Gaming Mouse",
+        "name": "MSI Interceptor DS B1",
         "desc": "DS B1 ergonomic design to enhance the comfort of the user while using mouse and to help prevent serious injury from long-term daily computer use. Featuring side Anti-Slip grips, ensure the prefect grip and you never loss of mouse control again. DS B1 comes with eight 2 gram weights to suit variety of games. Customize the perfect weight for a perfect feel. Gold-plated USB connector with rubber sheathed cable.",
         "extra-desc": "",
         "img": [
@@ -315,7 +325,10 @@ var product = [{
         "price": 69,
         "stock": "15",
         "brand": "MSI",
-        "type": "Mouse"
+        "type": [
+            "Mouse",
+            "Gaming"
+        ]
     },
 
     {
@@ -441,7 +454,7 @@ var product = [{
 
     {
         "id": 17,
-        "name": "SteelSeries APEX 5 Hybrid Mechanical Gaming Keyboard",
+        "name": "SteelSeries APEX 5 Hybrid",
         "desc": "Hybrid blue mechanical gaming switches guaranteed for 20 million keypresses. OLED Smart Display displays profiles, game info, Discord messages, and more. Aircraft-grade aluminum alloy built for a lifetime of unbreakable durability. 16.8 million illumination colors per key for unmatched customization. Premium magnetic wrist rest provides full palm support and comfortable feel.",
         "extra-desc": "",
         "img": [
@@ -452,14 +465,18 @@ var product = [{
         "price": 459,
         "stock": "5",
         "brand": "SteelSeries",
-        "type": "Keyboard"
+        "type": [
+            "Keyboard",
+            "Mechanical",
+            "Gaming"
+        ]
     },
 
 
     {
         "id": 18,
-        "name": "MSI Vigor GK50 Low Profile Gaming Keyboard",
-        "desc": "",
+        "name": "MSI Vigor GK50",
+        "desc": "Low profile mechanical switches provide speed, accuracy, and endurance, Slim and lightweight design, The ergonomic high-low keycap design reduces strain and pain of hands and wrists, Brushed metal top plate and octagonal-shaped keycaps, Stunning per-key RGB lighting and various effects, Steady Gaming Base provides incredible feedback and anti-slip performance, Fine-tune detail settings with Dragon Center",
         "extra-desc": "",
         "img": [
             "./assets/img/product/Keyboard/MSI Vigor GK50 Low Profile Gaming Keyboard.jpg",
@@ -468,13 +485,16 @@ var product = [{
         "price": 469,
         "stock": "5",
         "brand": "MSI",
-        "type": "Keyboard"
+        "type": [
+            "Keyboard",
+            "Gaming"
+        ]
     },
 
 
     {
         "id": 19,
-        "name": "MSI Vigor GK50 Low Profile Gaming Keyboard",
+        "name": "MSI Vigor GK50",
         "desc": "The keyboard with ergonomic high-low keycap design keeps your hands and wrists in a comfortable and natural position that reduces strain and pain while typing or gaming for a long period. Slim and lightweight design complete the stylish appearance of VIGOR GK50 LOW PROFILE gaming keyboard.The brushed metal top plate and matte coating keycaps make VIGOR GK50 LOW PROFILE durable and will not leave fingerprints on the keycap’s surface easily.",
         "extra-desc": "",
         "img": [
@@ -484,12 +504,15 @@ var product = [{
         "price": 469,
         "stock": "5",
         "brand": "MSI",
-        "type": "Keyboard"
+        "type": [
+            "Keyboard",
+            "Gaming"
+        ]
     },
 
     {
         "id": 20,
-        "name": "Kingston HyperX Alloy Elite RGB Mechanical Gaming Keyboard",
+        "name": "Kingston HyperX Alloy Elite",
         "desc": "Unique light bar and dynamic lighting effects. CHERRY® MX mechanical keyswitches. Solid steel frame. Dedicated media buttons and large volume wheel. Quick access buttons for brightness, lighting effects and Game Mode. 100% Anti-ghosting and N-Key Rollover functionality. Comfortable, detachable wrist rest with soft-touch coating. 2 Year Warranty by Kingston Malaysia",
         "extra-desc": "",
         "img": [
@@ -500,12 +523,16 @@ var product = [{
         "price": 671,
         "stock": "3",
         "brand": "Kingston",
-        "type": "Keyboard"
+        "type": [
+            "Keyboard", 
+            "Mechanical",
+            "Gaming"
+        ]
     },
 
     {
         "id": 21,
-        "name": "Logitech K270 Wireless Keyboard (920-003057)",
+        "name": "Logitech K270",
         "desc": "The tiny wireless receiver stays in your laptop—there’s no need to unplug it when you move around—and connects your keyboard. Advanced 2.4 GHz wireless. So you can work or play in more places—like your comfy couch—the wireless connection virtually eliminates delays, dropouts and interference and gives you range of up to 10 meters (33 feet). You’ll enjoy less hassle with a battery life of up to 24 months. Auto standby helps you save energy. The things you do most are right at your fingertips with eight hot keys for instant access to the Internet, e-mail, play/pause, volume and more. Logitech Unifying receiver—the tiny, wireless receiver that stays in your laptop and lets you add devices as you need them.You can do more, faster with eight hot keys for instant access to music, e-mail and more. With intelligent power management, you can go years without replacing the batteries.",
         "extra-desc": "",
         "img": [
@@ -516,13 +543,16 @@ var product = [{
         "price": 82,
         "stock": "20",
         "brand": "Logitech",
-        "type": "Keyboard"
+        "type": [
+            "Keyboard",
+            "Wireless"
+        ]
     },
 
 
     {
         "id": 22,
-        "name": "Razer Blackwidow Elite Tournament-Grade Mechanical Keyboard",
+        "name": "Razer Blackwidow Elite Tournament-Grade",
         "desc": "Razer™ Mechanical Switches. Multi-function digital dial. Ergonomic wrist rest. Fully controllable keys. Up to 80 million keystrokes lifespan. Switch : Yellow / Green / Orange. 2 Years Warranty by Razer Malaysia",
         "extra-desc": "",
         "img": [
@@ -532,13 +562,16 @@ var product = [{
         "price": 628,
         "stock": "20",
         "brand": "Razer",
-        "type": "Keyboard"
+        "type": [
+            "Keyboard",
+            "Mechanical"
+        ]
     },
 
 
     {
         "id": 23,
-        "name": "MSI Optix MAG322CQR 32-inch WQHD Curved Gaming Monitor ",
+        "name": "MSI Optix MAG322CQR",
         "desc": "Witness your epic battle with the MSI Optix MAG322CQR curved gaming monitor. Equipped with the 2560 x 1440 WQHD resolution and ground-breaking 165Hz refresh rate panel, the MSI Optix MAG322CQR will capture every moment while you take down your opponents. With the FreeSync technology, MSI Optix MAG322CQR provides gamers with the captivating, tearing-free gaming experience. Want to enjoy your games like the way they are meant to be enjoyed? MSI Optix MAG322CQR curved gaming monitor is designed specifically for that purpose.",
         "extra-desc": "",
         "img": [
@@ -549,14 +582,17 @@ var product = [{
         "price": 1859,
         "stock": "5",
         "brand": "MSIr",
-        "type": "Monitor"
+        "type": [
+            "Monitor",
+            "Curved"
+        ]
     },
 
     {
         "id": 24,
-        "name": "HP X24ih 23.8-inch FHD 144Hz Gaming Monitor",
-        "desc": "",
-        "extra-desc": "Experience action-packed gaming in lifelike quality with the 23.8-inch diagonal monitor that’s built to deliver the most consistent color. Now, with an IPS panel, enjoy the superb picture and ultra-wide viewing angles, and immerse yourself in a world of winning. Plus, with a 1ms response time, 144 Hz refresh rate[1] and AMD FreeSync™ Premium[2] technology, you’ll always be one step ahead of your opponent with fluid and lag-free gameplay.",
+        "name": "HP X24ih 23.8-inch FHD 144Hz",
+        "desc": "Experience action-packed gaming in lifelike quality with the 23.8-inch diagonal monitor that’s built to deliver the most consistent color. Now, with an IPS panel, enjoy the superb picture and ultra-wide viewing angles, and immerse yourself in a world of winning. Plus, with a 1ms response time, 144 Hz refresh rate[1] and AMD FreeSync™ Premium[2] technology, you’ll always be one step ahead of your opponent with fluid and lag-free gameplay.",
+        "extra-desc": "",
         "img": [
             "./assets/img/product/Monitor/HP X24ih 23.8'' FHD 144Hz Gaming Monitor.jpg",
             "./assets/img/product/Monitor/HP X24ih 23.8'' FHD 144Hz Gaming Monitor02.jpg",
@@ -571,7 +607,7 @@ var product = [{
 
     {
         "id": 25,
-        "name": "Samsung LC24F390FHEXXM 23.5-inch Super Slim Curved Monitor",
+        "name": "Samsung LC24F390FHEXXM",
         "desc": "Discover a truly immersive viewing experience with the Samsung monitor curved more deeply than any other. Wrapping around your field of vision like your local iMax theater screen, the 1800R screen — with its 1800mm radius of arc for greater curvature — creates a wider field of view, enhances depth perception, and minimizes peripheral distractions to draw you deeper in to your content. So whether it is an online movie, a favourite TV show, or a pulse-racing game, Samsung’s deeper screen curve will fully immerse you in all your multi-media content",
         "extra-desc": "",
         "img": [
@@ -581,13 +617,17 @@ var product = [{
         "price": 449,
         "stock": "10",
         "brand": "Samsung",
-        "type": "Monitor"
+        "type": [
+            "Super Slim",
+            "Curved",
+            "Monitor"
+        ]
     },
 
 
     {
         "id": 26,
-        "name": "ASUS TUF VG249Q 23.8-inch FHD Gaming Monitor",
+        "name": "ASUS TUF VG249Q",
         "desc": "TUF Gaming VG249Q is a 23.8-inch, Full HD (1920x1080), IPS display with fast 144Hz refresh rate designed for professional gamers and fast paced gameplay.It also features 1ms MPRT response time and Adaptive-Sync technology, for extremely fluid gameplay without tearing and stuttering.",
         "extra-desc": "",
         "img": [
@@ -598,7 +638,11 @@ var product = [{
         "price": 809,
         "stock": "15",
         "brand": "Asus",
-        "type": "Monitor"
+        "type": [
+            "Monitor",
+            "Gaming",
+            "Curved"
+        ]
     }
 
 ]
