@@ -19,8 +19,6 @@ function InitializeSearchConfig () {
     search.addIndex('name');
     search.addIndex('brand');
     search.addIndex('type');
-    search.addIndex('desc');
-    search.addIndex('extra-desc');
 
   search.addDocuments(allProduct);//add search document
 };
