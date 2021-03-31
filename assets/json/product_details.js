@@ -334,7 +334,7 @@ var product = [{
     },
 
     {
-        "id": 5,
+        "id": 14,
         "name": "Asus S340MC",
         "desc": "ASUS S340MC is the family PC that makes light work of everyday tasks and makes multimedia come alive with latest-generation processors, fast discrete graphics, and the latest DDR4 memory. Its dual-storage design lets you access your files, photos, and multimedia libraries in seconds. Plus, S340MC has outstanding build quality inside and out, including an all-solid capacitor design to ensure years of durable and reliable computing.",
         "extra-desc": {
