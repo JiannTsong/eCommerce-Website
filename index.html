@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -17,6 +17,17 @@
     <!-- Argon CSS -->
     <link type="text/css" href="./assets/css/argon-design-system.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script>
+        // Make sure sw are supported
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker
+                    .register('../sw_cached_site.js')
+                    .then(reg => console.log('Service Worker: Registered (Pages)'))
+                    .catch(err => console.log(`Service Worker: Error: ${err}`));
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -25,7 +36,8 @@
             <a class="navbar-brand" href="./index.html">
                 <img src="./assets/logo/Stygixlogo2.png" style="height: 80px;" alt="Stygix Computer Shop">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default"
+                aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbar-default">
@@ -37,7 +49,9 @@
                             </a>
                         </div>
                         <div class="col-6 collapse-close">
-                            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+                            <button type="button" class="navbar-toggler" data-toggle="collapse"
+                                data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false"
+                                aria-label="Toggle navigation">
                                 <span></span>
                                 <span></span>
                             </button>
@@ -67,7 +81,8 @@
 
                 <ul class="navbar-nav ml-lg-auto">
                     <form class="form-inline my-2 my-lg-0" action="./search.html">
-                        <input class="search-form form-control mr-sm-2" style="border-radius: 3rem;width: 100%;" name="q" type="search" placeholder="Search" aria-label="Search">
+                        <input class="search-form form-control mr-sm-2" style="border-radius: 3rem;width: 100%;"
+                            name="q" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn search-btn" style="position: absolute; border-radius: 3rem;" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
@@ -76,7 +91,7 @@
                         <a href="./account.html" class="form-inline" id="user_icon">
                             <i class="fad fa-user-circle fa-3x clwhite"></i>
                         </a>
-                        <a href="#cart">
+                        <a href="./cart.html">
                             <i class="fad fa-shopping-cart clwhite" style="font-size: 2rem;padding-top: 20%;"></i>
                         </a>
                         <span class="badge" id="cart-count" style="font-size: 0.85rem;">0</span>
@@ -100,10 +115,12 @@
                 <img class="d-block w-100" src="./assets/img/the-new-wonderful-acerprimary-large.jpg" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="./assets/img/homepage-primary-remote-solutions-large.jpg" alt="Second slide">
+                <img class="d-block w-100" src="./assets/img/homepage-primary-remote-solutions-large.jpg"
+                    alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="./assets/img/mym-swift5challenge-homebanner-large.jpg" alt="Third slide">
+                <img class="d-block w-100" src="./assets/img/mym-swift5challenge-homebanner-large.jpg"
+                    alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#mainslider" role="button" data-slide="prev">
@@ -140,7 +157,7 @@
             <div>
                 <div>Email: <a href="mailto:stygix_shop@gmail.com">stygix_shop@gmail.com</a></div>
                 <div>
-                    Contact No: 
+                    Contact No:
                     <a href="https://api.whatsapp.com/send?phone=+6013-259 8496" target="_blank">
                         +6013-25984966
                     </a>
@@ -188,9 +205,12 @@
 
 
     <!--jQuery 3.6-->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!--Bootstrap 4.6.0-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
     <!-- Core -->
     <!--script src="./assets/js/core/jquery.min.js"></script>
     <script src="./assets/js/core/popper.min.js"></script>
@@ -212,4 +232,5 @@
     <script src="./assets/json/product_details.js"></script>
     <script src="./assets/js/product.js"></script>
     <script src="./assets/js/firebase/firebase.js"></script>
+
 </html>
