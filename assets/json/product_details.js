@@ -218,8 +218,8 @@ var product = [{
         "stock": 16,
         "brand": "Logitech",
         "type": [
-            "Mouse",
-            "Mice"
+            "Desktop",
+            "PC"
         ]
     },
 
