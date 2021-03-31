@@ -208,7 +208,10 @@ var product = [{
             "WARRANTY INFORMATION": "2-Year Limited Hardware Warranty"
         },
         "img": [
-            "./assets/img/product/HPProDesk400G6/g203-black-gallery-1.webp",
+            "./assets/img/product/HPProDesk400G6/7XJ53PA-1_T1566528640.webp",
+            "./assets/img/product/HPProDesk400G6/7XJ53PA-2_T1566528641.webp",
+            "./assets/img/product/HPProDesk400G6/7XJ53PA-3_T1566528642.webp",
+            "./assets/img/product/HPProDesk400G6/7XJ53PA-4_T1566528642.webp",
 
         ],
         "price": 109,
@@ -242,9 +245,9 @@ var product = [{
         "desc": "Logitech M190 is a full-size wireless mouse with a comfortable contoured design that follows the natural curve of medium to large hands. You’ll work wirelessly and move freely – from up to 10 meters1Wireless range and battery life may vary based on user, environmental and computing conditions. away – with virtually no delays or dropouts. You’ll get great quality with 18-month2Wireless range and battery life may vary based on user, environmental and computing conditions. battery life, precision tracking, and line-by-line scrolling at an affordable price.",
         "extra-desc": "",
         "img": [
-            "./assets/img/product/Mouse/Logitech M190 Full-Size Wireless Mouse.png",
-            "./assets/img/product/Mouse/Logitech M190 Full-Size Wireless Mouse02.png",
-            "./assets/img/product/Mouse/Logitech M190 Full-Size Wireless Mouse03.png"
+            "./assets/img/product/Mouse/Logitech M190 Full-Size Wireless Mouse.jpg",
+            "./assets/img/product/Mouse/Logitech M190 Full-Size Wireless Mouse02.jpg",
+            "./assets/img/product/Mouse/Logitech M190 Full-Size Wireless Mouse03.jpg"
         ],
         "price": 55,
         "stock": "15",
@@ -258,8 +261,8 @@ var product = [{
         "desc": "This mouse is designed to adapt to all hand sizes, with different grips including claw, palm and tip. With built-in pivot hinges you can expect copious clean, consistent takedowns, er, clicks. Play all day for days with a power-saving system that makes the battery last up to 70 hours. The mouse is durable, easy to recharge and comes with a compatible Qi charging mousepad. ",
         "extra-desc": "",
         "img": [
-            "./assets/img/product/Mouse/HP OMEN Photon Wireless Gaming Mouse.png",
-            "./assets/img/product/Mouse/HP OMEN Photon Wireless Gaming Mouse02.png"
+            "./assets/img/product/Mouse/HP OMEN Photon Wireless Gaming Mouse.jpg",
+            "./assets/img/product/Mouse/HP OMEN Photon Wireless Gaming Mouse02.jpg"
         ],
         "price": 359,
         "stock": "15",
@@ -273,8 +276,8 @@ var product = [{
         "desc": "M170 is ready when you are. Simply plug the receiver into a USB port on your device to start working in seconds. The small size and smooth cursor control make it great for tight workspaces and busy desks. Enjoy the world of wireless!",
         "extra-desc": "",
         "img": [
-            "./assets/img/product/Mouse/Logitech B170 Wireless Mouse.png",
-            "./assets/img/product/Mouse/Logitech B170 Wireless Mouse02.png"
+            "./assets/img/product/Mouse/Logitech B170 Wireless Mouse.jpg",
+            "./assets/img/product/Mouse/Logitech B170 Wireless Mouse02.jpg"
         ],
         "price": 30,
         "stock": "20",
@@ -289,9 +292,9 @@ var product = [{
         "desc": "The #1 Best-Selling Gaming Peripherals Manufacturer in the US: Source - The NPD Group, Inc. U.S. Retail Tracking Service, Keyboards, Mice, PC Headset/Pc Microphone, Gaming Designed, based on dollar sales, 2017-2021. High-Precision 6,400 DPI Optical Sensor: Offers on-the-fly sensitivity adjustment through dedicated DPI buttons (reprogrammable) for gaming and creative work. Durable Mechanical Switches: Supports up to 10 million clicks, backed by a 2 year warranty. Ridged, Rubberized Scroll Wheel for Maximum Accuracy: Small, tactile bumps increases grip and allows for more controlled scrolling in high-stakes gaming situations. 5 Programmable Buttons: Allows for button remapping and assignment of complex macro functions through Razer Synapse",
         "extra-desc": "",
         "img": [
-            "./assets/img/product/Mouse/Razer Deathadder Essential Gaming Mouse (RZ01-02540100-R3M1).png",
-            "./assets/img/product/Mouse/Razer Deathadder Essential Gaming Mouse (RZ01-02540100-R3M1)02.png",
-            "./assets/img/product/Mouse/Razer Deathadder Essential Gaming Mouse (RZ01-02540100-R3M1)03.png"
+            "./assets/img/product/Mouse/Razer Deathadder Essential Gaming Mouse (RZ01-02540100-R3M1).jpg",
+            "./assets/img/product/Mouse/Razer Deathadder Essential Gaming Mouse (RZ01-02540100-R3M1)02.jpg",
+            "./assets/img/product/Mouse/Razer Deathadder Essential Gaming Mouse (RZ01-02540100-R3M1)03.jpg"
         ],
         "price": 129,
         "stock": "15",
@@ -305,9 +308,9 @@ var product = [{
         "desc": "DS B1 ergonomic design to enhance the comfort of the user while using mouse and to help prevent serious injury from long-term daily computer use. Featuring side Anti-Slip grips, ensure the prefect grip and you never loss of mouse control again. DS B1 comes with eight 2 gram weights to suit variety of games. Customize the perfect weight for a perfect feel. Gold-plated USB connector with rubber sheathed cable.",
         "extra-desc": "",
         "img": [
-            "./assets/img/product/Mouse/MSI Interceptor DS B1 Gaming Mouse.png",
-            "./assets/img/product/Mouse/MSI Interceptor DS B1 Gaming Mouse02.png",
-            "./assets/img/product/Mouse/MSI Interceptor DS B1 Gaming Mouse.png"
+            "./assets/img/product/Mouse/MSI Interceptor DS B1 Gaming Mouse.jpg",
+            "./assets/img/product/Mouse/MSI Interceptor DS B1 Gaming Mouse02.jpg",
+            "./assets/img/product/Mouse/MSI Interceptor DS B1 Gaming Mouse.jpg"
         ],
         "price": 69,
         "stock": "15",
@@ -321,8 +324,8 @@ var product = [{
         "desc": "The Pulsefire Surge RGB is a full-featured gaming mouse that includes five customizable native DPI settings that support up to 16,000 DPI. Onboard memory allows for customizable lighting and effects with up to three profiles for on-the-go gaming. HyperX NGenuity software offers LED lighting and RGB customization of the 360-degree light ring, DPI button and HyperX logo. In addition, NGenuity advanced tools include personalized sensor performance, macros and DPI settings.",
         "extra-desc": "",
         "img": [
-            "./assets/img/product/Mouse/Logitech B170 Wireless Mouse.png",
-            "./assets/img/product/Mouse/Logitech B170 Wireless Mouse02.png"
+            "./assets/img/product/Mouse/Logitech B170 Wireless Mouse.jpg",
+            "./assets/img/product/Mouse/Logitech B170 Wireless Mouse02.jpg"
         ],
         "price": 270,
         "stock": "5",
