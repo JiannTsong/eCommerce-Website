@@ -162,6 +162,36 @@ var product = [
         "stock" : 8,
         "brand" : "Asus",
         "type" : "Laptop"
+    },
+
+    {
+        "id" : 6,
+        "name" : "Logitech G102 LIGHTSYNC",
+        "desc" : "Make the most of your game time with G102 gaming mouse, featuring LIGHTSYNC technology, a gaming-grade sensor and a classic 6-button design. Light up your game … and your desk.",
+        "extra-desc": {
+            "PHYSICAL SPECS" : "Height: 116.6 mm, Width: 62.15 mm, Depth: 38.2 mm, Weight: 85 g, (mouse only), Cable Length: 2.1 m",
+            "TECHNICAL SPECIFICATIONS" : "LIGHTSYNC RGB lighting, 6 programmable buttons, Resolution: 200 – 8,000 DPI",
+            "RESPONSIVENESS" : "USB data format: 16 bits/axis, USB report rate: 1000 Hz (1ms), Microprocessor: 32-bit ARM",
+            "WARRANTY INFORMATION" : "2-Year Limited Hardware Warranty"
+        },
+        "img" : [
+                "./assets/img/product/logitech_g102/g203-black-gallery-1.webp",
+                "./assets/img/product/logitech_g102/g203-black-gallery-2.webp",
+                "./assets/img/product/logitech_g102/g203-black-gallery-3.webp",
+                "./assets/img/product/logitech_g102/g203-black-gallery-4.webp",
+                "./assets/img/product/logitech_g102/g102-black-gallery-5.webp"
+
+        ],
+        "price" : 109,
+        "stock" : 16,
+        "brand" : "Logitech",
+        "type" : [
+            "Mouse",
+            "Mice"
+        ]
     }
 
 ]
+
+
+logitech_g102
