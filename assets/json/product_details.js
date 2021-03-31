@@ -391,7 +391,7 @@ var product = [{
             "./assets/img/product/ASUS_VivoAiOV222/jbxxpzopapkgxdi2_setting_xxx_0_90_end_800.png"
 
         ],
-        "price": 2299,
+        "price": 2399,
         "stock": 8,
         "brand": "Asus",
         "type": [
