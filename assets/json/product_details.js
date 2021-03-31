@@ -9,7 +9,10 @@ var product = [
             "Graphics" : "Intel® Iris Xe Graphics",
             "Screen" : 'Full HD 1920 x 1080 14" LCD CineCrystal (Glare) In-plane Switching (IPS) Technology',
             "Memory" : "8GB LPDDR4X",
-            "Storage" : "512GB PCIe SSD"
+            "Storage" : "512GB PCIe SSD",
+            "Network & Communication" : "IEEE 802.11a/b/g/n/ac , Bluetooth 5.0",
+            "Interfaces" : "1x HDMI, 2 x USB3.2 Gen 1 Type A, 1 x USB3.2 Gen 2 Type C",
+            "Battery Information" : "4-cell Lithium Ion (Li-Ion) 15 Hour Run Time"
         },
         "img" : [
                 "./assets/img/product/swift5/swift_5_SF514-54.png",
@@ -66,7 +69,7 @@ var product = [
         "brand" : "Acer",
         "type" : [
             "Monitor",
-            "Gamming Monitor"
+            "Gaming Monitor"
         ]
     },
 
@@ -89,7 +92,7 @@ var product = [
         "brand" : "",
         "type" : [
             "Laptop",
-            "Gamming Laptop"
+            "Gaming Laptop"
         ]
     },
 
