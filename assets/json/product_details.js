@@ -341,7 +341,7 @@ var product = [{
             "Color": "Black",
             "Operating System": "Windows 10 Home",
             "Processor": "Intel® Core™ i5-8400 Processor 2.8 GHz (9M Cache, up to 4.0 GHz, 6 cores)",
-            "Graphics": "AMD Radeon™ Graphics",
+            "Graphics": "Intel® UHD 630",
             "Memory": "4GB DDR4 U-DIMM, Memory max up to:32GB",
             "Storage": '1TB SATA 7200RPM 3.5" HDD',
             "Network & Communication": "Wi-Fi 5 802.11ac)+Bluetooth 4.1 (Dual band) 1*1",
