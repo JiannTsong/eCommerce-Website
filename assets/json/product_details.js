@@ -29,7 +29,8 @@ var product = [
         "brand" : "Acer",
         "type" : [
             "Laptop",
-            "Notebook"
+            "Notebook",
+            "Ultra Slim"
         ]
     },
 
@@ -63,7 +64,8 @@ var product = [
         "brand" : "Acer",
         "type" : [
             "Laptop",
-            "Notebook"
+            "Notebook",
+            "Ultra Slim"
         ]
     },
 
@@ -137,15 +139,29 @@ var product = [
         "id" : 5,
         "name" : "Asus ZenBook 14 UM425",
         "desc" : "The incredibly compact, thin and light ZenBook 14 features AMD Ryzen™ 4000 Series Mobile Processors for powerful all-round performance, and includes HDMI, USB-C®, and USB Type-A ports, and a microSD card reader for unrivaled versatility. With its beautifully crafted classic design and travel-friendly features, ZenBook 14 will make your on-the-go lifestyle more effortless than ever.",
-        "extra-desc": {},
+        "extra-desc": {
+            "Color" : "Pine Grey",
+            "Operating System" : "Windows 10 Home",
+            "Processor" : "AMD Ryzen™ 5 4500U Processor 2.3 GHz (8M Cache, up to 4.0 GHz, 6 cores)",
+            "Graphics" : "AMD Radeon™ Graphics",
+            "Screen" : '14.0-inch, FHD (1920 x 1080) 16:9, IPS-level Panel, Anti-glare display, LED Backlit, 250nits, sRGB: 100%, Screen-to-body ratio: 90%',
+            "Memory" : "8GB LPDDR4X on board",
+            "Storage" : "512GB M.2 NVMe™ PCIe® 3.0 SSD",
+            "Network & Communication" : "Wi-Fi 6(802.11ax)+Bluetooth 5.0 (Dual band) 2*2",
+            "Interfaces" : "1x HDMI, 1 x USB3.1 Gen 2 Type A, 2 x USB3.2 Gen 2 Type C",
+            "Battery Information" : "67WHrs, 4S1P, 4-cell Li-ion",
+            "Power Supply" : "TYPE-C, 65W AC Adapter, Output: 20V DC, 3.25A, 65W, Input: 100-240V AC 50/60GHz universal"
+        },
         "img" : [
-                "./assets/img/product/Predator_Helios_700/Predator-Helios-700-PH717-71-preview.png",
-                ""
+                "./assets/img/product/zenbook-14-um425/model.png",
+                "./assets/img/product/zenbook-14-um425/1.png",
+                "./assets/img/product/zenbook-14-um425/2.png",
+                "./assets/img/product/zenbook-14-um425/3.png"
         ],
-        "price" : 2999,
+        "price" : 2699,
         "stock" : 8,
-        "brand" : "",
-        "type" : "Monitor"
+        "brand" : "Asus",
+        "type" : "Laptop"
     }
 
 ]
