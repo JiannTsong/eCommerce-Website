@@ -334,6 +334,3 @@ var product = [{
     }
 
 ]
-
-
-logitech_g102
