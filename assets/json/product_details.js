@@ -6,7 +6,12 @@ var product = [
         "extra-desc": "",
         "img" : [
                 "./assets/img/product/swift5/swift_5_SF514-54.png",
-                "./assets/img/product/"
+                "./assets/img/product/Acer-Swift-5_SF514-55_FP_Green_gallery_01.png",
+                "./assets/img/product/Acer-Swift-5_SF514-55_FP_Green_gallery_02.png",
+                "./assets/img/product/Acer-Swift-5_SF514-55_FP_Green_gallery_03.png",
+                "./assets/img/product/Acer-Swift-5_SF514-55_FP_Green_gallery_04.png",
+                "./assets/img/product/Acer-Swift-5_SF514-55_FP_Green_gallery_05.png",
+                "./assets/img/product/Acer-Swift-5_SF514-55_FP_Green_gallery_06.png"
         ],
         "price" : 2999,
         "stock" : "5",
