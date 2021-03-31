@@ -168,17 +168,10 @@ var product = [{
         "name": "Logitech G102 LIGHTSYNC",
         "desc": "Make the most of your game time with G102 gaming mouse, featuring LIGHTSYNC technology, a gaming-grade sensor and a classic 6-button design. Light up your game … and your desk.",
         "extra-desc": {
-            "Operating System": "Windows 10 Pro",
-            "Processor": "	Intel® Core™ i5-9500 with Intel® UHD Graphics 630 (3 GHz base frequency, up to 4.4 GHz with Intel® Turbo Boost Technology, 9 MB cache, 6 cores)",
-            "Graphics": "Intel® UHD Graphics 630",
-            "Memory": "4 GB DDR4-2666 SDRAM (1 X 4 GB)",
-            "Storage": "1 TB 7200 rpm SATA HDD",
-            "I/O Ports": "1 audio-in; 1 audio-out; 1 DisplayPort™ 1.2; 1 power connector; 1 RJ-45; 1 VGA; 2 USB 3.1 Gen 1; 4 USB 2.0",
-            "Expansion slots": "1 M.2 2230; 1 M.2 2230/2280; 1 PCIe 3 x16; 2 PCIe 3 x1; One 4-in-1 media card reader",
-            "Keyboard": "HP USB Wired Keyboard",
-            "Pointing device": "	Universal USB wired optical mouse",
-            "Power Supply": "180 W internal power supply, up to 90% efficiency, active PFC",
-            "Weight": "5.47KG"
+            "PHYSICAL SPECS": "Height: 116.6 mm, Width: 62.15 mm, Depth: 38.2 mm, Weight: 85 g, (mouse only), Cable Length: 2.1 m",
+            "TECHNICAL SPECIFICATIONS": "LIGHTSYNC RGB lighting, 6 programmable buttons, Resolution: 200 – 8,000 DPI",
+            "RESPONSIVENESS": "USB data format: 16 bits/axis, USB report rate: 1000 Hz (1ms), Microprocessor: 32-bit ARM",
+            "WARRANTY INFORMATION": "2-Year Limited Hardware Warranty"
         },
         "img": [
             "./assets/img/product/logitech_g102/g203-black-gallery-1.webp",
@@ -202,10 +195,17 @@ var product = [{
         "name": "HP ProDesk 400 G6",
         "desc": "HP Business laptops and desktops are built for security and collaboration. With Military Grade (Mil) Specs and the latest security, it's the Business device your business needs. Designed to fit the modern workspace, the stylish and reliable HP ProDesk 400 MT is equipped with strong security features and performance that’s scalable to grow with your business.",
         "extra-desc": {
-            "PHYSICAL SPECS": "Height: 116.6 mm, Width: 62.15 mm, Depth: 38.2 mm, Weight: 85 g, (mouse only), Cable Length: 2.1 m",
-            "TECHNICAL SPECIFICATIONS": "LIGHTSYNC RGB lighting, 6 programmable buttons, Resolution: 200 – 8,000 DPI",
-            "RESPONSIVENESS": "USB data format: 16 bits/axis, USB report rate: 1000 Hz (1ms), Microprocessor: 32-bit ARM",
-            "WARRANTY INFORMATION": "2-Year Limited Hardware Warranty"
+            "Operating System" : "Windows 10 Pro",
+            "Processor" : "	Intel® Core™ i5-9500 with Intel® UHD Graphics 630 (3 GHz base frequency, up to 4.4 GHz with Intel® Turbo Boost Technology, 9 MB cache, 6 cores)",
+            "Graphics" : "Intel® UHD Graphics 630",
+            "Memory" : "4 GB DDR4-2666 SDRAM (1 X 4 GB)",
+            "Storage" : "1 TB 7200 rpm SATA HDD",
+            "I/O Ports" : "1 audio-in; 1 audio-out; 1 DisplayPort™ 1.2; 1 power connector; 1 RJ-45; 1 VGA; 2 USB 3.1 Gen 1; 4 USB 2.0",
+            "Expansion slots" : "1 M.2 2230; 1 M.2 2230/2280; 1 PCIe 3 x16; 2 PCIe 3 x1; One 4-in-1 media card reader",
+            "Keyboard" : "HP USB Wired Keyboard",
+            "Pointing device" : "	Universal USB wired optical mouse",
+            "Power Supply" : "180 W internal power supply, up to 90% efficiency, active PFC",
+            "Weight" : "5.47KG"
         },
         "img": [
             "./assets/img/product/HPProDesk400G6/7XJ53PA-1_T1566528640.webp",
@@ -331,6 +331,36 @@ var product = [{
         "stock": "5",
         "brand": "Kingston",
         "type": "Mouse"
+    },
+
+    {
+        "id": 5,
+        "name": "Asus S340MC",
+        "desc": "ASUS S340MC is the family PC that makes light work of everyday tasks and makes multimedia come alive with latest-generation processors, fast discrete graphics, and the latest DDR4 memory. Its dual-storage design lets you access your files, photos, and multimedia libraries in seconds. Plus, S340MC has outstanding build quality inside and out, including an all-solid capacitor design to ensure years of durable and reliable computing.",
+        "extra-desc": {
+            "Color": "Black",
+            "Operating System": "Windows 10 Home",
+            "Processor": "Intel® Core™ i5-8400 Processor 2.8 GHz (9M Cache, up to 4.0 GHz, 6 cores)",
+            "Graphics": "AMD Radeon™ Graphics",
+            "Memory": "4GB DDR4 U-DIMM, Memory max up to:32GB",
+            "Storage": '1TB SATA 7200RPM 3.5" HDD',
+            "Network & Communication": "Wi-Fi 5 802.11ac)+Bluetooth 4.1 (Dual band) 1*1",
+            "Interfaces": "1x VGA, 1x DVI-D1x HDMI, 2 x USB3.1 Gen 2 Type A, 2 x USB2.0 Type A",
+            "Power Supply": "160W power supply (peak 200W)",
+            "Dimensions" : '16.00 x 34.70 x 35.50 cm (6.30" x 13.66" x 13.98")'
+        },
+        "img": [
+            "./assets/img/product/ASUS_S340MC/lCjVDJa8lpZFSJhf_setting_xxx_0_90_end_800.png",
+            "./assets/img/product/ASUS_S340MC/Tpgc5USKgdfTAVSe_setting_xxx_0_90_end_800.png",
+            "./assets/img/product/ASUS_S340MC/RPokogbgddieLs0z_setting_xxx_0_90_end_800.png",
+            "./assets/img/product/ASUS_S340MC/ZRdfppBJVuw1ivqL_setting_xxx_0_90_end_800.png",
+            "./assets/img/product/ASUS_S340MC/9OSp3fj3g3coMNq2_setting_xxx_0_90_end_800.png"
+
+        ],
+        "price": 2699,
+        "stock": 8,
+        "brand": "Asus",
+        "type": "Laptop"
     }
 
 ]
