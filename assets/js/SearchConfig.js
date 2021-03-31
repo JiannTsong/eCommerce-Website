@@ -24,21 +24,21 @@ function InitializeSearchConfig () {
 };
 
 //output whatever things pass from search function
-function updateResult (product) {
+function updateResult (products) {
   $("#result").html('');//reload the result content to empty before add new search result
 
   if(!(searchInput == null || searchInput == "")){
     var tokens = search.tokenizer.tokenize(searchInput);
   }
 
-  for (var i = 0; i < product.length; i++) {
+  for (let i = 0; i < products.length; i++) {
 
     $("#result").append('<div class="card product">' +
-                '<img src="' + product[i].img[0] + '" alt="' + product[i].name + '">' +
+                '<img src="' + products[i].img[0] + '" alt="' + products[i].name + '">' +
                 '<div class="card-body">' +
-                '<h5>' + product[i].name + '</h5>' + ' RM' + product[i].price +
-                '<p class="card-text">' + product[i].desc.substring(0, 105) + '...' + '</p>' +
-                '<a href="' + '/product.html?id=' + (i+1) + '" class="btn btn-info" target="_blank">View More</a>' +
+                '<h5>' + products[i].name + '</h5>' + ' RM' + products[i].price +
+                '<p class="card-text">' + products[i].desc.substring(0, 105) + '...' + '</p>' +
+                '<a href="' + './product.html?id=' + (i+1) + '" class="btn btn-info" target="_blank">View More</a>' +
                 '</div></div>');
   }
 };
@@ -56,7 +56,7 @@ function searchExecute () {
   }
 };
 
-
+/*
 //get json file
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
@@ -75,3 +75,13 @@ xmlhttp.onreadystatechange = function() {
 }
 xmlhttp.open('GET', './assets/json/product.json', true);
 xmlhttp.send();
+*/
+
+    allProduct = product;
+    InitializeSearchConfig();
+    updateResult(allProduct);
+
+    if(!(searchInput == null || searchInput == "")){
+      $("#search").val(searchInput);
+      searchExecute();
+}
