@@ -7,8 +7,6 @@ let day = d.getDate();
 let sday = day.toString(); 
 let time = syr.concat(smon, sday);
 
-let firebase = '<script src="./assets/js/firebase/firebase.js?'+time+'"></script>';
 let SearchConfig = '<script type="text/javascript" src="./assets/js/plugins/SearchConfig.js?'+time+'"></script>';
 
-$("body").append(firebase);
 $("body").append(SearchConfig);

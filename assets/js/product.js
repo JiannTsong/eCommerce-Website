@@ -1,5 +1,5 @@
 $(function () {
-    let product = "/assets/json/product.json";
+    let product = "./assets/json/product.json";
 
     $.getJSON(product).done(function (data) {
         for (let i = 0; i < data.product.length; i++) {
