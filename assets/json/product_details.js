@@ -1,6 +1,6 @@
 var product = [
     {
-        "id" : "1",
+        "id" : 1,
         "name" : "Acer Swift 5",
         "desc" : "Today’s environment calls for a new kind of laptop with fully-featured antimicrobial4 solutions (the chassis and Antimicrobial Corning® Gorilla® Glass4 touch display). At around 1 kg1, 14.951 mm thin and an incredible 90% screen-to-body ratio, it also has the latest 11th Gen Intel® Core™ Processors1, powerful NVIDIA® GeForce® MX350 graphics1 and up to 17 hours of battery1.",
         "extra-desc": "",
@@ -18,7 +18,7 @@ var product = [
     },
 
     {
-        "id" : "2",
+        "id" : 2,
         "name" : "Acer Swift 7",
         "desc" : "Elegance and efficiency find the perfect balance in the Swift 7, starting with its incredibly thin 9.95mm chassis. Looks and performance combine in a laptop that sets new standards in compact design. Savor the visuals of a 14” display in a smaller footprint thanks to this minimalist approach.",
         "extra-desc": "",
@@ -41,7 +41,7 @@ var product = [
     },
 
     {
-        "id" : "3",
+        "id" : 3,
         "name" : "Acer KG1 Monitor 27 Inch",
         "desc" : "Screen: 68.6 cm (27) Full HD (1920 x 1080) 75 Hz Panel Technology: IPS (178°x178°) FreeSync Inputs: HDMI, VGA Response Time: 1 ms Brightness: 250 cd/m²",
         "extra-desc": "",
@@ -59,7 +59,7 @@ var product = [
     },
 
     {
-        "id" : "4",
+        "id" : 4,
         "name" : "Acer Predator Helios 700",
         "desc" : "Command complete and utter dominance with the HyperDrift keyboard, unleashed overclocking potential and the forging of the PowerGem1 with the 10th Gen Intel® Core™ i9 Processor1 and GeForce® RTX 20801 SUPER™ graphics1.",
         "extra-desc": "",
@@ -82,7 +82,7 @@ var product = [
     },
 
     {
-        "id" : "5",
+        "id" : 5,
         "name" : "Acer Predator Helios 700",
         "desc" : "Command complete and utter dominance with the HyperDrift keyboard, unleashed overclocking potential and the forging of the PowerGem1 with the 10th Gen Intel® Core™ i9 Processor1 and GeForce® RTX 20801 SUPER™ graphics1.",
         "extra-desc": "",
