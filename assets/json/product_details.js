@@ -44,7 +44,7 @@ var product = [
             "Screen" : 'Full HD 1920 x 1080 14" LCD CineCrystal (Glare) In-plane Switching (IPS) Technology',
             "Memory" : "8GB LPDDR4X",
             "Storage" : "1TB PCIe SSD",
-            "Network & Communication" : "IEEE 802.11a/b/g/n/ac/ax , Bluetooth 5.2",
+            "Network & Communication" : "IEEE 802.11a/b/g/n/ac/ax , Bluetooth 5.0",
             "Interfaces" : "1x HDMI, 2 x USB3.2 Gen 1 Type A, 1 x USB3.2 Gen 2 Type C",
             "Battery Information" : "4-cell Lithium Ion (Li-Ion) 15 Hour Run Time",
             "Maximum Power Supply Wattage" : "65W"
@@ -70,11 +70,25 @@ var product = [
     {
         "id" : 3,
         "name" : "Acer KG1 Monitor 27 Inch",
-        "desc" : "Screen: 68.6 cm (27) Full HD (1920 x 1080) 75 Hz Panel Technology: IPS (178°x178°) FreeSync Inputs: HDMI, VGA Response Time: 1 ms Brightness: 250 cd/m²",
-        "extra-desc": "",
+        "desc" : "Take in the full view of the display with its ZeroFrame™1 design atop the sharply-cut three-pronged stand. Screen: 68.6 cm (27) Full HD (1920 x 1080) 75 Hz Panel Technology: IPS (178°x178°) FreeSync Inputs: HDMI, VGA Response Time: 1 ms Brightness: 250 cd/m²",
+        "extra-desc": {
+            "Screen Size" : "27 Inch",
+            "Maximum Resolution" : "(Full HD)1920 x 1080@75 Hz",
+            "Aspect Ratio" : "16:9",
+            "Response Time" : "1 ms GTG",
+            "Color Supported" : "16.7 Million",
+            "Brightness" : "300 cd/m²",
+            "Backlight" : "LED",
+            "Ports & Connectors" : "VGA, 2x HDMI®-in",
+            "Viewing Angles" : "170° Horizontal, 160° Vertical",
+            "Power" : "18.50 W (Power On)"
+        },
         "img" : [
-                "./assets/img/product/VG0 series-VG220Q-VG240Y-VG250Q-VG270-VG270S_gallery-03.png",
-                "./assets/img/product/Monitor_KG1.png"
+                "./assets/img/product/kg1_monitor/Monitor_KG1.png",
+                "./assets/img/product/kg1_monitor/KG1_gallery_red_01.png",
+                "./assets/img/product/kg1_monitor/KG1_gallery_red_02.png",
+                "./assets/img/product/kg1_monitor/KG1_gallery_red_03.png",
+                "./assets/img/product/kg1_monitor/KG1_gallery_red_04.png"
         ],
         "price" : 799,
         "stock" : 6,
@@ -88,8 +102,19 @@ var product = [
     {
         "id" : 4,
         "name" : "Acer Predator Helios 700",
-        "desc" : "Command complete and utter dominance with the HyperDrift keyboard, unleashed overclocking potential and the forging of the PowerGem1 with the 10th Gen Intel® Core™ i9 Processor1 and GeForce® RTX 20801 SUPER™ graphics1.",
-        "extra-desc": "",
+        "desc" : "Command complete and utter dominance with the HyperDrift keyboard, unleashed overclocking potential and the forging of the PowerGem with the 10th Gen Intel® Core™ i9 Processor and GeForce® RTX 20801 SUPER™ graphics.",
+        "extra-desc": {
+            "Operating System" : "Windows 10 Home",
+            "Processor" : "Intel® Core™ i9 10980HK 2.40 GHz Quad-core (8 Core™)",
+            "Graphics" : "NVIDIA® GeForce® RTX 2080 SUPER™",
+            "Screen" : 'Full HD 1920 x 1080 17.3" 144Hz LCD ComfyView (Matte) In-plane Switching (IPS) Technology',
+            "Memory" : "32GB DDR4 SDRAM",
+            "Storage" : "1TB SATA SSD",
+            "Network & Communication" : "2.5 Gigabit Ethernet, IEEE 802.11a/b/g/n/ac/ax , Bluetooth 5.0",
+            "Interfaces" : "1x Display Port 1x HDMI, 3 x USB3.2 Gen 2 Type A, 2 x USB3.2 Gen 2 Type C",
+            "Battery Information" : "4-cell Lithium Ion (Li-Ion)",
+            "Maximum Power Supply Wattage" : "330W"
+        },
         "img" : [
                 "./assets/img/product/Predator_Helios_700/Predator-Helios-700-PH717-71-preview.png",
                 "./assets/img/product/Predator_Helios_700/Predator-Helios-700_PH717-72_RGB_gallery_01.png",
@@ -101,7 +126,7 @@ var product = [
         ],
         "price" : 17999,
         "stock" : 5,
-        "brand" : "",
+        "brand" : "Acer",
         "type" : [
             "Laptop",
             "Gaming Laptop"
@@ -110,9 +135,9 @@ var product = [
 
     {
         "id" : 5,
-        "name" : "Acer Predator Helios 700",
-        "desc" : "Command complete and utter dominance with the HyperDrift keyboard, unleashed overclocking potential and the forging of the PowerGem1 with the 10th Gen Intel® Core™ i9 Processor1 and GeForce® RTX 20801 SUPER™ graphics1.",
-        "extra-desc": "",
+        "name" : "Asus ZenBook 14 UM425",
+        "desc" : "The incredibly compact, thin and light ZenBook 14 features AMD Ryzen™ 4000 Series Mobile Processors for powerful all-round performance, and includes HDMI, USB-C®, and USB Type-A ports, and a microSD card reader for unrivaled versatility. With its beautifully crafted classic design and travel-friendly features, ZenBook 14 will make your on-the-go lifestyle more effortless than ever.",
+        "extra-desc": {},
         "img" : [
                 "./assets/img/product/Predator_Helios_700/Predator-Helios-700-PH717-71-preview.png",
                 ""
