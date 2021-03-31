@@ -195,17 +195,17 @@ var product = [{
         "name": "HP ProDesk 400 G6",
         "desc": "HP Business laptops and desktops are built for security and collaboration. With Military Grade (Mil) Specs and the latest security, it's the Business device your business needs. Designed to fit the modern workspace, the stylish and reliable HP ProDesk 400 MT is equipped with strong security features and performance that’s scalable to grow with your business.",
         "extra-desc": {
-            "Operating System" : "Windows 10 Pro",
-            "Processor" : "	Intel® Core™ i5-9500 with Intel® UHD Graphics 630 (3 GHz base frequency, up to 4.4 GHz with Intel® Turbo Boost Technology, 9 MB cache, 6 cores)",
-            "Graphics" : "Intel® UHD Graphics 630",
-            "Memory" : "4 GB DDR4-2666 SDRAM (1 X 4 GB)",
-            "Storage" : "1 TB 7200 rpm SATA HDD",
-            "I/O Ports" : "1 audio-in; 1 audio-out; 1 DisplayPort™ 1.2; 1 power connector; 1 RJ-45; 1 VGA; 2 USB 3.1 Gen 1; 4 USB 2.0",
-            "Expansion slots" : "1 M.2 2230; 1 M.2 2230/2280; 1 PCIe 3 x16; 2 PCIe 3 x1; One 4-in-1 media card reader",
-            "Keyboard" : "HP USB Wired Keyboard",
-            "Pointing device" : "	Universal USB wired optical mouse",
-            "Power Supply" : "180 W internal power supply, up to 90% efficiency, active PFC",
-            "Weight" : "5.47KG"
+            "Operating System": "Windows 10 Pro",
+            "Processor": "	Intel® Core™ i5-9500 with Intel® UHD Graphics 630 (3 GHz base frequency, up to 4.4 GHz with Intel® Turbo Boost Technology, 9 MB cache, 6 cores)",
+            "Graphics": "Intel® UHD Graphics 630",
+            "Memory": "4 GB DDR4-2666 SDRAM (1 X 4 GB)",
+            "Storage": "1 TB 7200 rpm SATA HDD",
+            "I/O Ports": "1 audio-in; 1 audio-out; 1 DisplayPort™ 1.2; 1 power connector; 1 RJ-45; 1 VGA; 2 USB 3.1 Gen 1; 4 USB 2.0",
+            "Expansion slots": "1 M.2 2230; 1 M.2 2230/2280; 1 PCIe 3 x16; 2 PCIe 3 x1; One 4-in-1 media card reader",
+            "Keyboard": "HP USB Wired Keyboard",
+            "Pointing device": "	Universal USB wired optical mouse",
+            "Power Supply": "180 W internal power supply, up to 90% efficiency, active PFC",
+            "Weight": "5.47KG"
         },
         "img": [
             "./assets/img/product/HPProDesk400G6/7XJ53PA-1_T1566528640.webp",
@@ -347,7 +347,7 @@ var product = [{
             "Network & Communication": "Wi-Fi 5 802.11ac)+Bluetooth 4.1 (Dual band) 1*1",
             "Interfaces": "1x VGA, 1x DVI-D1x HDMI, 2 x USB3.1 Gen 2 Type A, 2 x USB2.0 Type A",
             "Power Supply": "160W power supply (peak 200W)",
-            "Dimensions" : '16.00 x 34.70 x 35.50 cm (6.30" x 13.66" x 13.98")'
+            "Dimensions": '16.00 x 34.70 x 35.50 cm (6.30" x 13.66" x 13.98")'
         },
         "img": [
             "./assets/img/product/ASUS_S340MC/lCjVDJa8lpZFSJhf_setting_xxx_0_90_end_800.png",
@@ -375,14 +375,14 @@ var product = [{
             "Operating System": "Windows 10 Home - ASUS recommends Windows 10 Pro for business",
             "Processor": "Intel® Core™ i3-10110U Processor 2.1 GHz (4M Cache, up to 4.1 GHz, 2 cores)",
             "Graphics": "Intel® UHD 630",
-            "Display" : "21.5-inch, FHD (1920 x 1080) 16:9, IPS-level Panel, Anti-glare display, LED Backlit, 250nits, sRGB: 100%, Screen-to-body ratio87%",
+            "Display": "21.5-inch, FHD (1920 x 1080) 16:9, IPS-level Panel, Anti-glare display, LED Backlit, 250nits, sRGB: 100%, Screen-to-body ratio87%",
             "Memory": "4GB DDR4 SO-DIMM",
             "Storage": '256GB M.2 SATA SSD, Without HDD Without HDD, 512GB M.2 NVMe™ PCIe® 3.0 SSD',
             "Network & Communication": "Wi-Fi 5(802.11ac)+Bluetooth 5.0 (Dual band) 1*1",
             "Interfaces": "1x HDMI out 1x DC-in 1x RJ45 Gigabit Ethernet 1x HDMI out 1.4 4x USB 3.2 Gen 1 Type-A",
             "Power Supply": "ø5.5, 90W AC Adapter, Output: 19V DC, 4.74A, 90W, Input: 100~240V AC 50/60Hz universal",
-            "Dimensions" : '48.9 x 38.7 x 5.1 ~ 16.4 cm (19.25" x 15.24" x 2.01" ~ 6.46")',
-            "Weight" : "04.80 kg (10.58 lbs)"
+            "Dimensions": '48.9 x 38.7 x 5.1 ~ 16.4 cm (19.25" x 15.24" x 2.01" ~ 6.46")',
+            "Weight": "04.80 kg (10.58 lbs)"
         },
         "img": [
             "./assets/img/product/ASUS_VivoAiOV222/ss253qz0da8sfemc_setting_xxx_0_90_end_800.png",
@@ -410,15 +410,15 @@ var product = [{
             "Operating System": "Windows 10 Home - ASUS recommends Windows 10 Pro for business",
             "Processor": "AMD Ryzen™ 9 5900HX Processor 3.3 GHz (16M Cache, up to 4.6 GHz)",
             "Graphics": "NVIDIA® GeForce RTX™ 3060 Laptop GPU With ROG Boost up to 1802MHz at 115W (130W with Dynamic Boost) 6GB GDDR6",
-            "Display" : "17.3-inch FHD (1920 x 1080) 16:9 anti-glare display sRGB: 62.50% Adobe: 47.34% Refresh Rate: 144Hz Value IPS-level Adaptive-Sync",
+            "Display": "17.3-inch FHD (1920 x 1080) 16:9 anti-glare display sRGB: 62.50% Adobe: 47.34% Refresh Rate: 144Hz Value IPS-level Adaptive-Sync",
             "Memory": "8GB DDR4-3200 SO-DIMM x 2",
             "Storage": '1TB M.2 NVMe™ PCIe® 3.0 SSD',
             "Network & Communication": "Wi-Fi 6(802.11ax)+Bluetooth 5.1 (Dual band) 2*2;(*BT version may change with OS upgrades.) -RangeBoost",
             "Interfaces": "1x 3.5mm Combo Audio Jack 1x HDMI 2.0b 3x USB 3.2 Gen 1 Type-A 1x USB 3.2 Gen 2 Type-C support DisplayPort / power delivery / G-SYNC 1x RJ45 LAN port",
             "Power Supply": "ø6.0, 240W AC Adapter, Output: 20V DC, 12A, 240W, Input: 100~240C AC 50/60Hz universal",
-            "Battery" : "90WHrs, 4S1P, 4-cell Li-ion",
-            "Dimensions" : '39.5 x 28.2 x 2.34 ~ 2.83 cm (15.55" x 11.10" x 0.92" ~ 1.11")',
-            "Weight" : "2.70 Kg (5.95 lbs)"
+            "Battery": "90WHrs, 4S1P, 4-cell Li-ion",
+            "Dimensions": '39.5 x 28.2 x 2.34 ~ 2.83 cm (15.55" x 11.10" x 0.92" ~ 1.11")',
+            "Weight": "2.70 Kg (5.95 lbs)"
         },
         "img": [
             "./assets/img/product/ROGStrixG17G713/h732.png",
@@ -438,5 +438,167 @@ var product = [{
             "Gaming"
         ]
     },
+
+    {
+        "id": 17,
+        "name": "SteelSeries APEX 5 Hybrid Mechanical Gaming Keyboard",
+        "desc": "Hybrid blue mechanical gaming switches guaranteed for 20 million keypresses. OLED Smart Display displays profiles, game info, Discord messages, and more. Aircraft-grade aluminum alloy built for a lifetime of unbreakable durability. 16.8 million illumination colors per key for unmatched customization. Premium magnetic wrist rest provides full palm support and comfortable feel.",
+        "extra-desc": "",
+        "img": [
+            "./assets/img/product/Keyboard/SteelSeries APEX 5 Hybrid Mechanical Gaming Keyboard.jpg",
+            "./assets/img/product/Keyboard/SteelSeries APEX 5 Hybrid Mechanical Gaming Keyboard02.jpg",
+            "./assets/img/product/Keyboard/SteelSeries APEX 5 Hybrid Mechanical Gaming Keyboard03.jpg"
+        ],
+        "price": 459,
+        "stock": "5",
+        "brand": "SteelSeries",
+        "type": "Keyboard"
+    },
+
+
+    {
+        "id": 18,
+        "name": "MSI Vigor GK50 Low Profile Gaming Keyboard",
+        "desc": "",
+        "extra-desc": "",
+        "img": [
+            "./assets/img/product/Keyboard/MSI Vigor GK50 Low Profile Gaming Keyboard.jpg",
+            "./assets/img/product/Keyboard/MSI Vigor GK50 Low Profile Gaming Keyboard02.jpg"
+        ],
+        "price": 469,
+        "stock": "5",
+        "brand": "MSI",
+        "type": "Keyboard"
+    },
+
+
+    {
+        "id": 19,
+        "name": "MSI Vigor GK50 Low Profile Gaming Keyboard",
+        "desc": "The keyboard with ergonomic high-low keycap design keeps your hands and wrists in a comfortable and natural position that reduces strain and pain while typing or gaming for a long period. Slim and lightweight design complete the stylish appearance of VIGOR GK50 LOW PROFILE gaming keyboard.The brushed metal top plate and matte coating keycaps make VIGOR GK50 LOW PROFILE durable and will not leave fingerprints on the keycap’s surface easily.",
+        "extra-desc": "",
+        "img": [
+            "./assets/img/product/Keyboard/MSI Vigor GK50 Low Profile Gaming Keyboard.jpg",
+            "./assets/img/product/Keyboard/MSI Vigor GK50 Low Profile Gaming Keyboard02.jpg"
+        ],
+        "price": 469,
+        "stock": "5",
+        "brand": "MSI",
+        "type": "Keyboard"
+    },
+
+    {
+        "id": 20,
+        "name": "Kingston HyperX Alloy Elite RGB Mechanical Gaming Keyboard",
+        "desc": "Unique light bar and dynamic lighting effects. CHERRY® MX mechanical keyswitches. Solid steel frame. Dedicated media buttons and large volume wheel. Quick access buttons for brightness, lighting effects and Game Mode. 100% Anti-ghosting and N-Key Rollover functionality. Comfortable, detachable wrist rest with soft-touch coating. 2 Year Warranty by Kingston Malaysia",
+        "extra-desc": "",
+        "img": [
+            "./assets/img/product/Keyboard/Kingston HyperX Alloy Elite RGB Mechanical Gaming Keyboard.jpg",
+            "./assets/img/product/Keyboard/Kingston HyperX Alloy Elite RGB Mechanical Gaming Keyboard02.jpg",
+            "./assets/img/product/Keyboard/Kingston HyperX Alloy Elite RGB Mechanical Gaming Keyboard03.jpg"
+        ],
+        "price": 671,
+        "stock": "3",
+        "brand": "Kingston",
+        "type": "Keyboard"
+    },
+
+    {
+        "id": 21,
+        "name": "Logitech K270 Wireless Keyboard (920-003057)",
+        "desc": "The tiny wireless receiver stays in your laptop—there’s no need to unplug it when you move around—and connects your keyboard. Advanced 2.4 GHz wireless. So you can work or play in more places—like your comfy couch—the wireless connection virtually eliminates delays, dropouts and interference and gives you range of up to 10 meters (33 feet). You’ll enjoy less hassle with a battery life of up to 24 months. Auto standby helps you save energy. The things you do most are right at your fingertips with eight hot keys for instant access to the Internet, e-mail, play/pause, volume and more. Logitech Unifying receiver—the tiny, wireless receiver that stays in your laptop and lets you add devices as you need them.You can do more, faster with eight hot keys for instant access to music, e-mail and more. With intelligent power management, you can go years without replacing the batteries.",
+        "extra-desc": "",
+        "img": [
+            "./assets/img/product/Keyboard/Logitech K270 Wireless Keyboard (920-003057).jpg",
+            "./assets/img/product/Keyboard/Logitech K270 Wireless Keyboard (920-003057)02.jpg",
+            "./assets/img/product/Keyboard/Logitech K270 Wireless Keyboard (920-003057)03.jpg"
+        ],
+        "price": 82,
+        "stock": "20",
+        "brand": "Logitech",
+        "type": "Keyboard"
+    },
+
+
+    {
+        "id": 22,
+        "name": "Razer Blackwidow Elite Tournament-Grade Mechanical Keyboard",
+        "desc": "Razer™ Mechanical Switches. Multi-function digital dial. Ergonomic wrist rest. Fully controllable keys. Up to 80 million keystrokes lifespan. Switch : Yellow / Green / Orange. 2 Years Warranty by Razer Malaysia",
+        "extra-desc": "",
+        "img": [
+            "./assets/img/product/Keyboard/Razer Blackwidow Elite Tournament-Grade Mechanical Keyboard.jpg",
+            "./assets/img/product/Keyboard/Razer Blackwidow Elite Tournament-Grade Mechanical Keyboard02.jpg"
+        ],
+        "price": 628,
+        "stock": "20",
+        "brand": "Razer",
+        "type": "Keyboard"
+    },
+
+
+    {
+        "id": 23,
+        "name": "MSI Optix MAG322CQR 32-inch WQHD Curved Gaming Monitor ",
+        "desc": "Witness your epic battle with the MSI Optix MAG322CQR curved gaming monitor. Equipped with the 2560 x 1440 WQHD resolution and ground-breaking 165Hz refresh rate panel, the MSI Optix MAG322CQR will capture every moment while you take down your opponents. With the FreeSync technology, MSI Optix MAG322CQR provides gamers with the captivating, tearing-free gaming experience. Want to enjoy your games like the way they are meant to be enjoyed? MSI Optix MAG322CQR curved gaming monitor is designed specifically for that purpose.",
+        "extra-desc": "",
+        "img": [
+            "./assets/img/product/Monitor/MSI Optix MAG322CQR 32 WQHD Curved Gaming Monitor.jpg",
+            "./assets/img/product/Monitor/MSI Optix MAG322CQR 32 WQHD Curved Gaming Monitor 02.jpg",
+            "./assets/img/product/Monitor/MSI Optix MAG322CQR 32 WQHD Curved Gaming Monitor 03.jpg"
+        ],
+        "price": 1859,
+        "stock": "5",
+        "brand": "MSIr",
+        "type": "Monitor"
+    },
+
+    {
+        "id": 24,
+        "name": "HP X24ih 23.8-inch FHD 144Hz Gaming Monitor",
+        "desc": "",
+        "extra-desc": "Experience action-packed gaming in lifelike quality with the 23.8-inch diagonal monitor that’s built to deliver the most consistent color. Now, with an IPS panel, enjoy the superb picture and ultra-wide viewing angles, and immerse yourself in a world of winning. Plus, with a 1ms response time, 144 Hz refresh rate[1] and AMD FreeSync™ Premium[2] technology, you’ll always be one step ahead of your opponent with fluid and lag-free gameplay.",
+        "img": [
+            "./assets/img/product/Monitor/HP X24ih 23.8'' FHD 144Hz Gaming Monitor.jpg",
+            "./assets/img/product/Monitor/HP X24ih 23.8'' FHD 144Hz Gaming Monitor02.jpg",
+            "./assets/img/product/Monitor/HP X24ih 23.8'' FHD 144Hz Gaming Monitor03.jpg"
+        ],
+        "price": 719,
+        "stock": "10",
+        "brand": "HP",
+        "type": "Monitor"
+    },
+
+
+    {
+        "id": 25,
+        "name": "Samsung LC24F390FHEXXM 23.5-inch Super Slim Curved Monitor",
+        "desc": "Discover a truly immersive viewing experience with the Samsung monitor curved more deeply than any other. Wrapping around your field of vision like your local iMax theater screen, the 1800R screen — with its 1800mm radius of arc for greater curvature — creates a wider field of view, enhances depth perception, and minimizes peripheral distractions to draw you deeper in to your content. So whether it is an online movie, a favourite TV show, or a pulse-racing game, Samsung’s deeper screen curve will fully immerse you in all your multi-media content",
+        "extra-desc": "",
+        "img": [
+            "./assets/img/product/Monitor/Samsung LC24F390FHEXXM 23.5 Super Slim Curved Monitor.jpg",
+            "./assets/img/product/Monitor/Samsung LC24F390FHEXXM 23.5 Super Slim Curved Monitor02.jpg"
+        ],
+        "price": 449,
+        "stock": "10",
+        "brand": "Samsung",
+        "type": "Monitor"
+    },
+
+
+    {
+        "id": 26,
+        "name": "ASUS TUF VG249Q 23.8-inch FHD Gaming Monitor",
+        "desc": "TUF Gaming VG249Q is a 23.8-inch, Full HD (1920x1080), IPS display with fast 144Hz refresh rate designed for professional gamers and fast paced gameplay.It also features 1ms MPRT response time and Adaptive-Sync technology, for extremely fluid gameplay without tearing and stuttering.",
+        "extra-desc": "",
+        "img": [
+            "./assets/img/product/Monitor/ASUS TUF VG249Q 23.8 FHD Gaming Monitor.jpg",
+            "./assets/img/product/Monitor/ASUS TUF VG249Q 23.8 FHD Gaming Monitor02.jpg",
+            "./assets/img/product/Monitor/ASUS TUF VG249Q 23.8 FHD Gaming Monitor03.jpg"
+        ],
+        "price": 809,
+        "stock": "15",
+        "brand": "Asus",
+        "type": "Monitor"
+    }
 
 ]
