@@ -68,6 +68,12 @@ bold {
     font-weight: bold;
 }
 
+div>div+#item_added {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
 @media (min-width: 576px) {
     div>.product {
         display: inline-block;
@@ -81,11 +87,9 @@ bold {
         position: absolute;
         border-radius: 3rem;
     }
-
     a>.clwhite {
         color: #777777;
     }
-    
 }
 
 @media (min-width: 768px) {
