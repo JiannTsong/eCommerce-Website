@@ -92,9 +92,17 @@
 
     <!--Content-->
     <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 50px;">
-        <div class="row">
-            <div class="col-sm-4">col-sm-4</div>
-            <div class="col-sm-8">col-sm-8</div>
+        <div id="item_added">
+            <div class="row">
+                <div class="col-sm-4">col-sm-4</div>
+                <div class="col-sm-8">col-sm-8</div>
+            </div>
+        </div>
+
+        <!--button-->
+        <div class="d-flex flex-row-reverse">
+            <div class="p-2"><button type="button" class="btn btn-danger" id="checkout">Checkout</button></div>
+            <div class="p-2"><button type="button" class="btn btn-warning" id="clear">Clear</button></div>
         </div>
     </div>
 
@@ -185,8 +193,6 @@
     <!-- Argon JS -->
     <script src="./assets/js/argon-design-system.js"></script>
 
-    <script src="./assets/js/product.js"></script>
-
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 
@@ -198,7 +204,9 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
 
-    <script src="./assets/js/product.js"></script>
+    <script src="./assets/json/product_details.js"></script>
+    <script src="./assets/js/cartShow.js"></script>
+
     <script src="./assets/js/firebase/firebase.js"></script>
 </body>
 
