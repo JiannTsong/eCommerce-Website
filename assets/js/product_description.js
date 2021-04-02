@@ -8,7 +8,7 @@ let pid = getQueryString("id");
 function fetchProduct() {
     for(let i = 0; i < product.length; i++){
         if(pid == (i+1)){
-            $("#product_title").append('<h2>'+product[i].name+'</h2>');
+            $("#product_title").append('<h4>'+product[i].name+'</h4>');
             $("#product_price").append('<h5>RM'+product[i].price+'</h5>');
             $("#product_quantity").attr("max", product[i].stock);
             for(let j = 0; j < product[i].img.length; j++){
@@ -29,6 +29,7 @@ function fetchProduct() {
                 $("dl.row").append(dt);
                 $("dl.row").append(dd);
             }
+            $("#addToCart").attr("data-product-id", pid);
         }
     }
 };

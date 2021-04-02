@@ -17,7 +17,14 @@
     <!-- Argon CSS -->
     <link type="text/css" href="./assets/css/argon-design-system.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
 
+        @media (max-width: 576px){
+            div.row > div.col-sm-6{
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -95,7 +102,7 @@
         <div class="card shadow" style="margin-top: 4rem;">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-sm-6">
                         <div id="product_image" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
                                 <li data-target="#product_image" data-slide-to="0" style="background-color: #000000;" class="active"></li>
@@ -116,7 +123,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-sm-6">
                         <div id="product_title" style="margin-top: 3rem;"></div>
                         <div id="product_price"></div>
                         <div style="margin-top: 1rem; margin-bottom: 1rem;">
@@ -129,7 +136,7 @@
                                 <i class="fas fa-plus"></i>
                             </button>
                         </div>
-                        <button class="btn btn-outline-warning" style="margin-top: 2rem;">
+                        <button class="btn btn-outline-warning" id="addToCart" style="margin-top: 2rem;">
                             <span class="badge"><i class="fas fa-cart-plus" style="font-size: 1rem;"></i></span>Add to Cart
                         </button>
                     </div>
@@ -241,6 +248,7 @@
 
     <script src="./assets/json/product_details.js"></script>
     <script src="./assets/js/product_description.js"></script>
+    <script src="./assets/js/cartInsert.js"></script>
 
     <!--can change function at here-->
     <script src="./assets/js/firebase/firebase.js"></script>
