@@ -16,12 +16,12 @@ var product = [{
         },
         "img": [
             "./assets/img/product/swift5/swift_5_SF514-54.png",
-            "./assets/img/product/Acer-Swift-5_SF514-55_FP_Green_gallery_01.png",
-            "./assets/img/product/Acer-Swift-5_SF514-55_FP_Green_gallery_02.png",
-            "./assets/img/product/Acer-Swift-5_SF514-55_FP_Green_gallery_03.png",
-            "./assets/img/product/Acer-Swift-5_SF514-55_FP_Green_gallery_04.png",
-            "./assets/img/product/Acer-Swift-5_SF514-55_FP_Green_gallery_05.png",
-            "./assets/img/product/Acer-Swift-5_SF514-55_FP_Green_gallery_06.png"
+            "./assets/img/product/swift5/Acer-Swift-5_SF514-55_FP_Green_gallery_01.png",
+            "./assets/img/product/swift5/Acer-Swift-5_SF514-55_FP_Green_gallery_02.png",
+            "./assets/img/product/swift5/Acer-Swift-5_SF514-55_FP_Green_gallery_03.png",
+            "./assets/img/product/swift5/Acer-Swift-5_SF514-55_FP_Green_gallery_04.png",
+            "./assets/img/product/swift5/Acer-Swift-5_SF514-55_FP_Green_gallery_05.png",
+            "./assets/img/product/swift5/Acer-Swift-5_SF514-55_FP_Green_gallery_06.png"
         ],
         "price": 2999,
         "stock": 15,
@@ -51,12 +51,12 @@ var product = [{
         },
         "img": [
             "./assets/img/product/swift7/swift_7_SF714-52T-Black-Budlight_AL.png",
-            "./assets/img/product/Acer-Swift-7-SF714-52T-Black-photogallery-01.png",
-            "./assets/img/product/Acer-Swift-7-SF714-52T-Black-photogallery-02.png",
-            "./assets/img/product/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
-            "./assets/img/product/Acer-Swift-7-SF714-52T-Black-photogallery-04.png",
-            "./assets/img/product/Acer-Swift-7-SF714-52T-Black-photogallery-05.png",
-            "./assets/img/product/Acer-Swift-7-SF714-52T-Black-photogallery-06.png"
+            "./assets/img/product/swift7/Acer-Swift-7-SF714-52T-Black-photogallery-01.png",
+            "./assets/img/product/swift7/Acer-Swift-7-SF714-52T-Black-photogallery-02.png",
+            "./assets/img/product/swift7/Acer-Swift-7-SF714-52T-Black-photogallery-03.png",
+            "./assets/img/product/swift7/Acer-Swift-7-SF714-52T-Black-photogallery-04.png",
+            "./assets/img/product/swift7/Acer-Swift-7-SF714-52T-Black-photogallery-05.png",
+            "./assets/img/product/swift7/Acer-Swift-7-SF714-52T-Black-photogallery-06.png"
         ],
         "price": 3999,
         "stock": 5,
