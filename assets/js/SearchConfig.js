@@ -33,11 +33,11 @@ function updateResult (products) {
 
   for (let i = 0; i < products.length; i++) {
 
-    $("#result").append('<div class="card product">' +
+    $("#result").append('<div class="card product" style="height:30rem;">' +
                 '<img src="' + products[i].img[0] + '" alt="' + products[i].name + '">' +
                 '<div class="card-body">' +
-                '<h6><b>' + products[i].name.substring(0, 30) + '</b></h6>' + ' RM ' + products[i].price +
-                '<p class="card-text">' + products[i].desc.substring(0, 70) + '...' + '</p>' +
+                '<h6><b>' + products[i].name.substring(0, 35) + '</b></h6>' + ' RM ' + products[i].price +
+                '<p class="card-text">' + products[i].desc.substring(0, 100) + '...' + '</p>' +
                 '<a href="' + './product.html?id=' + products[i].id + '" class="btn btn-info" target="_blank">View More</a>' +
                 '</div></div>');
   }

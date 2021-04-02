@@ -3,7 +3,7 @@ function getQueryString(name) {
     var r = window.location.search.substr(1).match(reg);
     if (r != null) return unescape(r[2]); return null;
 }
-var urldata = getQueryString("id");
+var pid = getQueryString("id");
 
 function getproduct(products) {
     for (let i = 0; i < products.length; i++) {
