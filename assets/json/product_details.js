@@ -347,7 +347,7 @@ var product = [{
     },
 
     {
-        "id": 14,
+        "id": 15,
         "name": "Asus S340MC",
         "desc": "ASUS S340MC is the family PC that makes light work of everyday tasks and makes multimedia come alive with latest-generation processors, fast discrete graphics, and the latest DDR4 memory. Its dual-storage design lets you access your files, photos, and multimedia libraries in seconds. Plus, S340MC has outstanding build quality inside and out, including an all-solid capacitor design to ensure years of durable and reliable computing.",
         "extra_desc": {
@@ -380,7 +380,7 @@ var product = [{
     },
 
     {
-        "id": 15,
+        "id": 16,
         "name": "Asus Vivo AiO V222",
         "desc": "The astoundingly beautiful Vivo AiO V222 all-in-one PC has a near-invisible 2mm display bezel giving you edge-to-edge visuals and an incredible 87% screen-to-body ratio. Featuring a 21.5-inch Full HD LED display and advanced ASUS SonicMaster audio with a bass-reflex speaker system, Vivo AiO V222 immerses you in stunning visuals and superb sound for the ultimate entertainment experience.",
         "extra_desc": {
@@ -415,7 +415,7 @@ var product = [{
     },
 
     {
-        "id": 16,
+        "id": 17,
         "name": "ASUS ROG Strix G17 G713",
         "desc": "Focused firepower streamlines and elevates the core Windows 10 Home gaming experience in the ROG Strix G17. With up to a powerful AMD Ryzen™ 9 5900HX CPU and GeForce RTX™ 3070 GPU, everything from gaming to multitasking is fast and fluid. Go full-throttle on esports speed with a competition-grade display up to 300Hz/3ms, or immerse in rich detail on a WQHD 165Hz/3ms panel. Adaptive-Sync makes gameplay ultrasmooth, while advanced thermal upgrades help you stay cool under pressure. No matter what your game is, you can achieve your perfect play.",
         "extra_desc": {
@@ -453,7 +453,7 @@ var product = [{
     },
 
     {
-        "id": 17,
+        "id": 18,
         "name": "SteelSeries APEX 5 Hybrid",
         "desc": "Hybrid blue mechanical gaming switches guaranteed for 20 million keypresses. OLED Smart Display displays profiles, game info, Discord messages, and more. Aircraft-grade aluminum alloy built for a lifetime of unbreakable durability. 16.8 million illumination colors per key for unmatched customization. Premium magnetic wrist rest provides full palm support and comfortable feel.",
         "extra_desc": {},
@@ -474,7 +474,7 @@ var product = [{
 
 
     {
-        "id": 18,
+        "id": 19,
         "name": "MSI Vigor GK50",
         "desc": "Low profile mechanical switches provide speed, accuracy, and endurance, Slim and lightweight design, The ergonomic high-low keycap design reduces strain and pain of hands and wrists, Brushed metal top plate and octagonal-shaped keycaps, Stunning per-key RGB lighting and various effects, Steady Gaming Base provides incredible feedback and anti-slip performance, Fine-tune detail settings with Dragon Center",
         "extra_desc": {},
@@ -493,7 +493,7 @@ var product = [{
 
 
     {
-        "id": 19,
+        "id": 20,
         "name": "MSI Vigor GK50",
         "desc": "The keyboard with ergonomic high-low keycap design keeps your hands and wrists in a comfortable and natural position that reduces strain and pain while typing or gaming for a long period. Slim and lightweight design complete the stylish appearance of VIGOR GK50 LOW PROFILE gaming keyboard.The brushed metal top plate and matte coating keycaps make VIGOR GK50 LOW PROFILE durable and will not leave fingerprints on the keycap’s surface easily.",
         "extra_desc": {},
@@ -511,7 +511,7 @@ var product = [{
     },
 
     {
-        "id": 20,
+        "id": 21,
         "name": "Kingston HyperX Alloy Elite",
         "desc": "Unique light bar and dynamic lighting effects. CHERRY® MX mechanical keyswitches. Solid steel frame. Dedicated media buttons and large volume wheel. Quick access buttons for brightness, lighting effects and Game Mode. 100% Anti-ghosting and N-Key Rollover functionality. Comfortable, detachable wrist rest with soft-touch coating. 2 Year Warranty by Kingston Malaysia",
         "extra_desc": {},
@@ -531,7 +531,7 @@ var product = [{
     },
 
     {
-        "id": 21,
+        "id": 22,
         "name": "Logitech K270",
         "desc": "The tiny wireless receiver stays in your laptop—there’s no need to unplug it when you move around—and connects your keyboard. Advanced 2.4 GHz wireless. So you can work or play in more places—like your comfy couch—the wireless connection virtually eliminates delays, dropouts and interference and gives you range of up to 10 meters (33 feet). You’ll enjoy less hassle with a battery life of up to 24 months. Auto standby helps you save energy. The things you do most are right at your fingertips with eight hot keys for instant access to the Internet, e-mail, play/pause, volume and more. Logitech Unifying receiver—the tiny, wireless receiver that stays in your laptop and lets you add devices as you need them.You can do more, faster with eight hot keys for instant access to music, e-mail and more. With intelligent power management, you can go years without replacing the batteries.",
         "extra_desc": {},
@@ -551,7 +551,7 @@ var product = [{
 
 
     {
-        "id": 22,
+        "id": 23,
         "name": "Razer Blackwidow Elite Tournament-Grade",
         "desc": "Razer™ Mechanical Switches. Multi-function digital dial. Ergonomic wrist rest. Fully controllable keys. Up to 80 million keystrokes lifespan. Switch : Yellow / Green / Orange. 2 Years Warranty by Razer Malaysia",
         "extra_desc": {},
@@ -570,7 +570,7 @@ var product = [{
 
 
     {
-        "id": 23,
+        "id": 24,
         "name": "MSI Optix MAG322CQR",
         "desc": "Witness your epic battle with the MSI Optix MAG322CQR curved gaming monitor. Equipped with the 2560 x 1440 WQHD resolution and ground-breaking 165Hz refresh rate panel, the MSI Optix MAG322CQR will capture every moment while you take down your opponents. With the FreeSync technology, MSI Optix MAG322CQR provides gamers with the captivating, tearing-free gaming experience. Want to enjoy your games like the way they are meant to be enjoyed? MSI Optix MAG322CQR curved gaming monitor is designed specifically for that purpose.",
         "extra_desc": {},
@@ -589,7 +589,7 @@ var product = [{
     },
 
     {
-        "id": 24,
+        "id": 25,
         "name": "HP X24ih 23.8-inch FHD 144Hz",
         "desc": "Experience action-packed gaming in lifelike quality with the 23.8-inch diagonal monitor that’s built to deliver the most consistent color. Now, with an IPS panel, enjoy the superb picture and ultra-wide viewing angles, and immerse yourself in a world of winning. Plus, with a 1ms response time, 144 Hz refresh rate[1] and AMD FreeSync™ Premium[2] technology, you’ll always be one step ahead of your opponent with fluid and lag-free gameplay.",
         "extra_desc": {},
@@ -606,7 +606,7 @@ var product = [{
 
 
     {
-        "id": 25,
+        "id": 26,
         "name": "Samsung LC24F390FHEXXM",
         "desc": "Discover a truly immersive viewing experience with the Samsung monitor curved more deeply than any other. Wrapping around your field of vision like your local iMax theater screen, the 1800R screen — with its 1800mm radius of arc for greater curvature — creates a wider field of view, enhances depth perception, and minimizes peripheral distractions to draw you deeper in to your content. So whether it is an online movie, a favourite TV show, or a pulse-racing game, Samsung’s deeper screen curve will fully immerse you in all your multi-media content",
         "extra_desc": {},
@@ -626,7 +626,7 @@ var product = [{
 
 
     {
-        "id": 26,
+        "id": 27,
         "name": "ASUS TUF VG249Q",
         "desc": "TUF Gaming VG249Q is a 23.8-inch, Full HD (1920x1080), IPS display with fast 144Hz refresh rate designed for professional gamers and fast paced gameplay.It also features 1ms MPRT response time and Adaptive-Sync technology, for extremely fluid gameplay without tearing and stuttering.",
         "extra_desc": {},
