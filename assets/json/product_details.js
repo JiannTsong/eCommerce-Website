@@ -2,7 +2,7 @@ var product = [{
         "id": 1,
         "name": "Acer Swift 5",
         "desc": "Today’s environment calls for a new kind of laptop with fully-featured antimicrobial4 solutions (the chassis and Antimicrobial Corning® Gorilla® Glass4 touch display). At around 1 kg, 14.951 mm thin and an incredible 90% screen-to-body ratio, it also has the latest 11th Gen Intel® Core™ Processors, powerful Intel® Iris Xe® graphics and up to 17 hours of battery.",
-        "extra-desc": {
+        "extra_desc": {
             "Operating System": "Windows 10 Home",
             "Processor": "Intel® Core™ i5 1135G7 2.40 GHz Quad-core (4 Core™)",
             "Graphics": "Intel® Iris Xe Graphics",
@@ -37,7 +37,7 @@ var product = [{
         "id": 2,
         "name": "Acer Swift 7",
         "desc": "Elegance and efficiency find the perfect balance in the Swift 7, starting with its incredibly thin 9.95mm chassis. Looks and performance combine in a laptop that sets new standards in compact design. Savor the visuals of a 14” display in a smaller footprint thanks to this minimalist approach.",
-        "extra-desc": {
+        "extra_desc": {
             "Operating System": "Windows 10 Pro",
             "Processor": "Intel® Core™ i7 1185G7 4.80 GHz Quad-core (4 Core™)",
             "Graphics": "Intel® Iris Xe Graphics",
@@ -72,7 +72,7 @@ var product = [{
         "id": 3,
         "name": "Acer KG1 Monitor 27 Inch",
         "desc": "Take in the full view of the display with its ZeroFrame™1 design atop the sharply-cut three-pronged stand. Screen: 68.6 cm (27) Full HD (1920 x 1080) 75 Hz Panel Technology: IPS (178°x178°) FreeSync Inputs: HDMI, VGA Response Time: 1 ms Brightness: 250 cd/m²",
-        "extra-desc": {
+        "extra_desc": {
             "Screen Size": "27 Inch",
             "Maximum Resolution": "(Full HD)1920 x 1080@75 Hz",
             "Aspect Ratio": "16:9",
@@ -104,7 +104,7 @@ var product = [{
         "id": 4,
         "name": "Acer Predator Helios 700",
         "desc": "Command complete and utter dominance with the HyperDrift keyboard, unleashed overclocking potential and the forging of the PowerGem with the 10th Gen Intel® Core™ i9 Processor and GeForce® RTX 20801 SUPER™ graphics.",
-        "extra-desc": {
+        "extra_desc": {
             "Operating System": "Windows 10 Home",
             "Processor": "Intel® Core™ i9 10980HK 2.40 GHz Quad-core (8 Core™)",
             "Graphics": "NVIDIA® GeForce® RTX 2080 SUPER™",
@@ -138,7 +138,7 @@ var product = [{
         "id": 5,
         "name": "Asus ZenBook 14 UM425",
         "desc": "The incredibly compact, thin and light ZenBook 14 features AMD Ryzen™ 4000 Series Mobile Processors for powerful all-round performance, and includes HDMI, USB-C®, and USB Type-A ports, and a microSD card reader for unrivaled versatility. With its beautifully crafted classic design and travel-friendly features, ZenBook 14 will make your on-the-go lifestyle more effortless than ever.",
-        "extra-desc": {
+        "extra_desc": {
             "Color": "Pine Grey",
             "Operating System": "Windows 10 Home",
             "Processor": "AMD Ryzen™ 5 4500U Processor 2.3 GHz (8M Cache, up to 4.0 GHz, 6 cores)",
@@ -167,7 +167,7 @@ var product = [{
         "id": 6,
         "name": "Logitech G102 LIGHTSYNC",
         "desc": "Make the most of your game time with G102 gaming mouse, featuring LIGHTSYNC technology, a gaming-grade sensor and a classic 6-button design. Light up your game … and your desk.",
-        "extra-desc": {
+        "extra_desc": {
             "PHYSICAL SPECS": "Height: 116.6 mm, Width: 62.15 mm, Depth: 38.2 mm, Weight: 85 g, (mouse only), Cable Length: 2.1 m",
             "TECHNICAL SPECIFICATIONS": "LIGHTSYNC RGB lighting, 6 programmable buttons, Resolution: 200 – 8,000 DPI",
             "RESPONSIVENESS": "USB data format: 16 bits/axis, USB report rate: 1000 Hz (1ms), Microprocessor: 32-bit ARM",
@@ -194,7 +194,7 @@ var product = [{
         "id": 7,
         "name": "HP ProDesk 400 G6",
         "desc": "HP Business laptops and desktops are built for security and collaboration. With Military Grade (Mil) Specs and the latest security, it's the Business device your business needs. Designed to fit the modern workspace, the stylish and reliable HP ProDesk 400 MT is equipped with strong security features and performance that’s scalable to grow with your business.",
-        "extra-desc": {
+        "extra_desc": {
             "Operating System": "Windows 10 Pro",
             "Processor": "	Intel® Core™ i5-9500 with Intel® UHD Graphics 630 (3 GHz base frequency, up to 4.4 GHz with Intel® Turbo Boost Technology, 9 MB cache, 6 cores)",
             "Graphics": "Intel® UHD Graphics 630",
@@ -227,7 +227,7 @@ var product = [{
         "id": 8,
         "name": "SteelSeries Rival 3 RGB Gaming Mouse",
         "desc": "Engineered with hyper-durable materials. Guaranteed 60 million click mechanical switches. Lightweight ergonomic design for comfort. Brilliant Prism lighting with 3 zones of 16.8 million beautifully crisp colors. TrueMove Core optical gaming sensor with true 1-to-1 tracking.",
-        "extra-desc": "",
+        "extra_desc": "",
         "img": [
             "./assets/img/product/Mouse/SteelSeries Rival 3 RGB Gaming Mouse.png",
             "./assets/img/product/Mouse/SteelSeries Rival 3 RGB Gaming Mouse02.png",
@@ -243,7 +243,7 @@ var product = [{
         "id": 9,
         "name": "Logitech M190",
         "desc": "Logitech M190 is a full-size wireless mouse with a comfortable contoured design that follows the natural curve of medium to large hands. You’ll work wirelessly and move freely – from up to 10 meters1Wireless range and battery life may vary based on user, environmental and computing conditions. away – with virtually no delays or dropouts. You’ll get great quality with 18-month2Wireless range and battery life may vary based on user, environmental and computing conditions. battery life, precision tracking, and line-by-line scrolling at an affordable price.",
-        "extra-desc": "",
+        "extra_desc": "",
         "img": [
             "./assets/img/product/Mouse/Logitech M190 Full-Size Wireless Mouse.jpg",
             "./assets/img/product/Mouse/Logitech M190 Full-Size Wireless Mouse02.jpg",
@@ -262,7 +262,7 @@ var product = [{
         "id": 10,
         "name": "HP OMEN Photon",
         "desc": "This mouse is designed to adapt to all hand sizes, with different grips including claw, palm and tip. With built-in pivot hinges you can expect copious clean, consistent takedowns, er, clicks. Play all day for days with a power-saving system that makes the battery last up to 70 hours. The mouse is durable, easy to recharge and comes with a compatible Qi charging mousepad. ",
-        "extra-desc": "",
+        "extra_desc": "",
         "img": [
             "./assets/img/product/Mouse/HP OMEN Photon Wireless Gaming Mouse.jpg",
             "./assets/img/product/Mouse/HP OMEN Photon Wireless Gaming Mouse02.jpg"
@@ -281,7 +281,7 @@ var product = [{
         "id": 11,
         "name": "Logitech B170",
         "desc": "M170 is ready when you are. Simply plug the receiver into a USB port on your device to start working in seconds. The small size and smooth cursor control make it great for tight workspaces and busy desks. Enjoy the world of wireless!",
-        "extra-desc": "",
+        "extra_desc": "",
         "img": [
             "./assets/img/product/Mouse/Logitech B170 Wireless Mouse.jpg",
             "./assets/img/product/Mouse/Logitech B170 Wireless Mouse02.jpg"
@@ -300,7 +300,7 @@ var product = [{
         "id": 12,
         "name": "Razer Deathadder Essential",
         "desc": "The #1 Best-Selling Gaming Peripherals Manufacturer in the US: Source - The NPD Group, Inc. U.S. Retail Tracking Service, Keyboards, Mice, PC Headset/Pc Microphone, Gaming Designed, based on dollar sales, 2017-2021. High-Precision 6,400 DPI Optical Sensor: Offers on-the-fly sensitivity adjustment through dedicated DPI buttons (reprogrammable) for gaming and creative work. Durable Mechanical Switches: Supports up to 10 million clicks, backed by a 2 year warranty. Ridged, Rubberized Scroll Wheel for Maximum Accuracy: Small, tactile bumps increases grip and allows for more controlled scrolling in high-stakes gaming situations. 5 Programmable Buttons: Allows for button remapping and assignment of complex macro functions through Razer Synapse",
-        "extra-desc": "",
+        "extra_desc": "",
         "img": [
             "./assets/img/product/Mouse/Razer Deathadder Essential Gaming Mouse (RZ01-02540100-R3M1).jpg",
             "./assets/img/product/Mouse/Razer Deathadder Essential Gaming Mouse (RZ01-02540100-R3M1)02.jpg",
@@ -316,7 +316,7 @@ var product = [{
         "id": 13,
         "name": "MSI Interceptor DS B1",
         "desc": "DS B1 ergonomic design to enhance the comfort of the user while using mouse and to help prevent serious injury from long-term daily computer use. Featuring side Anti-Slip grips, ensure the prefect grip and you never loss of mouse control again. DS B1 comes with eight 2 gram weights to suit variety of games. Customize the perfect weight for a perfect feel. Gold-plated USB connector with rubber sheathed cable.",
-        "extra-desc": "",
+        "extra_desc": "",
         "img": [
             "./assets/img/product/Mouse/MSI Interceptor DS B1 Gaming Mouse.jpg",
             "./assets/img/product/Mouse/MSI Interceptor DS B1 Gaming Mouse02.jpg",
@@ -335,7 +335,7 @@ var product = [{
         "id": 14,
         "name": "Kingston HyperX Pulsefire Surge RGB Gaming Mouse",
         "desc": "The Pulsefire Surge RGB is a full-featured gaming mouse that includes five customizable native DPI settings that support up to 16,000 DPI. Onboard memory allows for customizable lighting and effects with up to three profiles for on-the-go gaming. HyperX NGenuity software offers LED lighting and RGB customization of the 360-degree light ring, DPI button and HyperX logo. In addition, NGenuity advanced tools include personalized sensor performance, macros and DPI settings.",
-        "extra-desc": "",
+        "extra_desc": "",
         "img": [
             "./assets/img/product/Mouse/Logitech B170 Wireless Mouse.jpg",
             "./assets/img/product/Mouse/Logitech B170 Wireless Mouse02.jpg"
@@ -350,7 +350,7 @@ var product = [{
         "id": 14,
         "name": "Asus S340MC",
         "desc": "ASUS S340MC is the family PC that makes light work of everyday tasks and makes multimedia come alive with latest-generation processors, fast discrete graphics, and the latest DDR4 memory. Its dual-storage design lets you access your files, photos, and multimedia libraries in seconds. Plus, S340MC has outstanding build quality inside and out, including an all-solid capacitor design to ensure years of durable and reliable computing.",
-        "extra-desc": {
+        "extra_desc": {
             "Color": "Black",
             "Operating System": "Windows 10 Home",
             "Processor": "Intel® Core™ i5-8400 Processor 2.8 GHz (9M Cache, up to 4.0 GHz, 6 cores)",
@@ -383,7 +383,7 @@ var product = [{
         "id": 15,
         "name": "Asus Vivo AiO V222",
         "desc": "The astoundingly beautiful Vivo AiO V222 all-in-one PC has a near-invisible 2mm display bezel giving you edge-to-edge visuals and an incredible 87% screen-to-body ratio. Featuring a 21.5-inch Full HD LED display and advanced ASUS SonicMaster audio with a bass-reflex speaker system, Vivo AiO V222 immerses you in stunning visuals and superb sound for the ultimate entertainment experience.",
-        "extra-desc": {
+        "extra_desc": {
             "Color": "White",
             "Operating System": "Windows 10 Home - ASUS recommends Windows 10 Pro for business",
             "Processor": "Intel® Core™ i3-10110U Processor 2.1 GHz (4M Cache, up to 4.1 GHz, 2 cores)",
@@ -418,7 +418,7 @@ var product = [{
         "id": 16,
         "name": "ASUS ROG Strix G17 G713",
         "desc": "Focused firepower streamlines and elevates the core Windows 10 Home gaming experience in the ROG Strix G17. With up to a powerful AMD Ryzen™ 9 5900HX CPU and GeForce RTX™ 3070 GPU, everything from gaming to multitasking is fast and fluid. Go full-throttle on esports speed with a competition-grade display up to 300Hz/3ms, or immerse in rich detail on a WQHD 165Hz/3ms panel. Adaptive-Sync makes gameplay ultrasmooth, while advanced thermal upgrades help you stay cool under pressure. No matter what your game is, you can achieve your perfect play.",
-        "extra-desc": {
+        "extra_desc": {
             "Color": "Black",
             "Operating System": "Windows 10 Home - ASUS recommends Windows 10 Pro for business",
             "Processor": "AMD Ryzen™ 9 5900HX Processor 3.3 GHz (16M Cache, up to 4.6 GHz)",
@@ -456,7 +456,7 @@ var product = [{
         "id": 17,
         "name": "SteelSeries APEX 5 Hybrid",
         "desc": "Hybrid blue mechanical gaming switches guaranteed for 20 million keypresses. OLED Smart Display displays profiles, game info, Discord messages, and more. Aircraft-grade aluminum alloy built for a lifetime of unbreakable durability. 16.8 million illumination colors per key for unmatched customization. Premium magnetic wrist rest provides full palm support and comfortable feel.",
-        "extra-desc": "",
+        "extra_desc": "",
         "img": [
             "./assets/img/product/Keyboard/SteelSeries APEX 5 Hybrid Mechanical Gaming Keyboard.jpg",
             "./assets/img/product/Keyboard/SteelSeries APEX 5 Hybrid Mechanical Gaming Keyboard02.jpg",
@@ -477,7 +477,7 @@ var product = [{
         "id": 18,
         "name": "MSI Vigor GK50",
         "desc": "Low profile mechanical switches provide speed, accuracy, and endurance, Slim and lightweight design, The ergonomic high-low keycap design reduces strain and pain of hands and wrists, Brushed metal top plate and octagonal-shaped keycaps, Stunning per-key RGB lighting and various effects, Steady Gaming Base provides incredible feedback and anti-slip performance, Fine-tune detail settings with Dragon Center",
-        "extra-desc": "",
+        "extra_desc": "",
         "img": [
             "./assets/img/product/Keyboard/MSI Vigor GK50 Low Profile Gaming Keyboard.jpg",
             "./assets/img/product/Keyboard/MSI Vigor GK50 Low Profile Gaming Keyboard02.jpg"
@@ -496,7 +496,7 @@ var product = [{
         "id": 19,
         "name": "MSI Vigor GK50",
         "desc": "The keyboard with ergonomic high-low keycap design keeps your hands and wrists in a comfortable and natural position that reduces strain and pain while typing or gaming for a long period. Slim and lightweight design complete the stylish appearance of VIGOR GK50 LOW PROFILE gaming keyboard.The brushed metal top plate and matte coating keycaps make VIGOR GK50 LOW PROFILE durable and will not leave fingerprints on the keycap’s surface easily.",
-        "extra-desc": "",
+        "extra_desc": "",
         "img": [
             "./assets/img/product/Keyboard/MSI Vigor GK50 Low Profile Gaming Keyboard.jpg",
             "./assets/img/product/Keyboard/MSI Vigor GK50 Low Profile Gaming Keyboard02.jpg"
@@ -514,7 +514,7 @@ var product = [{
         "id": 20,
         "name": "Kingston HyperX Alloy Elite",
         "desc": "Unique light bar and dynamic lighting effects. CHERRY® MX mechanical keyswitches. Solid steel frame. Dedicated media buttons and large volume wheel. Quick access buttons for brightness, lighting effects and Game Mode. 100% Anti-ghosting and N-Key Rollover functionality. Comfortable, detachable wrist rest with soft-touch coating. 2 Year Warranty by Kingston Malaysia",
-        "extra-desc": "",
+        "extra_desc": "",
         "img": [
             "./assets/img/product/Keyboard/Kingston HyperX Alloy Elite RGB Mechanical Gaming Keyboard.jpg",
             "./assets/img/product/Keyboard/Kingston HyperX Alloy Elite RGB Mechanical Gaming Keyboard02.jpg",
@@ -534,7 +534,7 @@ var product = [{
         "id": 21,
         "name": "Logitech K270",
         "desc": "The tiny wireless receiver stays in your laptop—there’s no need to unplug it when you move around—and connects your keyboard. Advanced 2.4 GHz wireless. So you can work or play in more places—like your comfy couch—the wireless connection virtually eliminates delays, dropouts and interference and gives you range of up to 10 meters (33 feet). You’ll enjoy less hassle with a battery life of up to 24 months. Auto standby helps you save energy. The things you do most are right at your fingertips with eight hot keys for instant access to the Internet, e-mail, play/pause, volume and more. Logitech Unifying receiver—the tiny, wireless receiver that stays in your laptop and lets you add devices as you need them.You can do more, faster with eight hot keys for instant access to music, e-mail and more. With intelligent power management, you can go years without replacing the batteries.",
-        "extra-desc": "",
+        "extra_desc": "",
         "img": [
             "./assets/img/product/Keyboard/Logitech K270 Wireless Keyboard (920-003057).jpg",
             "./assets/img/product/Keyboard/Logitech K270 Wireless Keyboard (920-003057)02.jpg",
@@ -554,7 +554,7 @@ var product = [{
         "id": 22,
         "name": "Razer Blackwidow Elite Tournament-Grade",
         "desc": "Razer™ Mechanical Switches. Multi-function digital dial. Ergonomic wrist rest. Fully controllable keys. Up to 80 million keystrokes lifespan. Switch : Yellow / Green / Orange. 2 Years Warranty by Razer Malaysia",
-        "extra-desc": "",
+        "extra_desc": "",
         "img": [
             "./assets/img/product/Keyboard/Razer Blackwidow Elite Tournament-Grade Mechanical Keyboard.jpg",
             "./assets/img/product/Keyboard/Razer Blackwidow Elite Tournament-Grade Mechanical Keyboard02.jpg"
@@ -573,7 +573,7 @@ var product = [{
         "id": 23,
         "name": "MSI Optix MAG322CQR",
         "desc": "Witness your epic battle with the MSI Optix MAG322CQR curved gaming monitor. Equipped with the 2560 x 1440 WQHD resolution and ground-breaking 165Hz refresh rate panel, the MSI Optix MAG322CQR will capture every moment while you take down your opponents. With the FreeSync technology, MSI Optix MAG322CQR provides gamers with the captivating, tearing-free gaming experience. Want to enjoy your games like the way they are meant to be enjoyed? MSI Optix MAG322CQR curved gaming monitor is designed specifically for that purpose.",
-        "extra-desc": "",
+        "extra_desc": "",
         "img": [
             "./assets/img/product/Monitor/MSI Optix MAG322CQR 32 WQHD Curved Gaming Monitor.jpg",
             "./assets/img/product/Monitor/MSI Optix MAG322CQR 32 WQHD Curved Gaming Monitor 02.jpg",
@@ -592,7 +592,7 @@ var product = [{
         "id": 24,
         "name": "HP X24ih 23.8-inch FHD 144Hz",
         "desc": "Experience action-packed gaming in lifelike quality with the 23.8-inch diagonal monitor that’s built to deliver the most consistent color. Now, with an IPS panel, enjoy the superb picture and ultra-wide viewing angles, and immerse yourself in a world of winning. Plus, with a 1ms response time, 144 Hz refresh rate[1] and AMD FreeSync™ Premium[2] technology, you’ll always be one step ahead of your opponent with fluid and lag-free gameplay.",
-        "extra-desc": "",
+        "extra_desc": "",
         "img": [
             "./assets/img/product/Monitor/HP X24ih 23.8'' FHD 144Hz Gaming Monitor.jpg",
             "./assets/img/product/Monitor/HP X24ih 23.8'' FHD 144Hz Gaming Monitor02.jpg",
@@ -609,7 +609,7 @@ var product = [{
         "id": 25,
         "name": "Samsung LC24F390FHEXXM",
         "desc": "Discover a truly immersive viewing experience with the Samsung monitor curved more deeply than any other. Wrapping around your field of vision like your local iMax theater screen, the 1800R screen — with its 1800mm radius of arc for greater curvature — creates a wider field of view, enhances depth perception, and minimizes peripheral distractions to draw you deeper in to your content. So whether it is an online movie, a favourite TV show, or a pulse-racing game, Samsung’s deeper screen curve will fully immerse you in all your multi-media content",
-        "extra-desc": "",
+        "extra_desc": "",
         "img": [
             "./assets/img/product/Monitor/Samsung LC24F390FHEXXM 23.5 Super Slim Curved Monitor.jpg",
             "./assets/img/product/Monitor/Samsung LC24F390FHEXXM 23.5 Super Slim Curved Monitor02.jpg"
@@ -629,7 +629,7 @@ var product = [{
         "id": 26,
         "name": "ASUS TUF VG249Q",
         "desc": "TUF Gaming VG249Q is a 23.8-inch, Full HD (1920x1080), IPS display with fast 144Hz refresh rate designed for professional gamers and fast paced gameplay.It also features 1ms MPRT response time and Adaptive-Sync technology, for extremely fluid gameplay without tearing and stuttering.",
-        "extra-desc": "",
+        "extra_desc": "",
         "img": [
             "./assets/img/product/Monitor/ASUS TUF VG249Q 23.8 FHD Gaming Monitor.jpg",
             "./assets/img/product/Monitor/ASUS TUF VG249Q 23.8 FHD Gaming Monitor02.jpg",

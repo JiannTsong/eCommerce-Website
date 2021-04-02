@@ -95,48 +95,53 @@
         <div class="card shadow" style="margin-top: 4rem;">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-5">
+                    <div class="col-6">
                         <div id="product_image" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators" id="img_point">
+                            <ol class="carousel-indicators">
+                                <li data-target="#product_image" data-slide-to="0" style="background-color: #000000;" class="active"></li>
                             </ol>
-                            <div class="carousel-inner" id="img_product_desc">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    
+                                </div>
                             </div>
                             <a class="carousel-control-prev" href="#product_image" role="button" data-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <i class="carousel-control-prev-icon fas fa-chevron-left" class="" style="color: #000000;" aria-hidden="true"></i>
                               <span class="sr-only">Previous</span>
                             </a>
                             <a class="carousel-control-next" href="#product_image" role="button" data-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              
+                              <i class="carousel-control-next-icon fas fa-chevron-right" class="" style="color: #000000;" aria-hidden="true"></i>
                               <span class="sr-only">Next</span>
                             </a>
-                          </div>
+                        </div>
                     </div>
-                    <div></div>
+                    <div class="col-6">
+                        <div id="product_title" style="margin-top: 3rem;"></div>
+                        <div id="product_price"></div>
+                        <div style="margin-top: 1rem; margin-bottom: 1rem;">
+                            <h6 style="display: inline-block;">Quantity</h6>
+                            <button class="btn btn-secondary btn-sm" id="minus_quantity">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input type="number" class="form form-control" value="1" style="width: 3.5rem; display: inline-block;" name="quantity" id="product_quantity" min="0">
+                            <button class="btn btn-secondary btn-sm" id="plus_quantity">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <button class="btn btn-outline-warning" style="margin-top: 2rem;">
+                            <span class="badge"><i class="fas fa-cart-plus" style="font-size: 1rem;"></i></span>Add to Cart
+                        </button>
+                    </div>
                 </div>
-                <dl class="row">
-                    <dt class="col-sm-3">Description lists</dt>
-                    <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
-                  
-                    <dt class="col-sm-3">Euismod</dt>
-                    <dd class="col-sm-9">
-                      <p class="text-muted">Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
-                      <p class="text-muted">Donec id elit non mi porta gravida at eget metus.</p>
-                    </dd>
-                  
-                    <dt class="col-sm-3">Malesuada porta</dt>
-                    <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
-                  
-                    <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
-                    <dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
-                  
-                    <dt class="col-sm-3">Nesting</dt>
-                    <dd class="col-sm-9">
-                      <dl class="row">
-                        <dt class="col-sm-4">Nested definition list</dt>
-                        <dd class="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>
-                      </dl>
-                    </dd>
-                  </dl>
+                <div class="row" style="margin-top: 1.5rem;">
+                    <div class="col-12">
+                        <h3>Product Description</h3>
+                    </div>
+                </div>
+                <dl class="row" style="margin-left: 1rem;">
+                    
+                </dl>
             </div>
         </div>
     </div>
