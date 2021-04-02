@@ -1,20 +1,18 @@
 $(function() {
 
-    if (checkBrowser()) {
-        var i;
-
-        if (localStorage.length > 0) {
-            for (i = 0; i < localStorage.length; i++) {
+    if (typeof(Storage) !== "undefined") {
+        if (JSON.parse(localStorage.getItem("Cart")) != null) {
+            for (var i = 0; i < localStorage.length; i++) {
                 //retrieve from local storage
-                var product_img = localStorage.getItem("product-img");
-                var product_name = localStorage.getItem("product-name");
-                var product_price = localStorage.getItem("product-price");
-                var product_quantity = localStorage.getItem("product-quantity");
+                cartArray = JSON.parse(localStorage.getItem("Cart"));
+                var id = localStorage.getItem("product_ID");
+                var product_quantity = localStorage.getItem("product_qty");
 
                 //show the item
                 $("#item_added").append(
-                    '<div class="row"> <div class="col-sm-4">' + product_img + '</div>' +
-                    '<div class="col-sm-8">' + '<div>' + product_name + '</div>' + '<div> RM ' + product_price + '</div>' + '<div>' + '<span><i class="fas fa-plus"></i></span><span>' + product_quantity + '</span><span><i class="fas fa-minus"></i></span>' + '</div>' + '</div>' + '</div>');
+                    '<div class="row" data-cartProduct' + (i + 1) + '> <div class="col-sm-4">' + '<img src="' + product[id].img[0] + '" alt="' + product[id].name + '">' + '</div>' +
+                    '<div class="col-sm-8">' + '<div><b>' + product[id].name.substring(0, 30) + '</b></div>' +
+                    '<div> RM ' + product[id].price + '</div>' + '<div>' + '<span><i class="fas fa-plus"></i></span><span>' + product_quantity + '</span><span><i class="fas fa-minus"></i></span>' + '</div>' + '</div>' + '</div>');
             }
         } else {
             $("#item_added").html() = '<div class="row">There are no item item selected</div>';
