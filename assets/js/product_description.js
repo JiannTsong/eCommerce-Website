@@ -30,7 +30,7 @@ $(function(){
                     let dt = '<dt class="col-sm-3" style="margin-top:1rem;margin-bottom:1rem;">'+Object.entries(product[i].extra_desc)[d][0]+'</dt>';
                     $("dl.row").append(dt);
 
-                    if(Object.entries(product[i].extra_desc)[d][1][1].length == 1){
+                    if(Object.entries(product[i].extra_desc)[d][1][0].length == 1){
                         let dd = '<dd class="col-sm-9" style="margin-top:1rem;margin-bottom:1rem;">'+Object.entries(product[i].extra_desc)[d][1]+'</dd>';
                         $("dl.row").append(dd);
                     }else{
