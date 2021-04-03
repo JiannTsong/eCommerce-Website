@@ -21,16 +21,17 @@ $(function(){
                         $('div.carousel-inner').append('<div class="carousel-item"><img class="d-block w-100" src="'+product[i].img[j]+'"></div>');
                     }
                 }
-    
+
+                $("#addToCart").attr("data-product-id", pid);
+
                 //Object.entries(product[i].extra_desc).forEach(([k, v], h) => console.log(h,k,v));
-    
                 for(let d = 0; d < Object.entries(product[i].extra_desc).length; d++){
                     let dt = '<dt class="col-sm-3" style="margin-top:1rem;margin-bottom:1rem;">'+Object.entries(product[i].extra_desc)[d][0]+'</dt>';
                     let dd = '<dd class="col-sm-9" style="margin-top:1rem;margin-bottom:1rem;">'+Object.entries(product[i].extra_desc)[d][1]+'</dd>'
                     $("dl.row").append(dt);
                     $("dl.row").append(dd);
                 }
-                $("#addToCart").attr("data-product-id", pid);
+                
             }
         }
     };
