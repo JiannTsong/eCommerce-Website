@@ -24,6 +24,7 @@ $(function(){
                 }
 
                 $("#addToCart").attr("data-product-id", pid);
+                $("#short_description").append('<p>'+product[i].desc+'</p>');
 
                 //Object.entries(product[i].extra_desc).forEach(([k, v], h) => console.log(h,k,v));
                 for(let d = 0; d < Object.entries(product[i].extra_desc).length; d++){
