@@ -74,8 +74,13 @@ div>div+#item_added {
     border-color: black;
 }
 
-div>div>img.img_cart {
+div>div>img #img_cart {
     max-width: 150px;
+}
+
+span>i.iconwidth,
+span.iconwidth {
+    margin-left: 5px;
 }
 
 @media (min-width: 576px) {
