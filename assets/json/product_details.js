@@ -108,22 +108,33 @@ var product = [{
         "Operating System": "Windows 10 Home",
         "Processor": "Intel® Core™ i9 10980HK 2.40 GHz Quad-core (8 Core™)",
         "Graphics": "NVIDIA® GeForce® RTX 2080 SUPER™",
-        "Screen": 'Full HD 1920 x 1080 17.3" 144Hz LCD ComfyView (Matte) In-plane Switching (IPS) Technology',
+        "Screen": [
+            'Full HD 1920 x 1080 17.3" 144Hz LCD',
+            'ComfyView (Matte) In-plane Switching (IPS) Technology'
+        ],
         "Memory": "32GB DDR4 SDRAM",
         "Storage": "1TB SATA SSD",
-        "Network & Communication": "2.5 Gigabit Ethernet, IEEE 802.11a/b/g/n/ac/ax , Bluetooth 5.0",
-        "Interfaces": "1x Display Port 1x HDMI, 3 x USB3.2 Gen 2 Type A, 2 x USB3.2 Gen 2 Type C",
+        "Network & Communication": [
+            "2.5 Gigabit Ethernet", 
+            "IEEE 802.11a/b/g/n/ac/ax", 
+            "Bluetooth 5.0"
+        ],
+        "Interfaces": [
+            "1x Display Port",
+            "1x HDMI", "3 x USB3.2 Gen 2 Type A", 
+            "2 x USB3.2 Gen 2 Type C"
+        ],
         "Battery Information": "4-cell Lithium Ion (Li-Ion)",
         "Maximum Power Supply Wattage": "330W"
     },
     "img": [
         "./assets/img/product/Predator_Helios_700/Predator-Helios-700-PH717-71-preview.png",
         "./assets/img/product/Predator_Helios_700/Predator-Helios-700_PH717-72_RGB_gallery_01.png",
-        "./assets/img/product/Predator-Helios-700/Predator-Helios-700_PH717-72_RGB_gallery_02.png",
-        "./assets/img/product/Predator-Helios-700/Predator-Helios-700_PH717-72_RGB_gallery_03.png",
-        "./assets/img/product/Predator-Helios-700/Predator-Helios-700_PH717-72_RGB_gallery_04.png",
-        "./assets/img/product/Predator-Helios-700/Predator-Helios-700_PH717-72_RGB_gallery_05.png",
-        "./assets/img/product/Predator-Helios-700/Predator-Helios-700_PH717-72_RGB_gallery_06.png"
+        "./assets/img/product/Predator_Helios_700/Predator-Helios-700_PH717-72_RGB_gallery_02.png",
+        "./assets/img/product/Predator_Helios_700/Predator-Helios-700_PH717-72_RGB_gallery_03.png",
+        "./assets/img/product/Predator_Helios_700/Predator-Helios-700_PH717-72_RGB_gallery_04.png",
+        "./assets/img/product/Predator_Helios_700/Predator-Helios-700_PH717-72_RGB_gallery_05.png",
+        "./assets/img/product/Predator_Helios_700/Predator-Helios-700_PH717-72_RGB_gallery_06.png"
     ],
     "price": 17999,
     "stock": 5,
@@ -227,7 +238,19 @@ var product = [{
     "id": 8,
     "name": "SteelSeries Rival 3 RGB Gaming Mouse",
     "desc": "Engineered with hyper-durable materials. Guaranteed 60 million click mechanical switches. Lightweight ergonomic design for comfort. Brilliant Prism lighting with 3 zones of 16.8 million beautifully crisp colors. TrueMove Core optical gaming sensor with true 1-to-1 tracking.",
-    "extra_desc": {},
+    "extra_desc": {
+        "Sensor" : "SteelSeries TrueMove Core",
+        "Sensor Type" : "Optical",
+        "CPI" : "200–8,500 in 100 CPI Increments",
+        "Acceleration" : "35G",
+        "Polling Rate" : "1000Hz 1 ms",
+        "Hardware Acceleration" : "None (Zero Hardware Acceleration)",
+        "Number of Buttons" : "6",
+        "Weight" : "77g (2.7oz) without cable",
+        "Length" : "120.60mm / 4.75 inches",
+        "Width" : "58.30mm / 2.30 inches (front), 67.00mm / 2.64 inches (back)",
+        "Height" : "21.50mm / 0.85 inches (front), 37.90mm / 1.49 inches (back)"
+    },
     "img": [
         "./assets/img/product/Mouse/SteelSeries Rival 3 RGB Gaming Mouse.png",
         "./assets/img/product/Mouse/SteelSeries Rival 3 RGB Gaming Mouse02.png",
@@ -243,7 +266,21 @@ var product = [{
     "id": 9,
     "name": "Logitech M190",
     "desc": "Logitech M190 is a full-size wireless mouse with a comfortable contoured design that follows the natural curve of medium to large hands. You’ll work wirelessly and move freely – from up to 10 meters1Wireless range and battery life may vary based on user, environmental and computing conditions. away – with virtually no delays or dropouts. You’ll get great quality with 18-month2Wireless range and battery life may vary based on user, environmental and computing conditions. battery life, precision tracking, and line-by-line scrolling at an affordable price.",
-    "extra_desc": {},
+    "extra_desc": {
+        "Mouse Dimensions" : [
+            "Height: 4.54 in (115.4 mm)",
+            "Width: 2.60 in (66.1 mm)",
+            "Depth: 1.59 in (40.3 mm)",
+            "Weight (with batteries): 3.17 oz (89.9 g)"
+        ],
+        "Sensor technology": "Smooth Optical Tracking",
+        "Sensor resolution": "1000 dpi",
+        "Number of buttons": "3",
+        "Scroll Wheel": "Line-by-Line Precision",
+        "Battery life": "18 months",
+        "Wireless operating distance": "32.81 ft (10 m)",
+        "Wireless technology": "Logitech Nano Receiver"
+    },
     "img": [
         "./assets/img/product/Mouse/Logitech M190 Full-Size Wireless Mouse.jpg",
         "./assets/img/product/Mouse/Logitech M190 Full-Size Wireless Mouse02.jpg",
@@ -446,8 +483,7 @@ var product = [{
     "stock": 8,
     "brand": "Asus",
     "type": [
-        "Desktop",
-        "PC",
+        "Laptop",
         "Gaming"
     ]
 },
@@ -475,9 +511,21 @@ var product = [{
 
 {
     "id": 19,
-    "name": "MSI Vigor GK50",
+    "name": "MSI Vigor GK50 Low Profile",
     "desc": "Low profile mechanical switches provide speed, accuracy, and endurance, Slim and lightweight design, The ergonomic high-low keycap design reduces strain and pain of hands and wrists, Brushed metal top plate and octagonal-shaped keycaps, Stunning per-key RGB lighting and various effects, Steady Gaming Base provides incredible feedback and anti-slip performance, Fine-tune detail settings with Dragon Center",
-    "extra_desc": {},
+    "extra_desc": {
+        "MAIN KEY SWITCHES" : "Kailh Low Profile Switches",
+        "KEYBOARD INTERFACE" : "USB 2.0",
+        "NORMAL KEYS" : "104 / 105 / 109 keys (different by languages)",
+        "BACKLIGHT" : "Per-key RGB Mystic Light",
+        "KEY STROKE LIFE" : "50+ Million",
+        "N-KEY ROLLOVER" : [
+            "N-Keys Rollover",
+            "Full Keys Anti-Ghosting"
+        ],
+        "PRODUCT DIMENSIONS (MM)" : "435 x 141 x 34 mm",
+        "WEIGHT (PRODUCT / PACKAGE)" : "700 g / 1200 g"
+    },
     "img": [
         "./assets/img/product/Keyboard/MSI Vigor GK50 Low Profile Gaming Keyboard.jpg",
         "./assets/img/product/Keyboard/MSI Vigor GK50 Low Profile Gaming Keyboard02.jpg"
@@ -487,7 +535,8 @@ var product = [{
     "brand": "MSI",
     "type": [
         "Keyboard",
-        "Gaming"
+        "Gaming",
+        "Low Profile"
     ]
 },
 
