@@ -39,7 +39,8 @@ $(function() {
 
     //clear all cart when user click clear all
     $("#clear").click(function() {
-        localStorage.clear();
+        localStorage.removeItem("Cart");
+        location.reload();
     });
 
     //add quantity
