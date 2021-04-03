@@ -513,7 +513,19 @@ var product = [{
     "id": 19,
     "name": "MSI Vigor GK50 Low Profile",
     "desc": "Low profile mechanical switches provide speed, accuracy, and endurance, Slim and lightweight design, The ergonomic high-low keycap design reduces strain and pain of hands and wrists, Brushed metal top plate and octagonal-shaped keycaps, Stunning per-key RGB lighting and various effects, Steady Gaming Base provides incredible feedback and anti-slip performance, Fine-tune detail settings with Dragon Center",
-    "extra_desc": {},
+    "extra_desc": {
+        "MAIN KEY SWITCHES" : "Kailh Low Profile Switches",
+        "KEYBOARD INTERFACE" : "USB 2.0",
+        "NORMAL KEYS" : "104 / 105 / 109 keys (different by languages)",
+        "BACKLIGHT" : "Per-key RGB Mystic Light",
+        "KEY STROKE LIFE" : "50+ Million",
+        "N-KEY ROLLOVER" : [
+            "N-Keys Rollover",
+            "Full Keys Anti-Ghosting"
+        ],
+        "PRODUCT DIMENSIONS (MM)" : "435 x 141 x 34 mm",
+        "WEIGHT (PRODUCT / PACKAGE)" : "700 g / 1200 g"
+    },
     "img": [
         "./assets/img/product/Keyboard/MSI Vigor GK50 Low Profile Gaming Keyboard.jpg",
         "./assets/img/product/Keyboard/MSI Vigor GK50 Low Profile Gaming Keyboard02.jpg"
