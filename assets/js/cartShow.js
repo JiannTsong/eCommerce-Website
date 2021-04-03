@@ -18,11 +18,11 @@ $(function() {
 
                 //show the item
                 $("#itemAdded").append(
-                    '<div class="row"> <div class="col-sm-4">' + '<img src="' + product[pid].img[0] + '" alt="' + product[pid].name + ' " id = "cart_img">' + '</div>' +
+                    '<div class="row"> <div class="col-sm-4">' + '<img src="' + product[pid].img[0] + '" alt="' + product[pid].name + '" class = "imgcart">' + '</div>' +
                     '<div class="col-sm-8">' + '<div><b>' + product[pid].name.substring(0, 30) + '</b></div>' +
                     '<div>' + product[pid].desc + '</div>' +
-                    '<div> RM ' + product[pid].price + '</div>' +
-                    '<div>' + '<span id = "add"><i class="fas fa-plus iconwidth"></i></span><span class = "iconwidth">' + product_quantity + '</span><span id = "deduct"><i class="fas fa-minus iconwidth"></i></span><span id = "deleteItem"><i class="fas fa-trash-alt"></i></span></div></div>');
+                    '<div class="cartprice"> RM ' + product[pid].price + '</div>' +
+                    '<div>' + '<span id = "add"><i class="fas fa-plus iconwidth"></i></span><span><input type="number" id = "qty" value = "' + product_quantity + '"></span><span id = "deduct"><i class="fas fa-minus iconwidth2"></i></span><span id = "deleteItem"><i class="fas fa-trash-alt"></i></span></div></div>');
             }
         } else {
             $("#itemAdded").hide();
