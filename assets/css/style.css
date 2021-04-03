@@ -74,6 +74,8 @@ div>div+#item_added {
     border-color: black;
 }
 
+
+
 @media (min-width: 576px) {
     div>.product {
         display: inline-block;
@@ -82,6 +84,11 @@ div>div+#item_added {
         width: 85%;
         max-height: 680px;
     }
+
+    div>.product>img {
+        max-height: 220px;
+    }
+
     form>button.search-btn {
         right: 2rem;
         position: absolute;
@@ -98,8 +105,13 @@ div>div+#item_added {
         margin: 20px;
         margin-top: 3rem;
         width: 100%;
-        max-height: 940px;
+        max-height: 480px;
     }
+
+    div>.product>img {
+        max-height: 240px;
+    }
+
     form>button.search-btn {
         right: 2rem;
         position: absolute;
@@ -117,9 +129,11 @@ div>div+#item_added {
         width: 22rem;
         max-height: 480px;
     }
+
     div>.product>img {
         max-height: 211.79px;
     }
+
     form>button.search-btn {
         right: 9.75rem;
         position: absolute;
@@ -132,3 +146,4 @@ div>div+#item_added {
         color: #ffffff;
     }
 }
+
