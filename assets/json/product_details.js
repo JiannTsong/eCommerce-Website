@@ -108,22 +108,33 @@ var product = [{
         "Operating System": "Windows 10 Home",
         "Processor": "Intel® Core™ i9 10980HK 2.40 GHz Quad-core (8 Core™)",
         "Graphics": "NVIDIA® GeForce® RTX 2080 SUPER™",
-        "Screen": 'Full HD 1920 x 1080 17.3" 144Hz LCD ComfyView (Matte) In-plane Switching (IPS) Technology',
+        "Screen": [
+            'Full HD 1920 x 1080 17.3" 144Hz LCD',
+            'ComfyView (Matte) In-plane Switching (IPS) Technology'
+        ],
         "Memory": "32GB DDR4 SDRAM",
         "Storage": "1TB SATA SSD",
-        "Network & Communication": "2.5 Gigabit Ethernet, IEEE 802.11a/b/g/n/ac/ax , Bluetooth 5.0",
-        "Interfaces": "1x Display Port 1x HDMI, 3 x USB3.2 Gen 2 Type A, 2 x USB3.2 Gen 2 Type C",
+        "Network & Communication": [
+            "2.5 Gigabit Ethernet", 
+            "IEEE 802.11a/b/g/n/ac/ax", 
+            "Bluetooth 5.0"
+        ],
+        "Interfaces": [
+            "1x Display Port",
+            "1x HDMI", "3 x USB3.2 Gen 2 Type A", 
+            "2 x USB3.2 Gen 2 Type C"
+        ],
         "Battery Information": "4-cell Lithium Ion (Li-Ion)",
         "Maximum Power Supply Wattage": "330W"
     },
     "img": [
         "./assets/img/product/Predator_Helios_700/Predator-Helios-700-PH717-71-preview.png",
         "./assets/img/product/Predator_Helios_700/Predator-Helios-700_PH717-72_RGB_gallery_01.png",
-        "./assets/img/product/Predator-Helios-700/Predator-Helios-700_PH717-72_RGB_gallery_02.png",
-        "./assets/img/product/Predator-Helios-700/Predator-Helios-700_PH717-72_RGB_gallery_03.png",
-        "./assets/img/product/Predator-Helios-700/Predator-Helios-700_PH717-72_RGB_gallery_04.png",
-        "./assets/img/product/Predator-Helios-700/Predator-Helios-700_PH717-72_RGB_gallery_05.png",
-        "./assets/img/product/Predator-Helios-700/Predator-Helios-700_PH717-72_RGB_gallery_06.png"
+        "./assets/img/product/Predator_Helios_700/Predator-Helios-700_PH717-72_RGB_gallery_02.png",
+        "./assets/img/product/Predator_Helios_700/Predator-Helios-700_PH717-72_RGB_gallery_03.png",
+        "./assets/img/product/Predator_Helios_700/Predator-Helios-700_PH717-72_RGB_gallery_04.png",
+        "./assets/img/product/Predator_Helios_700/Predator-Helios-700_PH717-72_RGB_gallery_05.png",
+        "./assets/img/product/Predator_Helios_700/Predator-Helios-700_PH717-72_RGB_gallery_06.png"
     ],
     "price": 17999,
     "stock": 5,
