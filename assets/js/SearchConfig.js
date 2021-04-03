@@ -38,7 +38,7 @@ function updateResult (products) {
                 '<div class="card-body">' +
                 '<h6><b>' + products[i].name.substring(0, 35) + '</b></h6>' + ' RM ' + products[i].price +
                 '<p class="card-text">' + products[i].desc.substring(0, 100) + '...' + '</p>' +
-                '<a href="' + './product.html?id=' + products[i].id + '" class="btn btn-info" target="_blank">View More</a>' +
+                '<a href="' + './product.html?id=' + products[i].id + '" class="btn btn-info">View More</a>' +
                 '</div></div>');
   }
 };

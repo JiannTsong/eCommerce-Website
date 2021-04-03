@@ -11,6 +11,7 @@ $(function(){
             if(pid == (i+1)){
                 $("#product_title").append('<h4>'+product[i].name+'</h4>');
                 $("#product_price").append('<h5>RM'+product[i].price+'</h5>');
+                $('#stock_available').append('<h5>Stock Available '+product[i].stock+'</h5>')
                 $("#product_quantity").attr("max", product[i].stock);
                 for(let j = 0; j < product[i].img.length; j++){
                     if(j == 0){
