@@ -6,7 +6,7 @@ $(function () {
             '<div class="card-body">' +
             '<h6 class="class-title">' + product[i].name.substring(0, 35) + '</h6>' + ' RM ' + product[i].price +
             '<p class="card-text">' + product[i].desc.substring(0, 100) + '...' + '</p>' +
-            '<a href="' + './product.html?id=' + product[i].id + '" class="btn btn-info" target="_blank">View More</a>' +
+            '<a href="' + './product.html?id=' + product[i].id + '" class="btn btn-info">View More</a>' +
             '</div></div>');
     }
 });
