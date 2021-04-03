@@ -446,8 +446,7 @@ var product = [{
     "stock": 8,
     "brand": "Asus",
     "type": [
-        "Desktop",
-        "PC",
+        "Laptop",
         "Gaming"
     ]
 },
