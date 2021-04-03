@@ -44,13 +44,18 @@ $(function() {
     });
 
     //add quantity
-    $("itemAdded").on("click", '$("#add")', function() {
+    $("itemAdded").on("click", $("#add"), function() {
+        alert("add");
+    });
 
+    //correct way here
+    $("#add").click(function(){
+        alert("add");
     });
 
     //deduct quantity
-    $("itemAdded").on("click", '$("#deduct")', function() {
-
+    $("itemAdded").on("click", $("#deduct"), function() {
+        alert("add");
         // if(quanity == 0 ) invoke delete item
     });
 
