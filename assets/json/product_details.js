@@ -629,7 +629,74 @@ var product = [{
         "id": 27,
         "name": "ASUS TUF VG249Q",
         "desc": "TUF Gaming VG249Q is a 23.8-inch, Full HD (1920x1080), IPS display with fast 144Hz refresh rate designed for professional gamers and fast paced gameplay.It also features 1ms MPRT response time and Adaptive-Sync technology, for extremely fluid gameplay without tearing and stuttering.",
-        "extra_desc": {},
+        "extra_desc": {
+            "Display" : [
+                "Panel Size (inch) : 23.8",
+            "Aspect Ratio : 16:9",
+            "Display Viewing Area (H x V) : 527.04 x 296.46 mm",
+            "Display Surface : Non-Glare",
+            "Backlight Type : LED",
+            "Panel Type : IPS",
+            "Viewing Angle (CR≧10, H/V) : 178°/ 178°",
+            "Pixel Pitch : 0.2745mm",
+            "Resolution : 1920x1080",
+            "Color Space (sRGB) : 100%",
+            "Brightness (Typ.) : 250cd/㎡",
+            "Contrast Ratio (Typ.) : 1000:1",
+            "ASUS Smart Contrast Ratio (ASCR) : 10000000:1",
+            "Display Colors : 16.7M",
+            "Response Time : 1ms MPRT",
+            "Refresh Rate (Max) : 144Hz",
+            "Flicker-free : Yes"
+            ],
+            "Video Feature" : [
+                "Trace Free Technology : Yes",
+                "GameVisual : Yes",
+                "Color Temp. Selection : Yes(4 modes)",
+                "GamePlus : Yes",
+                "QuickFit : Yes",
+                "HDCP : Yes",
+                "Extreme Low Motion Blur : Yes",
+                "VRR Technology : FreeSync Premium",
+                "Shadow Boost : Yes",
+                "Low Blue Light : Yes"
+            ],
+            "Audio Feature" : "Speaker : Yes(2Wx2)",
+            "I/O Ports" : [
+                "DisplayPort 1.2 x 1",
+                "HDMI(v1.4) x 1",
+                "VGA x 1",
+                "PC Audio Input : Yes"
+            ],
+            "Signal Frequency" : [
+                "Digital Signal Frequency : 30~180 KHz (H) / 48~144 Hz (V)",
+                "Analog Signal Frequency : 30~84 KHz (H) / 48~75 Hz (V)"
+            ],
+            "Power Consumption" : [
+                "Power Consumption : <16W",
+                "Power Saving Mode : <0.5W",
+                "Power Off Mode : <0.5W",
+                "Voltage : 100-240V, 50/60Hz"               
+            ],
+            "Mechanical Design" : [
+                "Tilt : Yes (+20° ~ -5°)",
+                "Swivel : Yes (+62° ~ -62°)",
+                "Pivot : Yes (+90° ~ -90°)",
+                "Height Adjustment : 0~150mm",
+                "VESA Wall Mounting : 100x100mm",
+                "Kensington Lock : Yes"
+            ],
+            "Dimensions" : [
+                "Phys. Dimension with Stand (W x H x D) : 540.50 x (365~515) x 217.6 mm",
+                "Phys. Dimension without Stand (W x H x D) : 540.50 x 325.24 x 51.67 mm",
+                "Box Dimension (W x H x D) : 723 x 400 x 200 mm"
+            ],
+            "Weight" : [
+                "Net Weight with Stand : 6.5 Kg",
+                "Net Weight without Stand : 3.07 Kg",
+                "Gross Weight : 9.0 Kg"
+            ]
+        },
         "img": [
             "./assets/img/product/Monitor/ASUS TUF VG249Q 23.8 FHD Gaming Monitor.jpg",
             "./assets/img/product/Monitor/ASUS TUF VG249Q 23.8 FHD Gaming Monitor02.jpg",

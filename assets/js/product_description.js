@@ -27,9 +27,21 @@ $(function(){
                 //Object.entries(product[i].extra_desc).forEach(([k, v], h) => console.log(h,k,v));
                 for(let d = 0; d < Object.entries(product[i].extra_desc).length; d++){
                     let dt = '<dt class="col-sm-3" style="margin-top:1rem;margin-bottom:1rem;">'+Object.entries(product[i].extra_desc)[d][0]+'</dt>';
-                    let dd = '<dd class="col-sm-9" style="margin-top:1rem;margin-bottom:1rem;">'+Object.entries(product[i].extra_desc)[d][1]+'</dd>'
                     $("dl.row").append(dt);
-                    $("dl.row").append(dd);
+
+                    if(Object.entries(product[i].extra_desc)[d][1][1].length == 1){
+                        let dd = '<dd class="col-sm-9" style="margin-top:1rem;margin-bottom:1rem;">'+Object.entries(product[i].extra_desc)[d][1]+'</dd>';
+                        $("dl.row").append(dd);
+                    }else{
+                        let dd = '<dd class="col-sm-9" style="margin-top:1rem;margin-bottom:1rem;"></dd>';
+                            $("dl.row").append(dd);
+                        for(let n = 0; n < Object.entries(product[i].extra_desc)[d][1].length; n++){
+                            let dd = '<p>'+Object.entries(product[i].extra_desc)[d][1][n]+'</p>';
+                            $("dl.row > dd").append(dd);
+
+                        }
+                    }
+
                 }
                 
             }
