@@ -96,6 +96,11 @@ span.iconwidth {
         position: absolute;
         border-radius: 3rem;
     }
+
+    div>.product>img {
+        max-height: 220px;
+    }
+
     a>.clwhite {
         color: #777777;
     }
@@ -114,6 +119,11 @@ span.iconwidth {
         position: absolute;
         border-radius: 3rem;
     }
+
+    div>.product>img {
+        max-height: 240px;
+    }
+    
     a>.clwhite {
         color: #777777;
     }
