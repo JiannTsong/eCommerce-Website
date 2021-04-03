@@ -238,7 +238,19 @@ var product = [{
     "id": 8,
     "name": "SteelSeries Rival 3 RGB Gaming Mouse",
     "desc": "Engineered with hyper-durable materials. Guaranteed 60 million click mechanical switches. Lightweight ergonomic design for comfort. Brilliant Prism lighting with 3 zones of 16.8 million beautifully crisp colors. TrueMove Core optical gaming sensor with true 1-to-1 tracking.",
-    "extra_desc": {},
+    "extra_desc": {
+        "Sensor" : "SteelSeries TrueMove Core",
+        "Sensor Type" : "Optical",
+        "CPI" : "200–8,500 in 100 CPI Increments",
+        "Acceleration" : "35G",
+        "Polling Rate" : "1000Hz 1 ms",
+        "Hardware Acceleration" : "None (Zero Hardware Acceleration)",
+        "Number of Buttons" : 6,
+        "Weight" : "77g (2.7oz) without cable",
+        "Length" : "120.60mm / 4.75 inches",
+        "Width" : "58.30mm / 2.30 inches (front), 67.00mm / 2.64 inches (back)",
+        "Height" : "21.50mm / 0.85 inches (front), 37.90mm / 1.49 inches (back)"
+    },
     "img": [
         "./assets/img/product/Mouse/SteelSeries Rival 3 RGB Gaming Mouse.png",
         "./assets/img/product/Mouse/SteelSeries Rival 3 RGB Gaming Mouse02.png",
@@ -254,7 +266,21 @@ var product = [{
     "id": 9,
     "name": "Logitech M190",
     "desc": "Logitech M190 is a full-size wireless mouse with a comfortable contoured design that follows the natural curve of medium to large hands. You’ll work wirelessly and move freely – from up to 10 meters1Wireless range and battery life may vary based on user, environmental and computing conditions. away – with virtually no delays or dropouts. You’ll get great quality with 18-month2Wireless range and battery life may vary based on user, environmental and computing conditions. battery life, precision tracking, and line-by-line scrolling at an affordable price.",
-    "extra_desc": {},
+    "extra_desc": {
+        "Mouse Dimensions" : [
+            "Height: 4.54 in (115.4 mm)",
+            "Width: 2.60 in (66.1 mm)",
+            "Depth: 1.59 in (40.3 mm)",
+            "Weight (with batteries): 3.17 oz (89.9 g)"
+        ],
+        "Sensor technology": "Smooth Optical Tracking",
+        "Sensor resolution": "1000 dpi",
+        "Number of buttons": 3,
+        "Scroll Wheel": "Line-by-Line Precision",
+        "Battery life": "18 months",
+        "Wireless operating distance": "32.81 ft (10 m)",
+        "Wireless technology": "Logitech Nano Receiver"
+    },
     "img": [
         "./assets/img/product/Mouse/Logitech M190 Full-Size Wireless Mouse.jpg",
         "./assets/img/product/Mouse/Logitech M190 Full-Size Wireless Mouse02.jpg",
