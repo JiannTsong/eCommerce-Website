@@ -511,7 +511,7 @@ var product = [{
 
 {
     "id": 19,
-    "name": "MSI Vigor GK50",
+    "name": "MSI Vigor GK50 Low Profile",
     "desc": "Low profile mechanical switches provide speed, accuracy, and endurance, Slim and lightweight design, The ergonomic high-low keycap design reduces strain and pain of hands and wrists, Brushed metal top plate and octagonal-shaped keycaps, Stunning per-key RGB lighting and various effects, Steady Gaming Base provides incredible feedback and anti-slip performance, Fine-tune detail settings with Dragon Center",
     "extra_desc": {},
     "img": [
@@ -523,7 +523,8 @@ var product = [{
     "brand": "MSI",
     "type": [
         "Keyboard",
-        "Gaming"
+        "Gaming",
+        "Low Profile"
     ]
 },
 
