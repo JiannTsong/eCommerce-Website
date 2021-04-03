@@ -252,6 +252,7 @@ var product = [{
         "Height" : "21.50mm / 0.85 inches (front), 37.90mm / 1.49 inches (back)"
     },
     "img": [
+        "./assets/img/product/Mouse/buyimg_rival3_006.png__1920x1080_q100_crop-fit_optimize_subsampling-2.png",
         "./assets/img/product/Mouse/SteelSeries Rival 3 RGB Gaming Mouse.png",
         "./assets/img/product/Mouse/SteelSeries Rival 3 RGB Gaming Mouse02.png",
         "./assets/img/product/Mouse/SteelSeries Rival 3 RGB Gaming Mouse03.png"

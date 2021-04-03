@@ -91,7 +91,7 @@ div>div>div.cartprice {
         display: inline-block;
         margin: 1rem;
         margin-top: 3rem;
-        width: 85%;
+        width: 95%;
         max-height: 576px;
     }
 
@@ -102,7 +102,7 @@ div>div>div.cartprice {
     }
 
     div>.product>img {
-        max-height: 220px;
+        max-height: 200px;
     }
 
     a>.clwhite {
@@ -115,7 +115,7 @@ div>div>div.cartprice {
         display: inline-block;
         margin: 1rem;
         margin-top: 3rem;
-        width: 85%;
+        width: 95%;
         max-height: 576px;
     }
 
@@ -161,7 +161,7 @@ div>div>div.cartprice {
         display: inline-block;
         margin: 20px;
         margin-top: 3rem;
-        width: 100%;
+        width: 95%;
         max-height: 940px;
     }
     form>button.search-btn {
