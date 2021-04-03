@@ -534,7 +534,22 @@ var product = [{
         "id": 22,
         "name": "Logitech K270",
         "desc": "The tiny wireless receiver stays in your laptop—there’s no need to unplug it when you move around—and connects your keyboard. Advanced 2.4 GHz wireless. So you can work or play in more places—like your comfy couch—the wireless connection virtually eliminates delays, dropouts and interference and gives you range of up to 10 meters (33 feet). You’ll enjoy less hassle with a battery life of up to 24 months. Auto standby helps you save energy. The things you do most are right at your fingertips with eight hot keys for instant access to the Internet, e-mail, play/pause, volume and more. Logitech Unifying receiver—the tiny, wireless receiver that stays in your laptop and lets you add devices as you need them.You can do more, faster with eight hot keys for instant access to music, e-mail and more. With intelligent power management, you can go years without replacing the batteries.",
-        "extra_desc": {},
+        "extra_desc": {
+            "Dimensions" : [
+                "Height: 149 mm",
+                "Width: 441.5 mm",
+                "Depth: 18 mm at front, 22 mm at back"
+            ],
+            "Connection Type" : [
+                "Logitech Unifying protocol (2.4 GHz)",
+                "Wireless range: >10m wireless range"
+            ],
+            "Battery Life" : [
+                "Battery life: 24 months",
+                "Battery: 2 x AAA (included)"
+            ],
+            "Key Life" : "Up to 5 million keystrokes"
+        },
         "img": [
             "./assets/img/product/Keyboard/Logitech K270 Wireless Keyboard (920-003057).jpg",
             "./assets/img/product/Keyboard/Logitech K270 Wireless Keyboard (920-003057)02.jpg",
@@ -554,7 +569,8 @@ var product = [{
         "id": 23,
         "name": "Razer Blackwidow Elite Tournament-Grade",
         "desc": "Razer™ Mechanical Switches. Multi-function digital dial. Ergonomic wrist rest. Fully controllable keys. Up to 80 million keystrokes lifespan. Switch : Yellow / Green / Orange. 2 Years Warranty by Razer Malaysia",
-        "extra_desc": {},
+        "extra_desc": {
+        },
         "img": [
             "./assets/img/product/Keyboard/Razer Blackwidow Elite Tournament-Grade Mechanical Keyboard.jpg",
             "./assets/img/product/Keyboard/Razer Blackwidow Elite Tournament-Grade Mechanical Keyboard02.jpg"
@@ -573,7 +589,22 @@ var product = [{
         "id": 24,
         "name": "MSI Optix MAG322CQR",
         "desc": "Witness your epic battle with the MSI Optix MAG322CQR curved gaming monitor. Equipped with the 2560 x 1440 WQHD resolution and ground-breaking 165Hz refresh rate panel, the MSI Optix MAG322CQR will capture every moment while you take down your opponents. With the FreeSync technology, MSI Optix MAG322CQR provides gamers with the captivating, tearing-free gaming experience. Want to enjoy your games like the way they are meant to be enjoyed? MSI Optix MAG322CQR curved gaming monitor is designed specifically for that purpose.",
-        "extra_desc": {},
+        "extra_desc": {
+            "PANEL RESOLUTION" : "2560 x 1440 (WQHD)",
+            "REFRESH RATE" : "165Hz",
+            "RESPONSE TIME" : "1ms(MPRT)",
+            "BRIGHTNESS (NITS)" : "300",
+            "ASPECT RATIO" : "16:9",
+            "CURVATURE" : "1500R",
+            "VIDEO PORTS" : [
+                "1x DP (1.2a)",
+                "2x HDMI (2.0b)",
+                "1x USB Type C (DisplayPort Alternate)"
+            ],
+            "AUDIO PORTS" : "1 x Earphone out",
+            "DIMENSION (W X H X D)" : "710.38 x 513.6 x 266.5 mm / 27.95 x 20.11 x 10.33 inch",
+            "POWER INPUT" : "100~240V, 50~60Hz"
+        },
         "img": [
             "./assets/img/product/Monitor/MSI Optix MAG322CQR 32 WQHD Curved Gaming Monitor.jpg",
             "./assets/img/product/Monitor/MSI Optix MAG322CQR 32 WQHD Curved Gaming Monitor 02.jpg",
@@ -592,7 +623,20 @@ var product = [{
         "id": 25,
         "name": "HP X24ih 23.8-inch FHD 144Hz",
         "desc": "Experience action-packed gaming in lifelike quality with the 23.8-inch diagonal monitor that’s built to deliver the most consistent color. Now, with an IPS panel, enjoy the superb picture and ultra-wide viewing angles, and immerse yourself in a world of winning. Plus, with a 1ms response time, 144 Hz refresh rate[1] and AMD FreeSync™ Premium[2] technology, you’ll always be one step ahead of your opponent with fluid and lag-free gameplay.",
-        "extra_desc": {},
+        "extra_desc": {
+            "Display type" : "IPS",
+            "Display area (metric)" : "527.04 mm x 296.46 mm",
+            "Aspect ratio" : "16:9",
+            "Resolution (native)" : "FHD (1920 x 1080)",
+            "Brightness" : "	350 nits",
+            "Contrast ratio" : "1000:1 static",
+            "Response time" : "1ms GtG (with overdrive)",
+            "Display Input Type" : "1 HDMI 2.0; 1 DisplayPort™ 1.2",
+            "Dimensions without stand (W x D x H)" : "54.08 x 5.25 x 32.58 cm",
+            "Dimensions with stand (W x D x H)" : "54.08 x 21.8 x 48.99 cm",
+            "Power" : "	Input voltage 100 to 240 VAC",
+            "Power Consumption Description" : "46 W (maximum), 38 W (typical), 0.5 W (standby)"
+        },
         "img": [
             "./assets/img/product/Monitor/HP X24ih 23.8'' FHD 144Hz Gaming Monitor.jpg",
             "./assets/img/product/Monitor/HP X24ih 23.8'' FHD 144Hz Gaming Monitor02.jpg",
@@ -609,7 +653,38 @@ var product = [{
         "id": 26,
         "name": "Samsung LC24F390FHEXXM",
         "desc": "Discover a truly immersive viewing experience with the Samsung monitor curved more deeply than any other. Wrapping around your field of vision like your local iMax theater screen, the 1800R screen — with its 1800mm radius of arc for greater curvature — creates a wider field of view, enhances depth perception, and minimizes peripheral distractions to draw you deeper in to your content. So whether it is an online movie, a favourite TV show, or a pulse-racing game, Samsung’s deeper screen curve will fully immerse you in all your multi-media content",
-        "extra_desc": {},
+        "extra_desc": {
+            "Resolution" : "1920 x 1080",
+            "Aspect Ratio" : "16:9",
+            "Screen Curvature" : "1800R",
+            "Brightness (Typical)" : "250cd/m2",
+            "Contrast Ratio Static" : "3,000:1 (Typ.)",
+            "Response Time" : "4(GTG)",
+            "Viewing Angle (H/V)" : "178°(H)/178°(V)",
+            "General Feature" : [
+                "Samsung MagicBright",
+                "Samsung MagicUpscale",
+                "Eco Saving Plus",
+                "Eye Saver Mode",
+                "Flicker Free",
+                "Game Mode",
+                "Image Size",
+                "FreeSync",
+                "Windows 10 Certification"
+            ],
+            "Interface" : [
+                "HDMI x 1",
+                "Headphone x 1",
+                "D-Sub"
+            ],
+            "Power" : [
+                "Power Supply AC 100~240V",
+                "Power Consumption (Max) 25 W",
+                "Power Consumption (DPMS) Less than 0.3 W",
+                "Power Consumption (Off Mode) Less than 0.3 W",
+                "External Adaptor"
+            ]
+        },
         "img": [
             "./assets/img/product/Monitor/Samsung LC24F390FHEXXM 23.5 Super Slim Curved Monitor.jpg",
             "./assets/img/product/Monitor/Samsung LC24F390FHEXXM 23.5 Super Slim Curved Monitor02.jpg"

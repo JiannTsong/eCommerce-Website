@@ -33,13 +33,12 @@ $(function(){
                         let dd = '<dd class="col-sm-9" style="margin-top:1rem;margin-bottom:1rem;">'+Object.entries(product[i].extra_desc)[d][1]+'</dd>';
                         $("dl.row").append(dd);
                     }else{
-                        let dd = '<dd class="col-sm-9" style="margin-top:1rem;margin-bottom:1rem;"></dd>';
-                            $("dl.row").append(dd);
+                        let ddc = '';
                         for(let n = 0; n < Object.entries(product[i].extra_desc)[d][1].length; n++){
-                            let dd = '<p>'+Object.entries(product[i].extra_desc)[d][1][n]+'</p>';
-                            $("dl.row > dd").append(dd);
-
+                            ddc = ddc + '<p>'+Object.entries(product[i].extra_desc)[d][1][n]+'</p>';
                         }
+                        let dd = '<dd class="col-sm-9" style="margin-top:1rem;margin-bottom:1rem;">'+ddc+'</dd>';
+                        $("dl.row").append(dd);
                     }
 
                 }
@@ -49,8 +48,6 @@ $(function(){
     };
     
     window.onload = fetchProduct();
-    
-    
     
     $("#minus_quantity").click(function () { 
         let current = $("#product_quantity").val();
