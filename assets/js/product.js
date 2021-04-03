@@ -1,6 +1,6 @@
 $(function () {
 
-    for (let i = 0; i < product.length; i++) {
+    for (let i = product.length - 1; i >= 0; i--) {
         $("#product").append('<div class="card product" style="height:30rem;">' +
             '<img src="' + product[i].img[0] + '" alt="' + product[i].name + '">' +
             '<div class="card-body">' +
