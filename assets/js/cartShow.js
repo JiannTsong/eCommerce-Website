@@ -7,7 +7,7 @@ $(function() {
             $("#itemAdded").show();
             $("#message").hide();
 
-            let cartArray = JSON.parse(localStorage.getItem(localStorage.key(i)));
+            let cartArray = JSON.parse(localStorage.getItem("Cart"));
 
             for (let i = 0; i < cartArray.length; i++) {
                 //retrieve from local storage
@@ -176,7 +176,7 @@ $(function() {
             }
         }
 
-        //location.reload();
+        location.reload();
     });
 
 });
