@@ -1,0 +1,23 @@
+{
+    "name" : "Stygix Computer Shop",
+    "short_name" : "Stygix",
+    "start_url" : ".",
+    "background_color" : "#fff",
+    "theme_color" : "#525f7f",
+    "description" : "The Stygix Computer Shop",
+    "display": "standalone",
+    "icons" : [
+        {
+            "src" : "assets/logo/icon.png",
+            "type" : "image/png",
+            "sizes" : "250x250",
+            "purpose": "any maskable"
+        },
+        {
+            "src" : "assets/logo/StygixWhite.png",
+            "type" : "image/png",
+            "sizes" : "49x357",
+            "purpose": "any maskable"
+        }
+    ]
+}
