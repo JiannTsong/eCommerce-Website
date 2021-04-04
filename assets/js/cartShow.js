@@ -9,7 +9,7 @@ $(function() {
 
             let cartArray = JSON.parse(localStorage.getItem(localStorage.key(i)));
 
-            for (var i = 0; i < cartArray.length; i++) {
+            for (let i = 0; i < cartArray.length; i++) {
                 //retrieve from local storage
 
                 let pid = parseInt(cartArray[i].product_ID) - 1;
@@ -18,7 +18,7 @@ $(function() {
 
                 //show the item
                 $("#itemAdded").append(
-                    '<div class="row" data-cartid = "' + pid + '" style = "padding-top: 50px"> <div class="col-sm-4">' + '<img src="' + product[pid].img[0] + '" alt="' + product[pid].name + '" class = "imgcart">' + '</div>' +
+                    '<div class="row" data-cartid = "' + (pid+1) + '" style = "padding-top: 50px"> <div class="col-sm-4">' + '<img src="' + product[pid].img[0] + '" alt="' + product[pid].name + '" class = "imgcart">' + '</div>' +
                     '<div class="col-sm-8">' + '<div style = "font-size: 20px;"><b>' + product[pid].name.substring(0, 30) + '</b></div>' +
                     '<div><i style = "justify-content: space-evenly;">' + product[pid].desc + '</i></div>' +
                     '<div class="cartprice"> RM ' + product[pid].price + '</div>' +
@@ -40,122 +40,143 @@ $(function() {
     });
 
     //change on effect - quantity
-    $("#itemAdded").on('change', $("#qty"), function(e) {
+    $("#itemAdded > div.row").on('change', "#qty", function(e) {
         e.preventDefault();
-        var cartid = $(this).data("cartid");
-        console.log(cartid);
+        let cartid = $(this).closest("div.row").data("cartid");//get data cartid from it's parent
 
-        var newQty = $("#qty").val();
-        var cartArray = JSON.parse(localStorage.getItem("Cart"));
+        let newQty = $(this).val();
 
-        if (newQty !== 0) {
-            for (var i = 0; i < cartArray.length; i++) {
-                if (cartid === cartArray[i].product_ID) {
+        let cartArray = JSON.parse(localStorage.getItem("Cart"));
+
+        if (newQty > 0) {
+            for (let i = 0; i < cartArray.length; i++) {
+                if (cartid == cartArray[i].product_ID) {
                     cartArray[i].product_quantity = newQty;
-
                     localStorage.setItem("Cart", JSON.stringify(cartArray));
-
-                    alert("Item have been successfully modify");
-                } else
-                    alert("Something went wrong! Please try again.");
+                }
             }
-        } else if (newQty === 0) {
-            for (var i = 0; i < cartArray.length; i++) {
-                if (cartid === cartArray[i].product_ID) {
+        } else if (newQty == 0) {
+            for (let i = 0; i < cartArray.length; i++) {
+                if (cartid == cartArray[i].product_ID) {
+                    delete cartArray[i];
 
-                    delete cartArray[i].product_ID;
-                    delete cartArray[i].product_quantity;
+                    let filtered = [];//declare array list var
 
-                    localStorage.setItem("Cart", JSON.stringify(cartArray));
+                    //recreate array list wiithout null element
+                    filtered = cartArray.filter(function(el){
+                        return el != null;
+                    });
 
-                    alert("Item have been successfully modify");
-                } else
-                    alert("Something went wrong! Please try again.");
+                    //remove whole localSotrage item if no item in the array list
+                    if(filtered.length == 0){
+                        localStorage.removeItem("Cart");
+                    }else{
+                        localStorage.setItem("Cart", JSON.stringify(filtered));
+                    }
+
+                    console.log("Item have been successfully removed");
+                    location.reload();//relaod if item is deleted
+                }
             }
         } else {
-            alert("Something went wrong! Please try again.")
+            console.log("Something went wrong! Please try again.")
         }
 
-        location.reload();
     });
 
     //add quantity
-    $("#itemAdded").on("click", $("#add"), function(e) {
+    $("#itemAdded > div.row").on("click", "#add", function(e) {
         e.preventDefault();
-        var cartid = $(this).data("cartid");
-        console.log(cartid);
+        let cartid = $(this).closest("div.row").data("cartid");//get data cartid from it's parent
 
-        var cartArray = JSON.parse(localStorage.getItem("Cart"));
+        let cartArray = JSON.parse(localStorage.getItem("Cart"));
 
-        for (var i = 0; i < cartArray.length; i++) {
-            if (cartid === cartArray[i].product_ID) {
-                cartArray[i].product_quantity += 1;
+        for (let i = 0; i < cartArray.length; i++) {
+            if (cartid == cartArray[i].product_ID) {
+                cartArray[i].product_quantity = parseInt(cartArray[i].product_quantity) + 1;
 
                 localStorage.setItem("Cart", JSON.stringify(cartArray));
 
-                alert("Item have been successfully added");
-            } else
-                alert("Something went wrong! Please try again.");
+                console.log("Item have been successfully added");
+            }
         }
-
         location.reload();
     });
 
     //deduct quantity
-    $("#itemAdded").on("click", $("#deduct"), function(e) {
-        var cartid = $(this).data("cartid");
-        console.log(cartid);
+    $("#itemAdded > div.row").on("click", "#deduct", function(e) {
+        let cartid = $(this).closest("div.row").data("cartid");
 
-        var cartArray = JSON.parse(localStorage.getItem("Cart"));
+        let cartArray = JSON.parse(localStorage.getItem("Cart"));
 
-        for (var i = 0; i < cartArray.length; i++) {
-            if (cartid === cartArray[i].product_ID) {
-                cartArray[i].product_quantity -= 1;
+        for (let i = 0; i < cartArray.length; i++) {
+            if (cartid == cartArray[i].product_ID) {
+                cartArray[i].product_quantity = parseInt(cartArray[i].product_quantity) - 1;
 
-                if (cartArray[i].product_quantity !== 0) {
+                if (cartArray[i].product_quantity > 0) {
                     localStorage.setItem("Cart", JSON.stringify(cartArray));
 
-                    alert("Item have been successfully modify");
-                } else if (cartArray[i].product_quantity === 0) {
+                    console.log("Item have been successfully deducted !");
+                } else if (cartArray[i].product_quantity == 0) {
 
-                    delete cartArray[i].product_ID;
-                    delete cartArray[i].product_quantity;
+                    delete cartArray[i];//delete the target element in array
 
-                    localStorage.setItem("Cart", JSON.stringify(cartArray));
+                    let filtered = [];//declare array list var
 
-                    alert("Item have been successfully deleted");
-                } else
-                    alert("Something went wrong! Please try again.")
-            } else
-                alert("Something went wrong! Please try again.");
+                    //recreate array list without null element
+                    filtered = cartArray.filter(function(el){
+                        return el != null;
+                    });
+
+                    //remove array if no more element in array
+                    if(filtered.length == 0){
+                        localStorage.removeItem("Cart");
+                    }else{
+                        localStorage.setItem("Cart", JSON.stringify(filtered));
+                    }
+
+                    console.log("Item have been successfully deleted !");
+                } else {
+                    console.log("Something went wrong during deduct item ! Please try again.");
+                }
+            }
         }
 
         location.reload();
     });
 
     //delete the item when user click delete
-    $("#itemAdded").on("click", $("#deleteItem"), function(e) {
+    $("#itemAdded > div.row").on("click", "#deleteItem", function(e) {
         e.preventDefault();
-        var cartid = $(this).data("cartid");
+        let cartid = $(this).closest("div.row").data("cartid");
         console.log(cartid);
 
-        var cartArray = JSON.parse(localStorage.getItem("Cart"));
+        let cartArray = JSON.parse(localStorage.getItem("Cart"));
 
 
-        for (var i = 0; i < cartArray.length; i++) {
-            if (cartid === cartArray[i].product_ID) {
+        for (let i = 0; i < cartArray.length; i++) {
+            if (cartid == cartArray[i].product_ID) {
+                delete cartArray[i];//delete the item from array
 
-                delete cartArray[i].product_ID;
-                delete cartArray[i].product_quantity;
+                let filtered = [];//declare array list var
 
-                localStorage.setItem("Cart", JSON.stringify(cartArray));
+                //recreate array list without null element
+                filtered = cartArray.filter(function(el){
+                    return el != null;
+                });
 
-                alert("Item have been successfully deleted");
-            } else
-                alert("Something went wrong! Please try again.");
+                //remove array if no more element in array
+                if(filtered.length == 0){
+                    localStorage.removeItem("Cart");
+                }else{
+                    localStorage.setItem("Cart", JSON.stringify(filtered));
+                }
+
+                console.log("Item have been successfully deleted");
+            }
         }
 
-        location.reload();
+        //location.reload();
     });
 
 });
