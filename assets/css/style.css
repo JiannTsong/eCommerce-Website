@@ -74,7 +74,7 @@ div>div+#item_added {
     border-color: black;
 }
 
-div>div>img.imgcart {
+div>div>a>img.imgcart {
     max-width: 250px;
 }
 
@@ -83,6 +83,14 @@ div>div>div.cartprice {
     padding-bottom: 5px;
     font-size: 25px;
     font-weight: bold;
+}
+
+a.cart_link {
+    color:#525f7f;
+}
+
+a.cart_link:hover {
+    color: #233dd2;
 }
 
 
