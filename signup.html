@@ -276,6 +276,7 @@
                 let regExpStrong = /.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/;
                 let pass = $("#password").val();
 
+                let no = 1;
                 if(pass.length <= 3 && (pass.match(regExpWeak) || pass.match(regExpMedium) || pass.match(regExpStrong)))no=1;
                 if(pass.length >= 6 && ((pass.match(regExpWeak) && pass.match(regExpMedium)) || (pass.match(regExpMedium) && pass.match(regExpStrong)) || (pass.match(regExpWeak) && pass.match(regExpStrong))))no=2;
                 if(pass.length >= 6 && pass.match(regExpWeak) && pass.match(regExpMedium) && pass.match(regExpStrong))no=3;
