@@ -18,6 +18,11 @@ $(function() {
 
                 //show the item
                 $("#itemAdded").append(
+
+                    '<div class="row" data-cartid = "' + (pid+1) + '" style = "padding-top: 50px"> <div class="col-sm-4">' + '<a href="product.html?id='+(pid+1)+'"><img src="' + product[pid].img[0] + '" alt="' + product[pid].name + '" class="imgcart"></a>' + '</div>' +
+                    '<div class="col-sm-8">' + '<div style = "font-size: 20px;"><a href="product.html?id='+(pid+1)+'" class="cart_link"><b>' + product[pid].name.substring(0, 30) + '</b></a></div>' +
+                    '<div><p style = "font-style:italic;justify-content: stretch;text-align: justify; text-justify: inter-word;">' + product[pid].desc + '</p></div>' +
+
                     '<div class="row" data-cartid = "' + (pid + 1) + '" style = "padding-top: 50px"> <div class="col-sm-4">' + '<a href="product.html?id=' + (pid + 1) + '"><img src="' + product[pid].img[0] + '" alt="' + product[pid].name + '" class="imgcart"></a>' + '</div>' +
                     '<div class="col-sm-8">' + '<div style = "font-size: 20px;"><a href="product.html?id=' + (pid + 1) + '" class="cart_link"><b>' + product[pid].name.substring(0, 30) + '</b></a></div>' +
                     '<div><i style = "justify-content: space-between;">' + product[pid].desc + '</i></div>' +
