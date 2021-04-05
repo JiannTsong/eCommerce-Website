@@ -179,4 +179,8 @@ $(function() {
         location.reload();
     });
 
+    $("#checkout").click(function() {
+        localStorage.removeItem("Cart");
+    });
+
 });

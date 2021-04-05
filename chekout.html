@@ -17,8 +17,8 @@
     <!-- Argon CSS -->
     <link type="text/css" href="assets/css/argon-design-system.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/logo/StygixWhite.png" type="image/png">
+    <meta http-equiv="refresh" content="3; url=https://stygix.azurewebsites.net/index.html" />
 </head>
 
 <body>
@@ -93,17 +93,10 @@
     </nav>
 
     <!--Content-->
-    <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 50px;">
-        <!--item add here-->
-        <div id="itemAdded"></div>
+    <div style="margin-left: 50px; margin-right: 50px; margin-top: 30px; margin-bottom: 300px;">
+        <h4 style="margin-bottom: 20px;">Redirecting in 5 seconds...</h4>
+        <div class="alert alert-success" role="alert" id="display">You have checkout successfully. Thank you for your support. Have a nice day! <br><a href="https://stygix.azurewebsites.net/">Click Here to back to main page.</a></div>
 
-        <div class="alert alert-light" role="alert" id="message"></div>
-
-        <!--button-->
-        <div class="d-flex flex-row-reverse">
-            <div class="p-2"><a href="./chekout.html"><button type="button" class="btn btn-danger" id="checkout">Checkout</button></a></div>
-            <div class="p-2"><button type="button" class="btn btn-warning" id="clear">Clear All</button></div>
-        </div>
     </div>
 
 
@@ -116,7 +109,7 @@
                     <a class="nav-link" href="about.html">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
+                    <a class="nav-link active" href="contact.html">Contact Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="privacy.html">Privacy Policy</a>
@@ -131,7 +124,7 @@
             <div>
                 <div>
                     Email: 
-                    <a href="mailto:stygix_shop@gmail.com" rel="noopener" rel="noreferrer">
+                    <a href="mailto:stygix_shop@gmail.com">
                         stygix_shop@gmail.com
                     </a>
                 </div>
@@ -159,6 +152,7 @@
                     </span>
                 </div>
             </div>
+
             <div>
                 <div>Get Apps </div>
                 <div>
@@ -203,9 +197,6 @@
     <!-- Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
-
-    <script src="assets/json/product_details.js"></script>
-    <script src="assets/js/cartShow.js"></script>
 
     <script src="assets/js/firebase/firebase.js"></script>
     <script src="assets/js/main.js"></script>
