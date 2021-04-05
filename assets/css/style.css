@@ -75,7 +75,7 @@ div>div+#item_added {
 }
 
 div>div>a>img.imgcart {
-    max-width: 250px;
+    max-width: 100%;
 }
 
 div>div>div.cartprice {
