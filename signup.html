@@ -7,6 +7,17 @@
 
     <title>Sign Up - Stygix Computer Shop</title>
 
+    <!--Web App Setup-->
+    <meta name="theme-color" content="#525f7f">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/logo/icon.png">
+    <!---script src="./sw_register.js"></script--->
+    <script type="module">
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+        const el = document.createElement('pwa-update');
+        document.body.appendChild(el);
+    </script>
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet">
 
@@ -71,7 +82,7 @@
                 </ul>
 
                 <ul class="navbar-nav ml-lg-auto">
-                    <form class="form-inline my-2 my-lg-0" action="search.html">
+                    <form class="form-inline my-2 my-lg-0" method="GET" action="search.html">
                         <input class="search-form form-control mr-sm-2" style="border-radius: 3rem;width: 100%;"
                             name="q" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn search-btn" style="position: absolute; border-radius: 3rem;" type="submit">

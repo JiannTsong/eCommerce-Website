@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Stygix Computer Shop</title>
+    
     <!--Web App Setup-->
     <meta name="theme-color" content="#525f7f">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="assets/logo/icon.png">
-    <script src="./sw_register.js"></script>
+    <!---script src="./sw_register.js"></script--->
+    <script type="module">
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+        const el = document.createElement('pwa-update');
+        document.body.appendChild(el);
+    </script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet">
@@ -22,17 +28,6 @@
     <!-- Argon CSS -->
     <link type="text/css" href="assets/css/argon-design-system.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!----script>
-        // Make sure sw are supported
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker
-                    .register('../sw_cached_site.js')
-                    .then(reg => console.log('Service Worker: Registered (Pages)'))
-                    .catch(err => console.log(`Service Worker: Error: ${err}`));
-            });
-        }
-    </script---->
     <link rel="shortcut icon" href="assets/logo/StygixWhite.png" type="image/png">
 </head>
 
