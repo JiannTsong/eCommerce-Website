@@ -82,6 +82,6 @@ xmlhttp.send();
     updateResult(allProduct);
 
     if(!(searchInput == null || searchInput == "")){
-      $("#search").val(searchInput.replace("+", " "));
+      $("#search").val(searchInput.replaceAll('+', ' '));
       searchExecute();
 }
