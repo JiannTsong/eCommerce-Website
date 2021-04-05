@@ -18,9 +18,9 @@ $(function() {
 
                 //show the item
                 $("#itemAdded").append(
-                    '<div class="row" data-cartid = "' + (pid+1) + '" style = "padding-top: 50px"> <div class="col-sm-4">' + '<a href="product.html?id='+(pid+1)+'"><img src="' + product[pid].img[0] + '" alt="' + product[pid].name + '" class="imgcart"></a>' + '</div>' +
-                    '<div class="col-sm-8">' + '<div style = "font-size: 20px;"><a href="product.html?id='+(pid+1)+'" class="cart_link"><b>' + product[pid].name.substring(0, 30) + '</b></a></div>' +
-                    '<div><i style = "justify-content: space-evenly;">' + product[pid].desc + '</i></div>' +
+                    '<div class="row" data-cartid = "' + (pid + 1) + '" style = "padding-top: 50px"> <div class="col-sm-4">' + '<a href="product.html?id=' + (pid + 1) + '"><img src="' + product[pid].img[0] + '" alt="' + product[pid].name + '" class="imgcart"></a>' + '</div>' +
+                    '<div class="col-sm-8">' + '<div style = "font-size: 20px;"><a href="product.html?id=' + (pid + 1) + '" class="cart_link"><b>' + product[pid].name.substring(0, 30) + '</b></a></div>' +
+                    '<div><i style = "text-align: justify; text-justify: inter-word;">' + product[pid].desc + '</i></div>' +
                     '<div class="cartprice"> RM ' + product[pid].price + '</div>' +
                     '<div>' + '<span id = "add" style = "padding-right: 10px;"><i class="fas fa-plus iconwidth"></i></span><span><input type="number" id = "qty" value = "' + product_quantity + '" style = "width: 3.5rem;" min = "0" max = "' + product[pid].stock + '"></span><span id = "deduct" style = "padding-right: 10px; padding-left: 10px;"><i class="fas fa-minus iconwidth2"></i></span><span id = "deleteItem"><i class="fas fa-trash-alt"></i></span></div></div>');
             }
@@ -42,7 +42,7 @@ $(function() {
     //change on effect - quantity
     $("#itemAdded > div.row").on('change', "#qty", function(e) {
         e.preventDefault();
-        let cartid = $(this).closest("div.row").data("cartid");//get data cartid from it's parent
+        let cartid = $(this).closest("div.row").data("cartid"); //get data cartid from it's parent
 
         let newQty = $(this).val();
 
@@ -60,22 +60,22 @@ $(function() {
                 if (cartid == cartArray[i].product_ID) {
                     delete cartArray[i];
 
-                    let filtered = [];//declare array list var
+                    let filtered = []; //declare array list var
 
                     //recreate array list wiithout null element
-                    filtered = cartArray.filter(function(el){
+                    filtered = cartArray.filter(function(el) {
                         return el != null;
                     });
 
                     //remove whole localSotrage item if no item in the array list
-                    if(filtered.length == 0){
+                    if (filtered.length == 0) {
                         localStorage.removeItem("Cart");
-                    }else{
+                    } else {
                         localStorage.setItem("Cart", JSON.stringify(filtered));
                     }
 
                     console.log("Item have been successfully removed");
-                    location.reload();//relaod if item is deleted
+                    location.reload(); //relaod if item is deleted
                 }
             }
         } else {
@@ -87,7 +87,7 @@ $(function() {
     //add quantity
     $("#itemAdded > div.row").on("click", "#add", function(e) {
         e.preventDefault();
-        let cartid = $(this).closest("div.row").data("cartid");//get data cartid from it's parent
+        let cartid = $(this).closest("div.row").data("cartid"); //get data cartid from it's parent
 
         let cartArray = JSON.parse(localStorage.getItem("Cart"));
 
@@ -119,19 +119,19 @@ $(function() {
                     console.log("Item have been successfully deducted !");
                 } else if (cartArray[i].product_quantity == 0) {
 
-                    delete cartArray[i];//delete the target element in array
+                    delete cartArray[i]; //delete the target element in array
 
-                    let filtered = [];//declare array list var
+                    let filtered = []; //declare array list var
 
                     //recreate array list without null element
-                    filtered = cartArray.filter(function(el){
+                    filtered = cartArray.filter(function(el) {
                         return el != null;
                     });
 
                     //remove array if no more element in array
-                    if(filtered.length == 0){
+                    if (filtered.length == 0) {
                         localStorage.removeItem("Cart");
-                    }else{
+                    } else {
                         localStorage.setItem("Cart", JSON.stringify(filtered));
                     }
 
@@ -156,19 +156,19 @@ $(function() {
 
         for (let i = 0; i < cartArray.length; i++) {
             if (cartid == cartArray[i].product_ID) {
-                delete cartArray[i];//delete the item from array
+                delete cartArray[i]; //delete the item from array
 
-                let filtered = [];//declare array list var
+                let filtered = []; //declare array list var
 
                 //recreate array list without null element
-                filtered = cartArray.filter(function(el){
+                filtered = cartArray.filter(function(el) {
                     return el != null;
                 });
 
                 //remove array if no more element in array
-                if(filtered.length == 0){
+                if (filtered.length == 0) {
                     localStorage.removeItem("Cart");
-                }else{
+                } else {
                     localStorage.setItem("Cart", JSON.stringify(filtered));
                 }
 
