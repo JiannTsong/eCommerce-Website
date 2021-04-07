@@ -869,7 +869,7 @@ var product = [{
         "Gaming",
         "Curved"
     ]
-}
+},
 
 {
     "id": 28,
