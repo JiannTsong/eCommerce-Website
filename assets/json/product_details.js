@@ -871,4 +871,44 @@ var product = [{
     ]
 }
 
+{
+    "id": 28,
+    "name": "Kingston A400 SATA SSD",
+    "desc": "Kingston’s A400 solid-state drive dramatically improves the responsiveness of your existing system with incredible boot, loading and transfer times compared to mechanical hard drives. Powered by a latest gen controller for read and write speeds up to 500MB/s and 450MB/s, this SSD is 10x faster than a traditional hard drive for higher performance, ultra-responsive multi-tasking and an overall faster system. Also more reliable and durable than a hard drive, A400 is available in multiple capacities from 120GB–1.92TB.",
+    "extra_desc": {
+        "Form factor" : '2.5"',
+        "Interface" : "SATA Rev. 3.0 (6Gb/s) – with backwards compatibility to SATA Rev. 2.0 (3Gb/s)",
+        "Capacity" : "480GB",
+        "NAND" : "3D",
+        "Data Transfer (ATTO)" : [
+            "120GB — up to 500MB/s Read and 320MB/s Write",
+            "240GB — up to 500MB/s Read and 350MB/s Write",
+            "480GB — up to 500MB/s Read and 450MB/s Write",
+            "960GB — up to 500MB/s Read and 450MB/s Write",
+            "1.92TB — up to 500MB/s Read and 450MB/s Write"
+        ],
+        "Power Consumption" : "0.195W Idle / 0.279W Avg / 0.642W (MAX) Read / 1.535W (MAX) Write",
+        "Storage temperature" : "-40°C~85°C",
+        "Operating temperature" : "0°C~70°C",
+        "Dimensions" : "100.0mm x 69.9mm x 7.0mm",
+        "Weight" : '41g (480GB – 2.5")',
+        "Life expectancy" : "1 million hours MTBF",
+        "Warranty/support" : "Limited 3-year warranty with free technical support",
+        "Total Bytes Written (TBW)" : "160TB"
+    },
+    "img": [
+        "./assets/img/product/kingston_a400/ktc-product-ssd-a400-sa400s37-480gb-1-lg.webp",
+        "./assets/img/product/kingston_a400/ktc-product-ssd-a400-sa400s37-480gb-3-lg.jpg",
+        "./assets/img/product/kingston_a400/ktc-product-ssd-a400-sa400s37-480gb-4-lg.jpg",
+    ],
+    "price": 239,
+    "stock": 15,
+    "brand": "Kingston",
+    "type": [
+        "SSD",
+        "Storage",
+        "Drive"
+    ]
+}
+
 ]
