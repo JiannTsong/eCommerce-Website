@@ -36,8 +36,9 @@ $(function() {
             //store it and display successful message
             localStorage.setItem("Cart", JSON.stringify(cartArray));
 
-            $("div.container-fluid").prepend('<div class="alert alert-success" role="alert">'+
+            $("div.card.shadow > div.container-fluid").prepend('<div class="alert alert-success" role="alert" style="margin-top:1rem;margin-bottom:1rem;">'+
             'Successfully added to your cart !'+
+            '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span> </button>'+
             '</div>');
             
             //make an immediate update to cart icon counting
