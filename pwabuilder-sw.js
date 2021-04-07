@@ -16,7 +16,7 @@ workbox.routing.registerRoute(
     cacheName: CACHE,
     plugins: [
       new workbox.expiration.ExpirationPlugin({
-        maxEntries: 200,
+        maxEntries: 500,
       }),
     ],
   })
