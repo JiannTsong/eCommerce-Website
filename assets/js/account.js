@@ -52,9 +52,21 @@ $(function () {
                     username : new_username,
                     address : new_addr
                 }).then(() => {
-                        $("#profile_updated").addClass("show");
+                        //$("#profile_updated").addClass("show");
+                        $('<div class="alert alert-success alert-dismissible fade show" role="alert">'+
+                        '<span class="alert-inner--text">Success to save profile details!</span>'+
+                        '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'+
+                        '<span aria-hidden="true">×</span>'+
+                        '</button>'+
+                        '</div>').insertAfter("div.container.shadow.p-3.mb-5.bg-white.rounded > h3");
                     })
                     .catch((error) => {
+                        $('<div class="alert alert-warning alert-dismissible fade show" role="alert">'+
+                        '<span class="alert-inner--text">Failed to save profile details!</span>'+
+                        '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'+
+                        '<span aria-hidden="true">×</span>'+
+                        '</button>'+
+                        '</div>').insertAfter("div.container.shadow.p-3.mb-5.bg-white.rounded > h3");
                         console.error("Error writing document: ", error.message);
                     });
             });
