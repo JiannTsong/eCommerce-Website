@@ -12,7 +12,7 @@ var firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+//firebase.analytics();
 var db = firebase.firestore();//firestore database connection
 
 firebase.auth().onAuthStateChanged(function (user) {
