@@ -7,7 +7,7 @@
 
     <title>Stygix Computer Shop</title>
 
-    <!--Web App Setup>
+    <!--Web App Setup--->
     <meta name="theme-color" content="#525f7f">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="assets/logo/icon.png">
@@ -15,7 +15,7 @@
         import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
         const el = document.createElement('pwa-update');
         document.body.appendChild(el);
-    </script--->
+    </script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet">
@@ -304,34 +304,13 @@
                 return "";
             }
 
-            
-
-            $("div.wrapper > input#search").focus(function(){
-                if(getCookie("search_history") !== ""){
-                    let searchHistory = JSON.parse(getCookie("search_history"));
-                    $("div.wrapper > div.search_history").html("");
-                    for(let i = searchHistory.length;i>0;i--){
-                        $("div.wrapper > div.search_history").append('<li><a href="search.html?q='+searchHistory[i-1]+'">'+searchHistory[i-1]+'</a></li>');
-                    }
-                    $("div.wrapper > div.search_history").show();
-                }
-            });
-
-            $("div.wrapper > input#search").blur(function(){
-                if(getCookie("search_history") !== ""){
-                    window.setTimeout(function(){
-                        $("div.wrapper > div.search_history").hide();
-                    }, 500);
-                }
-            });
-
-            $('form').submit(function(e){
-                e.preventDefault();
+            function updateHistory() {
                 let searchHistory = [];
                 let filtered = [];
                 
                 let inputSearch = $("div.wrapper > input#search").val();
-                if(getCookie("search_history") !== ""){
+                if(inputSearch !== ""){
+                    if(getCookie("search_history") !== ""){
                     let temp = [];
                     searchHistory = JSON.parse(getCookie("search_history"));
                     for(let h=0;h<searchHistory.length;h++){
@@ -360,14 +339,56 @@
                         searchHistory[temp.length-1] = tempItem;
                     }
                 }else{
-                    //
                     searchHistory.push(inputSearch);
                 }
                 
                 setCookie("search_history", JSON.stringify(searchHistory), 90);
+                }
+            }
 
-                window.location.href = "search.html?q="+inputSearch;
+            
+
+            $("div.wrapper > input#search").focus(function(){
+                if(getCookie("search_history") !== ""){
+                    let searchHistory = JSON.parse(getCookie("search_history"));
+                    $("div.wrapper > div.search_history").html("");
+                    for(let i = searchHistory.length;i>0;i--){
+                        $("div.wrapper > div.search_history").append('<li><a href="search.html?q='+searchHistory[i-1]+'">'+searchHistory[i-1]+'</a></li>');
+                    }
+                    $("div.wrapper > div.search_history").show();
+                }
             });
+
+            $("div.wrapper > input#search").blur(function(){
+                if(getCookie("search_history") !== ""){
+                    window.setTimeout(function(){
+                        $("div.wrapper > div.search_history").hide();
+                    }, 500);
+                }
+            });
+
+            $('form').submit(function(e){
+                e.preventDefault();
+                let inputSearch = $("div.wrapper > input#search").val();
+                updateHistory();
+
+                window.setTimeout(function(){
+                    window.location.href = "search.html?q="+inputSearch
+                }, 200);
+            });
+
+            $('form > input[type="submit"]').click(function(){
+                let inputSearch = $("div.wrapper > input#search").val();
+                updateHistory();
+
+                window.setTimeout(function(){
+                    window.location.href = "search.html?q="+inputSearch
+                }, 200);
+            });
+
+
+            window.onload = updateHistory();
+
          });
     </script>
 </html>
