@@ -7,7 +7,7 @@
 
     <title>Stygix Computer Shop</title>
 
-    <!--Web App Setup-->
+    <!--Web App Setup>
     <meta name="theme-color" content="#525f7f">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="assets/logo/icon.png">
@@ -15,7 +15,7 @@
         import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
         const el = document.createElement('pwa-update');
         document.body.appendChild(el);
-    </script>
+    </script--->
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet">
@@ -103,14 +103,74 @@
             </div>
         </div>
     </nav>
+
+    <style>
+        form > .wrapper{
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        form > div.wrapper > input#search{
+            display:inline;
+            border-radius: 5px;
+        }
+
+        form > div.wrapper > input#search:focus{
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        form > .wrapper > div.search_history {
+            display: none;
+            background: #fff;
+            border-radius: 5px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border: 1px solid #cad1d7;
+            border-top: none;
+            box-shadow: 5px #8898aa;
+            width: 100%;
+            position: absolute;
+            z-index: 100;
+            padding: 1rem;
+            line-height: 1.5rem;
+        }
+
+        form > .wrapper > div.search_history > li {
+            padding: 0.75rem;
+            list-style: none;
+            font-size: 1.25rem;
+            width: 100%;
+            cursor: default;
+            border-radius: 5px;
+        }
+
+        form > .wrapper > div.search_history > li:hover {
+            background-color: #efefef;
+        }
+
+        form > input.btn.btn-outline-info{
+            position: absolute;
+        }
+
+        .container-fluid > div#result{
+            margin-top: 2rem;
+            text-align: center;
+        }
+    </style>
     <div class="container-fluid" id="" style="margin-top: 45px;">
         <div class="container">
-            <form action="search.html" method="GET" style="display: flex; max-width: 50rem;">
-                <input type="text" name="q" id="search" class="form-control" placeholder="Search">
-                <input type="submit" value="Search" style="margin-left: 1rem;" class="btn btn-outline-info">
+            <form action="search.html" method="GET" style="max-width: 80%;">
+                <div class="wrapper">
+                    <input type="text" name="q" id="search" class="form-control" placeholder="Search" autocomplete="off">
+                    <div class="search_history">
+                        <!--search history here-->
+                    </div>
+                </div>
+                <input type="submit" value="Search" style="margin-left: 1rem;max-height: 2.8rem;" class="btn btn-outline-info">
             </form>
         </div>
-        <div id="result" style="margin-top: 2rem; text-align: center;">
+        <div id="result">
 
         </div>
     </div>
@@ -220,4 +280,90 @@
     <script type="text/javascript" src="assets/js/SearchConfig.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <script>
+        $(function () { 
+            function setCookie(name, value, expire) {
+                var d = new Date();
+                d.setTime(d.getTime() + (expire * 24 * 60 * 60));
+                var expires = "expires=" + d.toUTCString();
+                document.cookie = name + "=" + value + ";" + expires + ";path=/";
+            }
+
+            function getCookie(cname) {
+                var name = cname + "=";
+                var ca = document.cookie.split(';');//split the cookie part
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);//move to next if the current position is space
+                    }
+                    if (c.indexOf(name) == 0) {//if current position match the string in name
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+            
+
+            $("div.wrapper > input#search").focus(function(){
+                if(getCookie("search_history") !== ""){
+                    let searchHistory = JSON.parse(getCookie("search_history"));
+                    $("div.wrapper > div.search_history").html("");
+                    for(let i = searchHistory.length;i>0;i--){
+                        $("div.wrapper > div.search_history").append('<li><a href="search.html?q='+searchHistory[i-1]+'">'+searchHistory[i-1]+'</a></li>');
+                    }
+                    $("div.wrapper > div.search_history").show();
+                }
+            });
+
+            $("div.wrapper > input#search").blur(function(){
+                if(getCookie("search_history") !== ""){
+                    window.setTimeout(function(){
+                        $("div.wrapper > div.search_history").hide();
+                    }, 500);
+                }
+            });
+
+            $('form').submit(function(e){
+                e.preventDefault();
+                let searchHistory = [];
+                let filtered = [];
+                
+                let inputSearch = $("div.wrapper > input#search").val();
+                if(getCookie("search_history") !== ""){
+                    let temp = [];
+                    searchHistory = JSON.parse(getCookie("search_history"));
+                    for(let h=0;h<searchHistory.length;h++){
+                        temp[h] = searchHistory[h].toLowerCase();
+                    }
+
+                    //not found in the list
+                    if(!temp.includes(inputSearch.toLowerCase())){
+
+                        if(searchHistory.length >=5){
+                            delete searchHistory[0];
+                            searchHistory = searchHistory.filter(function(el) {
+                                return el != null;
+                            });
+                        }
+
+                        searchHistory.push(inputSearch);
+                    }else{
+                        let num = temp.find(element => element == inputSearch.toLowerCase());
+                        let tempItem = searchHistory[0];
+                        searchHistory[0] = searchHistory[num];
+                        searchHistory[num]; //
+                    }
+                }else{
+                    //
+                    searchHistory.push(inputSearch);
+                }
+                
+                setCookie("search_history", JSON.stringify(searchHistory), 90);
+
+                window.location.href = "search.html?q="+inputSearch;
+            });
+         });
+    </script>
 </html>
