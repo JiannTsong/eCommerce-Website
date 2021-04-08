@@ -48,21 +48,23 @@ $(function(){
                 
             }
         }
+
+        $("#minus_quantity").click(function () { 
+            let current = $("#product_quantity").val();
+            if(current != 0){
+                $("#product_quantity").val(parseInt(current)-1);
+            }
+         });
+        
+         $("#plus_quantity").click(function () { 
+            let current = $("#product_quantity").val();
+            if(current < product[pid-1].stock){
+                $("#product_quantity").val(parseInt(current)+1);
+            }
+         });
+
     });
     
 
     
-    $("#minus_quantity").click(function () { 
-        let current = $("#product_quantity").val();
-        if(current != 0){
-            $("#product_quantity").val(parseInt(current)-1);
-        }
-     });
-    
-     $("#plus_quantity").click(function () { 
-        let current = $("#product_quantity").val();
-        if(current < product[pid-1].stock){
-            $("#product_quantity").val(parseInt(current)+1);
-        }
-     });
 });
