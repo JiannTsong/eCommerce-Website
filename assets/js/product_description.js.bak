@@ -6,9 +6,7 @@ $(function(){
     }
     let pid = getQueryString("id");
     
-
-    let aPI = "assets/json/product_details.json";
-    $.getJSON(aPI).done(function(product){
+    function fetchProduct() {
         for(let i = 0; i < product.length; i++){
             if(pid == (i+1)){
                 $("#product_title").append('<h4>'+product[i].name+'</h4>');
@@ -48,9 +46,9 @@ $(function(){
                 
             }
         }
-    });
+    };
     
-
+    window.onload = fetchProduct();
     
     $("#minus_quantity").click(function () { 
         let current = $("#product_quantity").val();

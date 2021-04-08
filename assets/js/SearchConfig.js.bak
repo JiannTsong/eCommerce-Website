@@ -77,16 +77,11 @@ xmlhttp.open('GET', './assets/json/product.json', true);
 xmlhttp.send();
 */
 
-    
+    allProduct = product;
+    InitializeSearchConfig();
+    updateResult(allProduct);
 
-    let aPI = "assets/json/product_details.json";
-    $.getJSON(aPI).done(function (product) { 
-        allProduct = product;
-        InitializeSearchConfig();
-        updateResult(allProduct);
-
-        if(!(searchInput == null || searchInput == "")){
-          $("#search").val(searchInput.replaceAll('+', ' '));
-          searchExecute();
-        }
-    }); 
+    if(!(searchInput == null || searchInput == "")){
+      $("#search").val(searchInput.replaceAll('+', ' '));
+      searchExecute();
+}
