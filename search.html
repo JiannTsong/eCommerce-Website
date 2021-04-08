@@ -350,10 +350,14 @@
 
                         searchHistory.push(inputSearch);
                     }else{
-                        let num = temp.find(element => element == inputSearch.toLowerCase());
-                        let tempItem = searchHistory[0];
-                        searchHistory[0] = searchHistory[num];
-                        searchHistory[num]; //
+
+                        //sort array according to the latest search record in the last
+                        let num = temp.indexOf(inputSearch.toLowerCase());
+                        let tempItem = searchHistory[num];
+                        for(let y= num;y<temp.length;y++){
+                            searchHistory[y] = searchHistory[y+1];
+                        }
+                        searchHistory[temp.length-1] = tempItem;
                     }
                 }else{
                     //
