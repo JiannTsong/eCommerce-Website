@@ -1,21 +1,29 @@
-function showNotification(){
-    const notification = new Notification("New Message", {
-        body : "Body item",
-        icon: "assets/logo/StygixWhite.png"
-    });
+function showNotification(title, bodyItem, img, link){
 
-    notification.onclick = (e) => {
-        window.location.href = "https://www.google.com";
+    if(Notification.permission === "granted"){
+        const notification = new Notification(title, {
+            body :  bodyItem,
+            icon: img
+        });
+
+        notification.onclick = (e) => {
+            window.open(link, '_blank').focus();
+        }
+
+    }else if(Notification.permission !== "denied"){
+        Notification.requestPermission().then(permission =>{
+            console.log(permission);
+            //show for first time when granted
+            const notification = new Notification(title, {
+                body :  bodyItem,
+                icon: img
+            });
+
+            notification.onclick = (e) => {
+                window.open(link, '_blank').focus();
+            }
+        });
     }
 }
 
-if(Notification.permission === "granted"){
-    console.log("Notification Granted");
-    showNotification();
-}else if(Notification.permission !== "denied"){
-    Notification.requestPermission().then(permission =>{
-        console.log(permission);
-        //show for first time when granted
-        showNotification();
-    });
-}
+showNotification('TestTitle', 'Body', 'assets/logo/StygixWhite.png', 'https://stygix.azurewebsites.net/');
