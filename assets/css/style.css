@@ -18,6 +18,12 @@ a>.clwhite {
     padding-left: 10px;
 }
 
+a>.wish {
+    color: white;
+    display: flex;
+    padding-left: 10px;
+}
+
 a>i.setasize {
     margin-top: 1rem;
     font-size: 50px;
