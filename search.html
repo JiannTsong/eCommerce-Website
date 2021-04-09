@@ -7,7 +7,7 @@
 
     <title>Stygix Computer Shop</title>
 
-    <!--Web App Setup--->
+    <!--Web App Setup>
     <meta name="theme-color" content="#525f7f">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="assets/logo/icon.png">
@@ -15,7 +15,7 @@
         import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
         const el = document.createElement('pwa-update');
         document.body.appendChild(el);
-    </script>
+    </script--->
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet">
@@ -134,9 +134,9 @@
                 </ul>
 
                 <ul class="navbar-nav ml-lg-auto">
-                    <form id="nv_search" class="form-inline my-2 my-lg-0" method="GET" action="search.html">
+                    <form id="nv_search" class="form-inline my-2 my-lg-0">
                         <input class="search-form form-control mr-sm-2" style="border-radius: 3rem;width: 100%;"
-                            name="q" type="search" placeholder="Search" aria-label="Search">
+                            name="q" type="text" placeholder="Search" aria-label="Search">
                         <button class="btn search-btn" style="position: absolute; border-radius: 3rem;" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
@@ -163,7 +163,7 @@
 
     <div class="container-fluid" id="" style="margin-top: 45px;">
         <div class="container">
-            <form id="nv_search" action="search.html" method="GET" style="max-width: 80%;">
+            <form id="bar_search_form" action="search.html" method="GET" style="max-width: 80%;">
                 <div class="wrapper">
                     <input type="text" name="q" id="search" class="form-control" placeholder="Search" autocomplete="off">
                     <div class="search_history">
@@ -244,7 +244,7 @@
 
         <h6 class="d-flex justify-content-center">Stygix Computer Shop Sdn. Bhd.(CA-0025647-M) &copy;
             <script>
-                var creditsyear = new Date();
+                let creditsyear = new Date();
                 document.write(creditsyear.getFullYear());
             </script> All Rights Reserved.
         </h6>
@@ -286,17 +286,17 @@
     <script>
         $(function () { 
             function setCookie(name, value, expire) {
-                var d = new Date();
+                let d = new Date();
                 d.setTime(d.getTime() + (expire * 24 * 60 * 60));
-                var expires = "expires=" + d.toUTCString();
+                let expires = "expires=" + d.toUTCString();
                 document.cookie = name + "=" + value + ";" + expires + ";path=/";
             }
 
             function getCookie(cname) {
-                var name = cname + "=";
-                var ca = document.cookie.split(';');//split the cookie part
-                for (var i = 0; i < ca.length; i++) {
-                    var c = ca[i];
+                let name = cname + "=";
+                let ca = document.cookie.split(';');//split the cookie part
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
                     while (c.charAt(0) == ' ') {
                         c = c.substring(1);//move to next if the current position is space
                     }
@@ -370,7 +370,7 @@
                 }
             });
 
-            $('form').submit(function(e){
+            $('form#bar_search_form').submit(function(e){
                 e.preventDefault();
                 let inputSearch = $("div.wrapper > input#search").val();
                 updateHistory();
@@ -392,16 +392,7 @@
 
             window.onload = updateHistory();
 
-            $("form#nv_search").submit(function(e){
-                e.prevenDefault();
-
-                let search_query = $("form#nv_search > input.search-form").val();
-
-                alert(search_query);
-                window.setTimeout(function(){
-                    window.location.href = `search.html?q=${search_query}`;
-                },200);
-            });
+            
 
          });
     </script>
