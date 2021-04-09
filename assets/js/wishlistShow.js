@@ -92,10 +92,11 @@ $(function() {
                 //loop in cart to found and update
                 let updateStatus = false;
                 for (let f = 0; f < cartArray.length; f++) {
-                    if (cartArray[f].product_ID === wishlistid) {
-                        cartArray[f].product_quantity = cartArray[f].product_quantity + 1;
+                    if (cartArray[f].product_ID == wishlistid) {
+                        ++cartArray[f].product_quantity;
                         updateStatus = true;
                     }
+                    localStorage.setItem("Cart", JSON.stringify(cartArray));
                 }
 
                 //if not found after loop then create new
