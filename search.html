@@ -392,6 +392,14 @@
 
             window.onload = updateHistory();
 
+            $("form#nv_search").submit(function(e){
+                e.prevenDefault();
+                let search_query = $("form#nv_search > input.search-form.form-control.mr-sm-2").val();
+                window.setTimeout(function(){
+                    window.location.href = "search.html?q="+search_query;
+                },200);
+            });
+
          });
     </script>
 </html>
