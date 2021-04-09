@@ -40,12 +40,12 @@ $(function () {
                     if (id == data[i].id) {
                         if (Notification.permission === "granted") {
                             const notification = new Notification(data[i].name, {
-                                body: 'Successfuly added to cart !',
+                                body: 'Successfuly added to wishlist !',
                                 icon: data[i].img[0]
                             });
 
                             notification.onclick = (e) => {
-                                window.open('cart.html', '_blank').focus();
+                                window.open('wishlist.html', '_blank').focus();
                             }
 
                         } else if (Notification.permission !== "denied") {
@@ -53,12 +53,12 @@ $(function () {
                                 console.log(permission);
                                 //show for first time when granted
                                 const notification = new Notification(title, {
-                                    body: 'Successfuly added to cart !',
+                                    body: 'Successfuly added to wishlist !',
                                     icon: data[i].img[0]
                                 });
 
                                 notification.onclick = (e) => {
-                                    window.open('cart.html', '_blank').focus();
+                                    window.open('wishlist.html', '_blank').focus();
                                 }
                             });
                         }
