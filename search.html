@@ -28,6 +28,60 @@
     <link type="text/css" href="assets/css/argon-design-system.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/logo/StygixWhite.png" type="image/png">
+    <style>
+        form > .wrapper{
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        form > div.wrapper > input#search{
+            display:inline;
+            border-radius: 5px;
+        }
+
+        form > div.wrapper > input#search:focus{
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        form > .wrapper > div.search_history {
+            display: none;
+            background: #fff;
+            border-radius: 5px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border: 1px solid #cad1d7;
+            border-top: none;
+            box-shadow: 5px #8898aa;
+            width: 100%;
+            position: absolute;
+            z-index: 100;
+            padding: 1rem;
+            line-height: 1.5rem;
+        }
+
+        form > .wrapper > div.search_history > li {
+            padding: 0.75rem;
+            list-style: none;
+            font-size: 1.25rem;
+            width: 100%;
+            cursor: default;
+            border-radius: 5px;
+        }
+
+        form > .wrapper > div.search_history > li:hover {
+            background-color: #efefef;
+        }
+
+        form > input.btn.btn-outline-info{
+            position: absolute;
+        }
+
+        .container-fluid > div#result{
+            margin-top: 2rem;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -107,60 +161,6 @@
         </div>
     </nav>
 
-    <style>
-        form > .wrapper{
-            position: relative;
-            display: inline-block;
-            width: 100%;
-        }
-        form > div.wrapper > input#search{
-            display:inline;
-            border-radius: 5px;
-        }
-
-        form > div.wrapper > input#search:focus{
-            border-bottom-left-radius: 0px;
-            border-bottom-right-radius: 0px;
-        }
-
-        form > .wrapper > div.search_history {
-            display: none;
-            background: #fff;
-            border-radius: 5px;
-            border-top-left-radius: 0px;
-            border-top-right-radius: 0px;
-            border: 1px solid #cad1d7;
-            border-top: none;
-            box-shadow: 5px #8898aa;
-            width: 100%;
-            position: absolute;
-            z-index: 100;
-            padding: 1rem;
-            line-height: 1.5rem;
-        }
-
-        form > .wrapper > div.search_history > li {
-            padding: 0.75rem;
-            list-style: none;
-            font-size: 1.25rem;
-            width: 100%;
-            cursor: default;
-            border-radius: 5px;
-        }
-
-        form > .wrapper > div.search_history > li:hover {
-            background-color: #efefef;
-        }
-
-        form > input.btn.btn-outline-info{
-            position: absolute;
-        }
-
-        .container-fluid > div#result{
-            margin-top: 2rem;
-            text-align: center;
-        }
-    </style>
     <div class="container-fluid" id="" style="margin-top: 45px;">
         <div class="container">
             <form id="nv_search" action="search.html" method="GET" style="max-width: 80%;">
@@ -395,11 +395,11 @@
             $("form#nv_search").submit(function(e){
                 e.prevenDefault();
 
-                let search_query = $("form#nv_search > input.search-form.form-control.mr-sm-2").val();
+                let search_query = $("form#nv_search > input.search-form").val();
 
                 alert(search_query);
                 window.setTimeout(function(){
-                    //window.location.href = "search.html?q="+search_query;
+                    window.location.href = `search.html?q=${search_query}`;
                 },200);
             });
 
