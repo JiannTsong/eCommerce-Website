@@ -163,7 +163,7 @@
     </style>
     <div class="container-fluid" id="" style="margin-top: 45px;">
         <div class="container">
-            <form action="search.html" method="GET" style="max-width: 80%;">
+            <form id="nv_search" action="search.html" method="GET" style="max-width: 80%;">
                 <div class="wrapper">
                     <input type="text" name="q" id="search" class="form-control" placeholder="Search" autocomplete="off">
                     <div class="search_history">
@@ -394,9 +394,12 @@
 
             $("form#nv_search").submit(function(e){
                 e.prevenDefault();
+
                 let search_query = $("form#nv_search > input.search-form.form-control.mr-sm-2").val();
+
+                alert(search_query);
                 window.setTimeout(function(){
-                    window.location.href = "search.html?q="+search_query;
+                    //window.location.href = "search.html?q="+search_query;
                 },200);
             });
 
