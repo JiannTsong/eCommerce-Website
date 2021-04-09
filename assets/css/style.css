@@ -107,6 +107,7 @@ a.cart_link:hover {
         width: 95%;
         max-height: 576px;
     }
+
     form>button.search-btn {
         right: 2rem;
         position: absolute;
@@ -195,7 +196,7 @@ a.cart_link:hover {
         max-height: 211.79px;
     }
     form>button.search-btn {
-        right: 9.75rem;
+        right: 12.75rem;
         position: absolute;
         border-radius: 3rem;
     }
