@@ -41,6 +41,38 @@ $(function() {
                 '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span> </button>' +
                 '</div>');
 
+            let aPI = "assets/json/product_details.json";
+            $.getJSON(aPI).done(function(data){
+                for(let i = 0; i< data.length;i++){
+                    if(id == data[i].id){
+                        if(Notification.permission === "granted"){
+                            const notification = new Notification(data[i].name, {
+                                body : 'Successfuly added to cart !',
+                                icon: data[i].img[0]
+                            });
+                    
+                            notification.onclick = (e) => {
+                                window.open('cart.html', '_blank').focus();
+                            }
+                    
+                        }else if(Notification.permission !== "denied"){
+                            Notification.requestPermission().then(permission =>{
+                                console.log(permission);
+                                //show for first time when granted
+                                const notification = new Notification(title, {
+                                    body :  'Successfuly added to cart !',
+                                    icon: data[i].img[0]
+                                });
+                    
+                                notification.onclick = (e) => {
+                                    window.open('cart.html', '_blank').focus();
+                                }
+                            });
+                        }
+                    }
+                }
+            });
+            
             //make an immediate update to cart icon counting
             if (JSON.parse(localStorage.getItem("Cart")) !== null) {
                 $("#cart-count").html(JSON.parse(localStorage.getItem("Cart")).length);
