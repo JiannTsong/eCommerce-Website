@@ -28,6 +28,14 @@
     <link type="text/css" href="assets/css/argon-design-system.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/logo/StygixWhite.png" type="image/png">
+    <style>
+        [type="text"]::-webkit-cancel-button,
+        [type="text"]::-webkit-cancel-button,
+        [type="text"]::-webkit-decoration {
+            -webkit-appearance: none;
+            appearance: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -81,7 +89,7 @@
                 </ul>
 
                 <ul class="navbar-nav ml-lg-auto">
-                    <form class="form-inline my-2 my-lg-0" method="GET" action="search.html">
+                    <form id="nv_search" class="form-inline my-2 my-lg-0" method="GET" action="./search.html">
                         <input class="search-form form-control mr-sm-2" style="border-radius: 3rem;width: 100%;"
                             name="q" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn search-btn" style="position: absolute; border-radius: 3rem;" type="submit">
