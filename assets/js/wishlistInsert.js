@@ -34,6 +34,7 @@ $(function () {
                 '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span> </button>' +
                 '</div>');
 
+            //notfication
             let aPI = "assets/json/product_details.json";
             $.getJSON(aPI).done(function (data) {
                 for (let i = 0; i < data.length; i++) {
