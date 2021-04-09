@@ -1,6 +1,7 @@
 $(function() {
 
     $("#message").hide();
+    $("#sucessMessage").hide();
     //show item store in local storage
 
     let aPI = "assets/json/product_details.json";
@@ -19,13 +20,14 @@ $(function() {
 
                     //show the item
                     $("#itemAdded").append(
-
                         '<div class="row" data-wishlistid = "' + (pid + 1) + '" style = "padding-top: 50px"> <div class="col-sm-4">' + '<a href="product.html?id=' + (pid + 1) + '"><img src="' + product[pid].img[0] + '" alt="' + product[pid].name + '" class="imgcart"></a>' + '</div>' +
                         '<div class="col-sm-8">' + '<div style = "font-size: 20px;"><a href="product.html?id=' + (pid + 1) + '" class="cart_link"><b>' + product[pid].name.substring(0, 30) + '</b></a></div>' +
                         '<div><p style = "font-style:italic;justify-content: stretch;text-align: justify; text-justify: inter-word;">' + product[pid].desc + '</p></div>' +
                         '<div class="cartprice"> RM ' + product[pid].price + '</div>' +
-                        '<div><span id = "deleteItem"><i class="fas fa-trash-alt"></i></span></div></div>' +
-                        '<div class="col-sm-4"><div class="p-2"><button type="button" class="btn btn-default" id="addtocart">Add to Cart</button></div></div>');
+                        '<div style = "padding-top: 15px"><span><button type="button" class="btn btn-default" id="addtocart">Add to Cart</button></span>' +
+                        '<span style = "padding-left: 20px;"><span id = "deleteItem"><i class="fas fa-trash-alt" style="font-size: 1.5rem; vertical-align: middle;"></i></span></span>' +
+                        '</div></div></div>');
+                    console.log(pid);
                 }
             } else {
                 $("#itemAdded").hide();
@@ -74,11 +76,10 @@ $(function() {
         });
 
         //add to cart
-        $("#itemAdded > div.row").on("click", "#addtocart", function(e) {
+        $("#itemAdded > div.row").on("click", "div.col-sm-8>div>span>button#addtocart", function(e) {
             e.preventDefault();
 
             let wishlistid = $(this).closest("div.row").data("wishlistid");
-
 
             if (typeof(Storage) !== "undefined") {
                 let cartArray = [];
@@ -91,7 +92,7 @@ $(function() {
                 //loop in cart to found and update
                 let updateStatus = false;
                 for (let f = 0; f < cartArray.length; f++) {
-                    if (cartArray[f].product_ID == wishlistid) {
+                    if (cartArray[f].product_ID === wishlistid) {
                         cartArray[f].product_quantity = cartArray[f].product_quantity + 1;
                         updateStatus = true;
                     }
@@ -103,14 +104,13 @@ $(function() {
                     cart.product_ID = wishlistid;
                     cart.product_quantity = 1;
 
+                    alert(cart.product_ID + " " + cart.product_quantity);
+
                     //push item into array
                     cartArray.push(cart);
+                    localStorage.setItem("Cart", JSON.stringify(cartArray));
                 }
             }
-
-            //store it and display successful message
-            localStorage.setItem("Cart", JSON.stringify(cartArray));
-
             location.reload();
         });
     });
