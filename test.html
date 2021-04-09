@@ -8,58 +8,6 @@
 </head>
 <body>
     <p id="token"></p>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-messaging.js"></script>
-    <script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-        apiKey: "AIzaSyBUI47vHCW6nF-wKjyKRZJUyM__ijNFxvE",
-        authDomain: "stygix-1d87b.firebaseapp.com",
-        projectId: "stygix-1d87b",
-        storageBucket: "stygix-1d87b.appspot.com",
-        messagingSenderId: "905203629267",
-        appId: "1:905203629267:web:6f3ad8103aee3c2a586826",
-        measurementId: "G-7C49C2VT2G"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    //firebase.analytics();
-
-    const messaging = firebase.messaging();
-    function initializeFirebaseMessaging(){
-        messaging
-            .requestPermission()
-            .then(function(){
-                console.log("Notification Permission");
-            })
-            .then(function(token){
-                console.log("Token = "+token);
-                document.getElementById("token = ").innerHTML=token;
-            })
-            .catch(function(error){
-                console.log("error = " + error);
-            })
-    }
-
-    messaging.onMessage(function(payload){
-        console.log("Payload = " + payload);
-    });
-
-    messaging.onTokenRefresh(function(){
-        messaging.getToken()
-            .then(function(newToken){
-                console.log("New Token = " + newToken);
-            })
-            .catch(function(error){
-                console.log("Error Refresh Token = " + error);
-            })
-    });
-
-    initializeFirebaseMessaging();
-    </script>
-    
-    <!---script src="assets/js/notification.js"></script---->
+    <script src="assets/js/notification.js"></script>
 </body>
 </html>
