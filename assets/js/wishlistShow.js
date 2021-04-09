@@ -27,7 +27,7 @@ $(function() {
                         '<div><p style = "font-style:italic;justify-content: stretch;text-align: justify; text-justify: inter-word;">' + product[pid].desc + '</p></div>' +
                         '<div class="cartprice"> RM ' + product[pid].price + '</div>' +
                         '<div><span id = "deleteItem"><i class="fas fa-trash-alt"></i></span></div></div>' +
-                        '<div class="col-sm-4"><div class="p-2"><button type="button" class="btn btn-success" id="addtocart">Add to Cart</button></div></div>');
+                        '<div class="col-sm-4"><div class="p-2"><button type="button" class="btn btn-default" id="addtocart">Add to Cart</button></div></div>');
                 }
             } else {
                 $("#itemAdded").hide();
@@ -78,10 +78,45 @@ $(function() {
             location.reload();
         });
 
+        //add to cart
+        $("#itemAdded > div.row").on("click", "#addtocart", function(e) {
+            e.preventDefault();
 
+            let cartid = $(this).closest("div.row").data("cartid");
+
+
+            if (typeof(Storage) !== "undefined") {
+                let cartArray = [];
+
+                //check if cart json already exists
+                if (!(localStorage.getItem("Cart") == null || localStorage.getItem("Cart") == "")) {
+                    cartArray = JSON.parse(localStorage.getItem("Cart"));
+                }
+
+                //loop in cart to found and update
+                let updateStatus = false;
+                for (let f = 0; f < cartArray.length; f++) {
+                    if (cartArray[f].product_ID == id) {
+                        cartArray[f].product_quantity = cartArray[f].product_quantity + 1;
+                        updateStatus = true;
+                    }
+                }
+
+                //if not found after loop then create new
+                if (!updateStatus) {
+                    let cart = new Object();
+                    cart.product_ID = cartid;
+                    cart.product_quantity = 1;
+
+                    //push item into array
+                    cartArray.push(cart);
+                }
+            }
+
+            //store it and display successful message
+            localStorage.setItem("Cart", JSON.stringify(cartArray));
+
+            location.reload();
+        });
     });
-
-
-
-
 });
