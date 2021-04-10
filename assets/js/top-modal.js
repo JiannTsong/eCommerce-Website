@@ -26,7 +26,7 @@ $(function() {
 
     $.getJSON("assets/json/product_details.json").done(function(product) {
 
-        if (getCookie("hide-banner") === false || getCookie("hide-banner") !== null || getCookie("hide-banner") !== "") {
+        if (getCookie("hide-banner") === false || getCookie("hide-banner") === null || getCookie("hide-banner") === "") {
             var topProductID = [3, 7, 9];
 
             //retrieve img from cookies to prsent as modal
@@ -36,33 +36,33 @@ $(function() {
 
                 pid = topProductID[j];
                 $("#sidemodal").show();
-                
+
                 for (let i = 0; i < product.length; i++) {
 
                     if (product[i].id == topProductID[j]) {
-                        
+
                         if (count_carousel == 1) {
                             count_carousel++;
-                            console.log("First"+product[i].img[0]);
+                            console.log("First" + product[i].img[0]);
                             $("body>div.sidemodal").show();
                             $("div#topProduct").append(
-                                '<div class="carousel-item active">' +
-                                '<a href="product.html?id=' + (i+1) + '">' +
-                                '<img class="d-block w-100" src="' + product[i].img[0] + '" alt="' + product[i].name + '"></a></div>'
+                                '<div class="carousel-item active carouselsize">' +
+                                '<a href="product.html?id=' + (i + 1) + '">' +
+                                '<img class="d-block w-100" src="' + product[i].img[0] + '" alt="' + product[i].name + '" style="height: 350px"></a></div>'
                             );
                         } else {
                             count_carousel++;
-                            console.log("Not first"+product[i].img[0]);
+                            console.log("Not first" + product[i].img[0]);
                             $("#topProduct").append(
-                                '<div class="carousel-item">' +
-                                '<a href="product.html?id=' + (i+1) + '">' +
-                                '<img class="d-block w-100" src="' + product[i].img[0] + '" alt="' + product[i].name + '"></a></div>'
+                                '<div class="carousel-item carouselsize">' +
+                                '<a href="product.html?id=' + (i + 1) + '">' +
+                                '<img class="d-block w-100" id="imgsize2" src="' + product[i].img[0] + '" alt="' + product[i].name + '" style="height: 350px"></a></div>'
                             );
                         }
                     }
                 }
             }
-        } else if (getCookie("hide-banner") === true || getCookie("hide-banner") === null || getCookie("hide-banner") === "")
+        } else if (getCookie("hide-banner") === true)
             $("body>div.sidemodal").hide();
     });
 

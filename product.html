@@ -12,9 +12,7 @@
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="assets/logo/icon.png">
     <script type="module">
-        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
-        const el = document.createElement('pwa-update');
-        document.body.appendChild(el);
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate'; const el = document.createElement('pwa-update'); document.body.appendChild(el);
     </script>
 
     <!-- Fonts -->
@@ -28,19 +26,22 @@
     <link type="text/css" href="assets/css/argon-design-system.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-
-        @media (max-width: 576px){
-            div.row > div.col-sm-6{
+        @media (max-width: 576px) {
+            div.row>div.col-sm-6 {
                 text-align: center;
             }
         }
-        p{
+        
+        p {
             justify-content: stretch;
             text-align: justify;
             text-justify: inter-word;
         }
     </style>
     <link rel="shortcut icon" href="assets/logo/StygixWhite.png" type="image/png">
+
+    <!--side modal CSS-->
+    <link rel="stylesheet" href="assets/css/top-modal.css">
 </head>
 
 <body>
@@ -128,17 +129,17 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    
+
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#product_image" role="button" data-slide="prev">
-                              <i class="carousel-control-prev-icon fas fa-chevron-left" class="" style="color: #000000;" aria-hidden="true"></i>
-                              <span class="sr-only">Previous</span>
+                                <i class="carousel-control-prev-icon fas fa-chevron-left" class="" style="color: #000000;" aria-hidden="true"></i>
+                                <span class="sr-only">Previous</span>
                             </a>
                             <a class="carousel-control-next" href="#product_image" role="button" data-slide="next">
-                              
-                              <i class="carousel-control-next-icon fas fa-chevron-right" class="" style="color: #000000;" aria-hidden="true"></i>
-                              <span class="sr-only">Next</span>
+
+                                <i class="carousel-control-next-icon fas fa-chevron-right" class="" style="color: #000000;" aria-hidden="true"></i>
+                                <span class="sr-only">Next</span>
                             </a>
                         </div>
                     </div>
@@ -179,7 +180,7 @@
                     </div>
                 </div>
                 <dl class="row" style="margin-left: 1rem;">
-                    
+
                 </dl>
                 <!--Disqus Comment Plugin-->
                 <div class="row">
@@ -188,8 +189,8 @@
                         <div id="disqus_thread"></div>
                         <script>
                             /**
-                            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
                             /*
                             var disqus_config = function () {
                             this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
@@ -197,15 +198,37 @@
                             };
                             */
                             (function() { // DON'T EDIT BELOW THIS LINE
-                            var d = document, s = d.createElement('script');
-                            s.src = 'https://stygix-1.disqus.com/embed.js';
-                            s.setAttribute('data-timestamp', +new Date());
-                            (d.head || d.body).appendChild(s);
+                                var d = document,
+                                    s = d.createElement('script');
+                                s.src = 'https://stygix-1.disqus.com/embed.js';
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
                             })();
                         </script>
                         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                         <script id="dsq-count-scr" src="//stygix-1.disqus.com/count.js" async></script>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--side modal content-->
+    <div id="sidemodal" class="admodal">
+        <div class="top-modal-content">
+            <span class="top-close">&times;</span>
+            <div><b>Our Top's Products</b></div>
+            <br>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div id="topProduct" class="carousel-inner">
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" style="filter: invert(100%);">
+                        <span class=" carousel-control-prev-icon " aria-hidden="true "></span>
+                        <span class="sr-only ">Previous</span>
+                    </a>
+                    <a class="carousel-control-next " href="#carouselExampleControls " role="button " data-slide="next " style="filter: invert(100%);">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -315,10 +338,11 @@
     <!--can change function at here-->
     <script src="assets/js/firebase/firebase.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/top-modal.js"></script>
 
     <script>
-        $(function(){
-            $("div.fb-like").attr("data-href", "https://stygix.azurewebsites.net/product.html?id="+window.location.href.split("id=")[1]);
+        $(function() {
+            $("div.fb-like").attr("data-href", "https://stygix.azurewebsites.net/product.html?id=" + window.location.href.split("id=")[1]);
         });
     </script>
 </body>
