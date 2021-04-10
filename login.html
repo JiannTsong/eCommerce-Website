@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Stygix Computer Shop</title>
-    
+
     <!--Web App Setup-->
     <meta name="theme-color" content="#525f7f">
     <link rel="manifest" href="manifest.json">
@@ -115,7 +115,7 @@
                 <div class="text-center text-muted mb-4">
                     <h3>Sign In</h3>
                 </div>
-                <form role="form" id="login_form" autocomplete="on">
+                <form role="form" id="login_form" autocomplete="on" onsubmit="return checkform(this);">
                     <div class="form-group mb-3">
                         <div class="input-group input-group-alternative">
                             <div class="input-group-prepend">
@@ -133,6 +133,23 @@
                             <input class="form-control" id="password" placeholder="Password" type="password">
                         </div>
                     </div>
+                    <!-- START CAPTCHA -->
+                    <br>
+                    <div class="capbox">
+
+                        <div id="CaptchaDiv"></div>
+
+                        <div class="capbox-inner">
+                            Type the number:<br>
+
+                            <input type="hidden" id="txtCaptcha">
+                            <input type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
+
+                        </div>
+                    </div>
+                    <br><br>
+                    <!-- END CAPTCHA -->
+
                     <div class="custom-control custom-control-alternative custom-checkbox">
                         <input class="custom-control-input" id="customCheckLogin" type="checkbox" checked>
                         <label class="custom-control-label" for="customCheckLogin">
@@ -159,28 +176,29 @@
                 </div>
             </div>
         </div>
-                <!-- Password Reset Box -->
-        <div class="modal fade" id="pass_reset" tabindex="-1" role="dialog" aria-labelledby="pass_resetLabel" aria-hidden="true">
+        <!-- Password Reset Box -->
+        <div class="modal fade" id="pass_reset" tabindex="-1" role="dialog" aria-labelledby="pass_resetLabel"
+            aria-hidden="true">
             <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="pass_resetLabel">Request Password Reset</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="pass_resetLabel">Request Password Reset</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-success" id="pass_reset_alert" style="display: none;" role="alert">
+                            Success to sent an password reset email to your email ! Please check your mail box.
+                        </div>
+                        <span>Please enter your email address to request for password reset.</span>
+                        <input type="email" class="form-control" id="reset_mail" name="reset_email" placeholder="Email">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-warning" id="request_reset">Request Reset</button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <div class="alert alert-success" id="pass_reset_alert" style="display: none;" role="alert">
-                        Success to sent an password reset email to your email ! Please check your mail box.
-                      </div>
-                <span>Please enter your email address to request for password reset.</span>
-                <input type="email" class="form-control" id="reset_mail" name="reset_email" placeholder="Email">
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-warning" id="request_reset">Request Reset</button>
-                </div>
-            </div>
             </div>
         </div>
 
@@ -215,7 +233,8 @@
                 <div>Email: <a href="mailto:stygix_shop@gmail.com">stygix_shop@gmail.com</a></div>
                 <div>
                     Contact No:
-                    <a href="https://api.whatsapp.com/send?phone=+6013-259 8496" target="_blank" rel="noopener" rel="noreferrer">
+                    <a href="https://api.whatsapp.com/send?phone=+6013-259 8496" target="_blank" rel="noopener"
+                        rel="noreferrer">
                         +6013-25984966
                     </a>
                 </div>
@@ -259,6 +278,54 @@
             </script> All Rights Reserved.
         </h6>
     </footer>
+
+    <script type="text/javascript">
+
+        // Captcha Script
+
+        function checkform(theform) {
+            var why = "";
+
+            if (theform.CaptchaInput.value == "") {
+                why += "- Please Enter CAPTCHA Code.\n";
+            }
+            if (theform.CaptchaInput.value != "") {
+                if (ValidCaptcha(theform.CaptchaInput.value) == false) {
+                    why += "- The CAPTCHA Code Does Not Match.\n";
+                }
+            }
+            if (why != "") {
+                alert(why);
+                return false;
+            }
+        }
+
+        var a = Math.ceil(Math.random() * 9) + '';
+        var b = Math.ceil(Math.random() * 9) + '';
+        var c = Math.ceil(Math.random() * 9) + '';
+        var d = Math.ceil(Math.random() * 9) + '';
+        var e = Math.ceil(Math.random() * 9) + '';
+
+        var code = a + b + c + d + e;
+        document.getElementById("txtCaptcha").value = code;
+        document.getElementById("CaptchaDiv").innerHTML = code;
+
+        // Validate input against the generated number
+        function ValidCaptcha() {
+            var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+            var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
+            if (str1 == str2) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        // Remove the spaces from the entered and generated code
+        function removeSpaces(string) {
+            return string.split(' ').join('');
+        }
+    </script>
 
 
     <!--jQuery 3.6-->
