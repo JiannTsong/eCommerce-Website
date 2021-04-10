@@ -294,36 +294,36 @@
                 let inputSearch = $("div.wrapper > input#search").val();
                 if(inputSearch !== ""){
                     if(getCookie("search_history") !== ""){
-                    let temp = [];
-                    searchHistory = JSON.parse(getCookie("search_history"));
-                    for(let h=0;h<searchHistory.length;h++){
-                        temp[h] = searchHistory[h].toLowerCase();
-                    }
-
-                    //not found in the list
-                    if(!temp.includes(inputSearch.toLowerCase())){
-
-                        if(searchHistory.length >=5){
-                            delete searchHistory[0];
-                            searchHistory = searchHistory.filter(function(el) {
-                                return el != null;
-                            });
+                        let temp = [];
+                        searchHistory = JSON.parse(getCookie("search_history"));
+                        for(let h=0;h<searchHistory.length;h++){
+                            temp[h] = searchHistory[h].toLowerCase();
                         }
 
-                        searchHistory.push(inputSearch);
+                        //not found in the list
+                        if(!temp.includes(inputSearch.toLowerCase())){
+
+                            if(searchHistory.length >=5){
+                                delete searchHistory[0];
+                                searchHistory = searchHistory.filter(function(el) {
+                                    return el != null;
+                                });
+                            }
+
+                            searchHistory.push(inputSearch);
+                        }else{
+
+                            //sort array according to the latest search record in the last
+                            let num = temp.indexOf(inputSearch.toLowerCase());
+                            let tempItem = searchHistory[num];
+                            for(let y= num;y<temp.length;y++){
+                                searchHistory[y] = searchHistory[y+1];
+                            }
+                            searchHistory[temp.length-1] = tempItem;
+                        }
                     }else{
-
-                        //sort array according to the latest search record in the last
-                        let num = temp.indexOf(inputSearch.toLowerCase());
-                        let tempItem = searchHistory[num];
-                        for(let y= num;y<temp.length;y++){
-                            searchHistory[y] = searchHistory[y+1];
-                        }
-                        searchHistory[temp.length-1] = tempItem;
+                        searchHistory.push(inputSearch);
                     }
-                }else{
-                    searchHistory.push(inputSearch);
-                }
                 
                 setCookie("search_history", JSON.stringify(searchHistory), 90);
                 }
