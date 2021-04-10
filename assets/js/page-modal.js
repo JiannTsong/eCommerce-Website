@@ -1,9 +1,6 @@
 $(function(){
-
     $("head").append('<link rel="stylesheet" href="assets/css/page-modal.css">');
-    $("body").append('<!-- The Modal -->'+
-        '<div id="promote-myModal" class="promote-modal">'+
-          '<!-- Modal content -->'+
+    $("body").append('<div id="promote-myModal" class="promote-modal">'+
           '<div class="promote-modal-content">'+
             '<span class="promote-close">&times;</span>'+
             '<a href="product.html?id=29">'+
@@ -28,27 +25,24 @@ $(function(){
     }
 
     $("span.promote-close").click(function(){
-        $("div#promote-myModal").hide();
-        if(typeof(Storage) !== "undefined"){
-            sessionStorage.setItem("hide_promote_banner", "true");
-        }
+        hideModal();
     });
 
     $("div#promote-myModal").click(function(e){
-        if(e.target == this){
-            $("div#promote-myModal").hide();
-            if(typeof(Storage) !== "undefined"){
-                sessionStorage.setItem("hide_promote_banner", "true");
-            }
-        }
+        hideModal();
     });
 
     $("div.promote-modal-content > a").on("click", "img", function(e){
         if(e.target == this){
-            $("div#promote-myModal").hide();
-            if(typeof(Storage) !== "undefined"){
-                sessionStorage.setItem("hide_promote_banner", "true");
-            }
+            hideModal();
         }
     });
+
+    function hideModal(){
+        $("div#promote-myModal").hide();
+        if(typeof(Storage) !== "undefined"){
+            sessionStorage.setItem("hide_promote_banner", "true");
+        }
+    }
+    
 });
