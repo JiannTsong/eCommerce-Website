@@ -1,4 +1,6 @@
-
+.promote-modal {
+    display: none;
+}
 
 @media (min-width:280px){
     .promote-modal {
