@@ -34,10 +34,12 @@ $(function() {
             for (let j = 0; j < topProductID.length; j++) {
 
                 pid = topProductID[j];
+                $("#sidemodal").show();
+
                 for (let i = 0; i <= product.length; i++) {
 
-                    if (product[i].id == pid) {
-                        $("#sidemodal").show();
+                    if (JSON.parse(product[(i + 1)].id) == pid) {
+
                         if (i == 1) {
                             $("body>div.sidemodal").show();
                             $("#topProduct").append(
@@ -45,7 +47,7 @@ $(function() {
                                 '<a href="product.html?id=' + pid + '">' +
                                 '<img class="d-block w-100" src="' + product[pid].img[0] + '" alt="' + product[pid].name + '"></a></div>'
                             );
-                        } else if (i > 1) {
+                        } else {
                             $("#topProduct").append(
                                 '<div class="carousel-item">' +
                                 '<a href="product.html?id=' + pid + '">' +
