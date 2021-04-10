@@ -26,34 +26,33 @@ $(function() {
 
     $.getJSON("assets/json/product_details.json").done(function(product) {
 
-        $("body>div.sidemodal").show();
-        alert("Run until here");
-
         if (getCookie("hide-banner") === false || getCookie("hide-banner") !== null || getCookie("hide-banner") !== "") {
             var topProductID = [3, 7, 9];
 
             //retrieve img from cookies to prsent as modal
             //show image of product
             for (let j = 0; j < topProductID.length; j++) {
-                for (let i = 1; i <= product.length; i++) {
-                    vname = toString(i) + " Top-Product";
 
-                    pid = topProductID[j];
+                pid = topProductID[j];
+                for (let i = 0; i <= product.length; i++) {
 
-                    if (i == 1) {
-                        $("#topProduct").append(
-                            '<div class="carousel-item active">' +
-                            '<a href="product.html?id=' + pid + '">' +
-                            '<img class="d-block w-100" src="' + product[pid].img[0] + '" alt="' + product[pid].name + '"></a></div>'
-                        );
-                    } else if (i > 1) {
-                        $("#topProduct").append(
-                            '<div class="carousel-item">' +
-                            '<a href="product.html?id=' + pid + '">' +
-                            '<img class="d-block w-100" src="' + product[pid].img[0] + '" alt="' + product[pid].name + '"></a></div>'
-                        );
+                    if ((i + 1) == pid) {
+                        if (i == 1) {
+                            $("body>div.sidemodal").show();
+                            $("#topProduct").append(
+                                '<div class="carousel-item active">' +
+                                '<a href="product.html?id=' + pid + '">' +
+                                '<img class="d-block w-100" src="' + product[pid].img[0] + '" alt="' + product[pid].name + '"></a></div>'
+                            );
+                        } else if (i > 1) {
+                            $("#topProduct").append(
+                                '<div class="carousel-item">' +
+                                '<a href="product.html?id=' + pid + '">' +
+                                '<img class="d-block w-100" src="' + product[pid].img[0] + '" alt="' + product[pid].name + '"></a></div>'
+                            );
+                        }
+                        $("#sidemodal").show();
                     }
-                    $("#sidemodal").show();
                 }
             }
         } else if (getCookie("hide-banner") === true || getCookie("hide-banner") === null || getCookie("hide-banner") === "")
