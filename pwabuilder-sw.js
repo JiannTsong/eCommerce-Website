@@ -12,11 +12,6 @@ self.addEventListener("message", (event) => {
 workbox.routing.registerRoute(
   new RegExp('/*'),
   new workbox.strategies.CacheFirst({
-    cacheName: CACHE,
-    plugins: [
-      new workbox.expiration.ExpirationPlugin({
-        maxEntries: 500,
-      }),
-    ],
+    cacheName: CACHE
   })
 );
