@@ -1,6 +1,6 @@
 $(function() {
 
-    //function push img info to cookies
+    //function push info to cookies
     function setCookie(name, value, expire) {
         let d = new Date();
         d.setTime(d.getTime() + (expire * 24 * 60 * 60));
@@ -8,7 +8,7 @@ $(function() {
         document.cookie = name + "=" + value + ";" + expires + ";path=/";
     }
 
-    //function to get imag from cookies
+    //function to get hide result from cookies
     function getCookie(cname) {
         let name = cname + "=";
         let ca = document.cookie.split(';'); //split the cookie part
@@ -24,55 +24,58 @@ $(function() {
         return "";
     }
 
-    var topProductID = [3, 7, 9];
+    $.getJSON("assets/json/product_details.json").done(function(product) {
 
-    for (let i = 1; i <= topProductID.length; i++) {
-        var vname = toString(i) + " Top-Product";
+        $("body>div.sidemodal").show();
+        alert("Run until here");
 
-        setCookie(vname, topProductID[i], 7);
-    }
+        if (getCookie("hide-banner") === false || getCookie("hide-banner") !== null || getCookie("hide-banner") !== "") {
+            var topProductID = [3, 7, 9];
 
-    $.getJSON("assets/json/product_details.json", function() {
+            //retrieve img from cookies to prsent as modal
+            //show image of product
+            for (let j = 0; j < topProductID.length; j++) {
+                for (let i = 1; i <= product.length; i++) {
+                    vname = toString(i) + " Top-Product";
 
-        //retrieve img from cookies to prsent as modal
-        //show image of product
-        for (let i = 1; i <= topProductID.length; i++) {
-            vname = toString(i) + " Top-Product";
+                    pid = topProductID[j];
 
-            pid = getCookie(vname);
-
-            if (i == 1) {
-                $("#topProduct").append(
-                    '<div class="carousel-item active">' +
-                    '<a href="product.html?id=' + pid + '">' +
-                    '<img class="d-block w-100" src="' + product[pid].img[0] + '" alt="' + product[pid].name + '"></a></div> <div>The item is only RM ' + product[pid].price + '</div>'
-                );
-            } else if (i > 1) {
-                $("#topProduct").append(
-                    '<div class="carousel-item">' +
-                    '<a href="product.html?id=' + pid + '">' +
-                    '<img class="d-block w-100" src="' + product[pid].img[0] + '" alt="' + product[pid].name + '"></a></div>'
-                );
+                    if (i == 1) {
+                        $("#topProduct").append(
+                            '<div class="carousel-item active">' +
+                            '<a href="product.html?id=' + pid + '">' +
+                            '<img class="d-block w-100" src="' + product[pid].img[0] + '" alt="' + product[pid].name + '"></a></div>'
+                        );
+                    } else if (i > 1) {
+                        $("#topProduct").append(
+                            '<div class="carousel-item">' +
+                            '<a href="product.html?id=' + pid + '">' +
+                            '<img class="d-block w-100" src="' + product[pid].img[0] + '" alt="' + product[pid].name + '"></a></div>'
+                        );
+                    }
+                    $("#sidemodal").show();
+                }
             }
-            $("#sidemodal").show();
-        }
-
-
+        } else if (getCookie("hide-banner") === true || getCookie("hide-banner") === null || getCookie("hide-banner") === "")
+            $("body>div.sidemodal").hide();
     });
 
     $("span.top-close").click(function() {
         $("div#sidemodal").hide();
+        setCookie("hide-banner", true, 1);
     });
 
     $("div#sidemodal").click(function(e) {
         if (e.target == this) {
             $("div#sidemodal").hide();
+            setCookie("hide-banner", true, 1);
         }
     });
 
     $("div.top-modal-content > a").on("click", "img", function(e) {
         if (e.target == this) {
             $("div#sidemodal").hide();
+            setCookie("hide-banner", true, 1);
         }
     });
 });

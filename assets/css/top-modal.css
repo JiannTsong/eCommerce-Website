@@ -11,8 +11,9 @@
 }
 
 .top-modal-content {
+    float: right;
     background-color: #fefefe;
-    margin: 45%, 80%;
+    margin: -45%, 80%;
     padding: 5px;
     border: 1px solid #888;
     width: 15%;
