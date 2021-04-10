@@ -12,8 +12,8 @@ $(function(){
 
     if(typeof(Storage) !== "undefined"){
         
-        if(sessionStorage.getItem("hide_promote_banner") !== null || sessionStorage.getItem("hide_promote_banner") !== ""){
-            let promote = sessionStorage.getItem("hide_promote_banner");
+        if(localStorage.getItem("hide_promote_banner") !== null || localStorage.getItem("hide_promote_banner") !== ""){
+            let promote = localStorage.getItem("hide_promote_banner");
             if(promote !== "true"){
                 $("div#promote-myModal").show();
             }else{
@@ -41,7 +41,7 @@ $(function(){
     function hideModal(){
         $("div#promote-myModal").hide();
         if(typeof(Storage) !== "undefined"){
-            sessionStorage.setItem("hide_promote_banner", "true");
+            localStorage.setItem("hide_promote_banner", "true");
         }
     }
     
