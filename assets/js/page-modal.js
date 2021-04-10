@@ -42,4 +42,13 @@ $(function(){
             }
         }
     });
+
+    $("div.promote-modal-content > a").on("click", "img", function(e){
+        if(e.target == this){
+            $("div#promote-myModal").hide();
+            if(typeof(Storage) !== "undefined"){
+                sessionStorage.setItem("hide_promote_banner", "true");
+            }
+        }
+    });
 });
