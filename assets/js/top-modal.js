@@ -54,6 +54,7 @@ $(function() {
                     '<img class="d-block w-100" src="' + product[pid].img[0] + '" alt="' + product[pid].name + '"></a></div>'
                 );
             }
+            $("#sidemodal").show();
         }
 
 
