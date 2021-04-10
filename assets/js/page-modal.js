@@ -7,7 +7,7 @@ $(function(){
           '<div class="promote-modal-content">'+
             '<span class="promote-close">&times;</span>'+
             '<a href="product.html?id=29">'+
-            '<img src="assets/img/promotion/acerus_21q2_ecomm_w15_swift_1620x600.png" alt="Acer Swift 3" style="max-width:100%;">' +
+            '<img src="assets/img/promotion/acerus_21q2_ecomm_w15_swift_1620x600.png" alt="Acer Swift 3">' +
             '</a>'+
           '</div>'+
         '</div>'
