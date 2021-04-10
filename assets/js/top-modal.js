@@ -31,27 +31,32 @@ $(function() {
 
             //retrieve img from cookies to prsent as modal
             //show image of product
+            let count_carousel = 1;
             for (let j = 0; j < topProductID.length; j++) {
 
                 pid = topProductID[j];
                 $("#sidemodal").show();
+                
+                for (let i = 0; i < product.length; i++) {
 
-                for (let i = 0; i <= product.length; i++) {
-
-                    if (JSON.parse(product[(i + 1)].id) == pid) {
-
-                        if (i == 1) {
+                    if (product[i].id == topProductID[j]) {
+                        
+                        if (count_carousel == 1) {
+                            count_carousel++;
+                            console.log("First"+product[i].img[0]);
                             $("body>div.sidemodal").show();
-                            $("#topProduct").append(
+                            $("div#topProduct").append(
                                 '<div class="carousel-item active">' +
-                                '<a href="product.html?id=' + pid + '">' +
-                                '<img class="d-block w-100" src="' + product[pid].img[0] + '" alt="' + product[pid].name + '"></a></div>'
+                                '<a href="product.html?id=' + (i+1) + '">' +
+                                '<img class="d-block w-100" src="' + product[i].img[0] + '" alt="' + product[i].name + '"></a></div>'
                             );
                         } else {
+                            count_carousel++;
+                            console.log("Not first"+product[i].img[0]);
                             $("#topProduct").append(
                                 '<div class="carousel-item">' +
-                                '<a href="product.html?id=' + pid + '">' +
-                                '<img class="d-block w-100" src="' + product[pid].img[0] + '" alt="' + product[pid].name + '"></a></div>'
+                                '<a href="product.html?id=' + (i+1) + '">' +
+                                '<img class="d-block w-100" src="' + product[i].img[0] + '" alt="' + product[i].name + '"></a></div>'
                             );
                         }
                     }
