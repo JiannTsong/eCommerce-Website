@@ -36,7 +36,8 @@ $(function() {
                 pid = topProductID[j];
                 for (let i = 0; i <= product.length; i++) {
 
-                    if ((i + 1) == pid) {
+                    if (product[i].id == pid) {
+                        $("#sidemodal").show();
                         if (i == 1) {
                             $("body>div.sidemodal").show();
                             $("#topProduct").append(
@@ -51,7 +52,6 @@ $(function() {
                                 '<img class="d-block w-100" src="' + product[pid].img[0] + '" alt="' + product[pid].name + '"></a></div>'
                             );
                         }
-                        $("#sidemodal").show();
                     }
                 }
             }
