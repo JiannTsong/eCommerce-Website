@@ -115,10 +115,16 @@
 
     <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 4rem;position: relative;">
         <h3>Orders</h3>
-        
-        <button type="button" class="btn btn-info" style="right: 5rem; bottom: 1rem; position: absolute;" id="sign-out">
-            <i class="fal fa-sign-out"></i> Sign Out
-        </button>
+        <div class="orders" style="margin-bottom: 3.5rem;">
+            <div class="alert alert-default" id="no-orders" role="alert">
+                No orders was placed ! <a href="cart.html" class="alert-link">Place order now ?</a>
+            </div>
+        </div>
+        <a href="./">
+            <button type="button" class="btn btn-info" style="right: 5rem; bottom: 1rem; position: absolute;" id="sign-out">
+                <i class="fas fa-home"></i> Home
+            </button>
+        </a>
 
 
     </div>
