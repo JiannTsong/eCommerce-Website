@@ -58,10 +58,14 @@ $(function () {
             db.collection("orders").doc(uid).get()
             .then(snapshot => {
                 //console.log("snapshot"+JSON.stringify(snapshot.data().order_detail));
-                snapshot.data().order_detail.forEach(element => {
+                /*snapshot.data().order_detail.forEach(element => {
                     orderPrinter(element);
                     //console.log("firebase = "+JSON.stringify(element));
-                });
+                });*/
+
+                for(let y = snapshot.data().order_detail.length;y>0;y--){
+                    orderPrinter(snapshot.data().order_detail[y-1]);
+                }
             });
         
         }
