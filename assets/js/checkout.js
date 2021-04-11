@@ -79,40 +79,52 @@ $(function(){
                 }else{
                     let user = firebase.auth().currentUser;
                     userId = user.uid;
-                    let order = {
-                        "product" : OrderDetail,
-                        "total" : totalPayment,
-                        "shipping" : 10,
-                        "date" : Date.now()
-                    }
-                    alert(JSON.stringify(order) + "\n\n" + userId);
-                    db.collection("orders").doc(userId).get("order_detail").then((docs) => {
-                        if(!docs.exists){
-                            db.collection("orders").doc(userId).set({
-                                order_detail : []
-                            });
-                            
-                            db.collection("orders").doc(userId).update({
-                                order_detail : firebase.firestore.FieldValue.arrayUnion(order)
-                            }).then(function(){
-                                localStorage.removeItem("Cart");
-                                window.location.href = "orders.html";
-                            }).ctach((error) => {
-                                console.log(error);
+
+                    let shipAddress = "";
+                    db.collection("users").doc(userId).get().then((item) => {
+                        if(item.data().address){
+                            shipAddress = item.data().address;
+
+                            let order = {
+                                "product" : OrderDetail,
+                                "total" : totalPayment,
+                                "shipping" : 10,
+                                "shipAddress" : shipAddress,
+                                "date" : Date.now()
+                            }
+                            //alert(JSON.stringify(order) + "\n\n" + userId);
+                            db.collection("orders").doc(userId).get("order_detail").then((docs) => {
+                                if(!docs.exists){
+                                    db.collection("orders").doc(userId).set({
+                                        order_detail : []
+                                    });
+                                    
+                                    db.collection("orders").doc(userId).update({
+                                        order_detail : firebase.firestore.FieldValue.arrayUnion(order)
+                                    }).then(function(){
+                                        localStorage.removeItem("Cart");
+                                        window.location.href = "orders.html";
+                                    }).ctach((error) => {
+                                        console.log(error);
+                                    })
+                                }else{
+                                    db.collection("orders").doc(userId).update({
+                                        order_detail : firebase.firestore.FieldValue.arrayUnion(order)
+                                    })
+                                    .then(function(){
+                                            localStorage.removeItem("Cart");
+                                            window.location.href = "orders.html";
+                                    })
+                                    .catch((error) => {
+                                            console.log(error);
+                                    });
+                                }
                             })
                         }else{
-                            db.collection("orders").doc(userId).update({
-                                order_detail : firebase.firestore.FieldValue.arrayUnion(order)
-                            })
-                            .then(function(){
-                                    localStorage.removeItem("Cart");
-                                    window.location.href = "orders.html";
-                            })
-                            .catch((error) => {
-                                    console.log(error);
-                            });
+                            warnError("Error", "No shipping address is provided !");
                         }
-                    })      
+                    }); 
+                          
                 }
             });
         });
