@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Stygix Computer Shop</title>
-    <!--Web App Setup-->
+    <!--Web App Setup>
     <meta name="theme-color" content="#525f7f">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="assets/logo/icon.png">
@@ -14,7 +14,7 @@
         import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
         const el = document.createElement('pwa-update');
         document.body.appendChild(el);
-    </script>
+    </script-->
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet">
@@ -114,99 +114,12 @@
     </nav>
 
     <div class="container shadow p-3 mb-5 bg-white rounded" style="margin-top: 4rem;position: relative;">
-        <h3>Profile</h3>
-        <table>
-            <tbody id="acc_profile" class="acc_profile">
-                <tr>
-                    <td>Name</td>
-                    <td> : </td>
-                    <td>
-                        <input type="text" class="form-control" id="uname" placeholder="Name">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Email</td>
-                    <td> : </td> 
-                    <td id="uemail">
-                        
-                    </td>
-                </tr>
-                <tr>
-                    <td>Password</td>
-                    <td> : </td> 
-                    <td>
-                        <button class="btn btn-info" data-toggle="modal" data-target="#change_pass">
-                            <i class="fas fa-key"></i> Change Password
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Shipping Address</td>
-                    <td> : </td>
-                    <td>
-                        <textarea class="form-control" name="shipping_address" id="ushipping"  rows="3" cols="70" placeholder="Shipping Address Here" ></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="3" style="text-align: right;">
-                        <button type="submit" id="save_profile" class="btn btn-info">
-                            <i class="fal fa-user-edit"></i> Save Profile
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <button type="button" class="btn btn-info" style="right: 5rem; bottom: 2rem; position: absolute;" id="sign-out">
+        <h3>Orders</h3>
+        
+        <button type="button" class="btn btn-info" style="right: 5rem; bottom: 1rem; position: absolute;" id="sign-out">
             <i class="fal fa-sign-out"></i> Sign Out
         </button>
 
-        <!-- Change Password Modal -->
-        <div class="modal fade modal-lg" id="change_pass" style="left: auto;" tabindex="-1" role="dialog" aria-labelledby="change_passLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="change_passLabel">Change Password</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <form>       
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>Old Password</td>
-                                    <td> : </td>
-                                    <td>
-                                        <input type="password" class="form-control" name="old_pass">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>New Password</td>
-                                    <td> : </td>
-                                    <td>
-                                        <input type="password"  class="form-control" name="new_pass">
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="alert alert-success" id="success_pass_result" style="display: none;" role="alert">
-                            Success to change password.
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span> </button>
-                        </div>
-                        <div class="alert alert-warning" id="fail_pass_result" style="display: none;" role="alert">
-                            Failed to change password.
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span> </button>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="save_new_pass">Save changes</button>
-                </div>
-            </div>
-            </div>
-        </div>
 
     </div>
 
@@ -312,7 +225,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
 
     <script src="assets/js/firebase/firebase.js"></script>
-    <script src="assets/js/account.js"></script>
+    <script src="assets/js/orders.js"></script>
     <script src="assets/js/main.js"></script>
 
 </html>
