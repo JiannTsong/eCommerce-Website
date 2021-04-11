@@ -183,9 +183,9 @@ $(function() {
             location.reload();
         });
 
-        $("#checkout").click(function() {
+        /*$("#checkout").click(function() {
             localStorage.removeItem("Cart");
-        });
+        });*/
     });
 
 

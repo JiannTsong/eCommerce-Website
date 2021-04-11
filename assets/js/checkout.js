@@ -103,7 +103,8 @@ $(function(){
                                         order_detail : firebase.firestore.FieldValue.arrayUnion(order)
                                     }).then(function(){
                                         localStorage.removeItem("Cart");
-                                        window.location.href = "orders.html";
+                                        //window.location.href = "checkout_success.html";
+                                        alert("yes checkout");
                                     }).catch((error) => {
                                         console.log(error);
                                     })
@@ -113,7 +114,8 @@ $(function(){
                                     })
                                     .then(function(){
                                             localStorage.removeItem("Cart");
-                                            window.location.href = "orders.html";
+                                            //window.location.href = "checkout_success.html";
+                                            alert("yes checkout");
                                     })
                                     .catch((error) => {
                                             console.log(error);
