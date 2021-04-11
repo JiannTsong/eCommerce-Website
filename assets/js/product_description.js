@@ -18,10 +18,10 @@ $(function() {
                 $("#product_quantity").attr("max", product[i].stock);
                 for (let j = 0; j < product[i].img.length; j++) {
                     if (j == 0) {
-                        $("div#product_image>div.carousel-item").append('<img class="d-block w-100" src="' + product[i].img[j] + '" alt="' + product[i].name + '">');
+                        $("div#product_image > div.carousel-inner > div.carousel-item.active").append('<img class="d-block w-100" src="' + product[i].img[j] + '" alt="' + product[i].name + '">');
                     } else {
                         $("ol.carousel-indicators").append('<li data-target="#product_image" style="background-color: #000000;" data-slide-to="' + j + '"></li>');
-                        $('div#product_image>div.carousel-inner').append('<div class="carousel-item"><img class="d-block w-100" src="' + product[i].img[j] + '"></div>');
+                        $('div#product_image > div.carousel-inner').append('<div class="carousel-item"><img class="d-block w-100" src="' + product[i].img[j] + '" alt="' + product[i].name + '"></div>');
                     }
                 }
 
