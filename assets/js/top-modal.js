@@ -24,7 +24,7 @@ $(function() {
         return "";
     }
 
-    $.getJSON("assets/json/product_details.json").done(function(product) {
+    $.getJSON("assets/json/product_details.json").done(function(product_data) {
 
         if (getCookie("hide-banner") === false || getCookie("hide-banner") === null || getCookie("hide-banner") === "") {
             var topProductID = [3, 7, 9];
@@ -37,26 +37,26 @@ $(function() {
                 pid = topProductID[j];
                 $("#sidemodal").show();
 
-                for (let i = 0; i < product.length; i++) {
+                for (let i = 0; i < product_data.length; i++) {
 
-                    if (product[i].id == topProductID[j]) {
+                    if (product_data[i].id == topProductID[j]) {
 
                         if (count_carousel == 1) {
                             count_carousel++;
-                            console.log("First" + product[i].img[0]);
+                            console.log("First" + product_data[i].img[0]);
                             $("body>div.sidemodal").show();
-                            $("div#topProduct").append(
-                                '<div class="carousel-item active carouselsize">' +
+                            $("div#topProduct").prepend(
+                                '<div class="carousel-item active">' +
                                 '<a href="product.html?id=' + (i + 1) + '">' +
-                                '<img class="d-block w-100" src="' + product[i].img[0] + '" alt="' + product[i].name + '" style="height: 350px"></a></div>'
+                                '<img class="d-block w-100" src="' + product_data[i].img[0] + '" alt="' + product_data[i].name + '" style="height: 350px"></a></div>'
                             );
                         } else {
                             count_carousel++;
-                            console.log("Not first" + product[i].img[0]);
-                            $("#topProduct").append(
-                                '<div class="carousel-item carouselsize">' +
+                            console.log("Not first" + product_data[i].img[0]);
+                            $("#topProduct").prepend(
+                                '<div class="carousel-item">' +
                                 '<a href="product.html?id=' + (i + 1) + '">' +
-                                '<img class="d-block w-100" id="imgsize2" src="' + product[i].img[0] + '" alt="' + product[i].name + '" style="height: 350px"></a></div>'
+                                '<img class="d-block w-100" id="imgsize2" src="' + product_data[i].img[0] + '" alt="' + product_data[i].name + '" style="height: 350px"></a></div>'
                             );
                         }
                     }
