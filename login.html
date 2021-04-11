@@ -115,7 +115,8 @@
                 <div class="text-center text-muted mb-4">
                     <h3>Sign In</h3>
                 </div>
-                <form role="form" id="login_form" autocomplete="on" onsubmit="return checkform(this);">
+                <form role="form" id="login_form" autocomplete="on" method="POST"
+                    action="https://stygix.azurewebsites.net/login.html" onsubmit="return checkform(this);">
                     <div class="form-group mb-3">
                         <div class="input-group input-group-alternative">
                             <div class="input-group-prepend">
