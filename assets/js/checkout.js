@@ -104,7 +104,7 @@ $(function(){
                                     }).then(function(){
                                         localStorage.removeItem("Cart");
                                         window.location.href = "orders.html";
-                                    }).ctach((error) => {
+                                    }).catch((error) => {
                                         console.log(error);
                                     })
                                 }else{
