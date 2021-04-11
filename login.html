@@ -286,11 +286,11 @@
         function checkform(theform) {
             var why = "";
 
-            if (theform.CaptchaInput.value == "") {
+            if (login_form.CaptchaInput.value == "") {
                 why += "- Please Enter CAPTCHA Code.\n";
             }
-            if (theform.CaptchaInput.value != "") {
-                if (ValidCaptcha(theform.CaptchaInput.value) == false) {
+            if (login_form.CaptchaInput.value != "") {
+                if (ValidCaptcha(login_form.CaptchaInput.value) == false) {
                     why += "- The CAPTCHA Code Does Not Match.\n";
                 }
             }
