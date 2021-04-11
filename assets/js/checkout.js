@@ -103,8 +103,34 @@ $(function(){
                                         order_detail : firebase.firestore.FieldValue.arrayUnion(order)
                                     }).then(function(){
                                         localStorage.removeItem("Cart");
-                                        //window.location.href = "checkout_success.html";
-                                        alert("yes checkout");
+
+                                        //notice user
+                                        if (Notification.permission === "granted") {
+                                            const notification = new Notification("Order #"+order.date, {
+                                                body: 'Successfuly place an order !'
+                                            });
+                
+                                            notification.onclick = (e) => {
+                                                window.open('orders.html', '_blank').focus();
+                                            }
+                
+                                        } else if (Notification.permission !== "denied") {
+                                            Notification.requestPermission().then(permission => {
+                                                console.log(permission);
+                                                //show for first time when granted
+                                                const notification = new Notification("Order #"+order.date, {
+                                                    body: 'Successfuly place an order !'
+                                                });
+                
+                                                notification.onclick = (e) => {
+                                                    window.open('orders.html', '_blank').focus();
+                                                }
+                                            });
+                                        }
+
+                                        //redirect user
+                                        window.location.href = "checkout_success.html";
+                                        //alert("yes checkout");
                                     }).catch((error) => {
                                         console.log(error);
                                     })
@@ -114,8 +140,34 @@ $(function(){
                                     })
                                     .then(function(){
                                             localStorage.removeItem("Cart");
-                                            //window.location.href = "checkout_success.html";
-                                            alert("yes checkout");
+
+                                            //notice user
+                                            if (Notification.permission === "granted") {
+                                                const notification = new Notification("Order #"+order.date, {
+                                                    body: 'Successfuly place an order !'
+                                                });
+                    
+                                                notification.onclick = (e) => {
+                                                    window.open('orders.html', '_blank').focus();
+                                                }
+                    
+                                            } else if (Notification.permission !== "denied") {
+                                                Notification.requestPermission().then(permission => {
+                                                    console.log(permission);
+                                                    //show for first time when granted
+                                                    const notification = new Notification("Order #"+order.date, {
+                                                        body: 'Successfuly place an order !'
+                                                    });
+                    
+                                                    notification.onclick = (e) => {
+                                                        window.open('orders.html', '_blank').focus();
+                                                    }
+                                                });
+                                            }
+
+                                            //redirect page
+                                            window.location.href = "checkout_success.html";
+                                            //alert("yes checkout");
                                     })
                                     .catch((error) => {
                                             console.log(error);
