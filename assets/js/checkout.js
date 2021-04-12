@@ -138,6 +138,7 @@ $(function(){
                                         console.log(error);
                                     })
                                 }else{
+                                    //push javascript object to firestore
                                     db.collection("orders").doc(userId).update({
                                         order_detail : firebase.firestore.FieldValue.arrayUnion(order)
                                     })
