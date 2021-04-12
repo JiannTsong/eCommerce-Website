@@ -95,10 +95,13 @@ $(function(){
                             //alert(JSON.stringify(order) + "\n\n" + userId);
                             db.collection("orders").doc(userId).get("order_detail").then((docs) => {
                                 if(!docs.exists){
+
+                                    //create document array
                                     db.collection("orders").doc(userId).set({
                                         order_detail : []
                                     });
                                     
+                                    //push javascript object into the array
                                     db.collection("orders").doc(userId).update({
                                         order_detail : firebase.firestore.FieldValue.arrayUnion(order)
                                     }).then(function(){
