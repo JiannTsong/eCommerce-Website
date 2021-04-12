@@ -76,6 +76,7 @@ $(function(){
         $("button#paynow").click(function(){
             firebase.auth().onAuthStateChanged(function (user) {
                 if(!user){
+                    //warn user to login
                     warnError("Error !", "Please login to continue checkout !");
                 }else{
                     let user = firebase.auth().currentUser;
