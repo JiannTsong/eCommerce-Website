@@ -102,7 +102,7 @@ $(function(){
                                         order_detail : []
                                     });
                                     
-                                    //push javascript object into the array
+                                    //push javascript object into the array in firestore
                                     db.collection("orders").doc(userId).update({
                                         order_detail : firebase.firestore.FieldValue.arrayUnion(order)
                                     }).then(function(){
