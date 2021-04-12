@@ -16,7 +16,7 @@ $(function(){
 
     $.getJSON("assets/json/product_details.json").done(function(product){
         let totalPayment = 0;
-        let OrderDetail = [];
+        let OrderDetail = [];//for push to firestore 
         
         if (typeof(Storage) !== "undefined") {
             if (JSON.parse(localStorage.getItem("Cart")) != null) {
@@ -30,6 +30,7 @@ $(function(){
     
                     let product_quantity = cartArray[i].product_quantity;
 
+                    //created object for push to order_detail array
                     let newProduct = new Object();
                     newProduct.pid = product[pid].id;
                     newProduct.price = product[pid].price;
