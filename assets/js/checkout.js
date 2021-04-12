@@ -79,7 +79,7 @@ $(function(){
                     warnError("Error !", "Please login to continue checkout !");
                 }else{
                     let user = firebase.auth().currentUser;
-                    userId = user.uid;
+                    let userId = user.uid;
 
                     let shipAddress = "";
                     db.collection("users").doc(userId).get().then((item) => {
