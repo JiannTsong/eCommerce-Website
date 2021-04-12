@@ -10,11 +10,12 @@ $(function(){
             }
     });
 
-    if(getCookie("autoCom") == "true"){
-        $("form#login_form").attr("autocomplete", "on");
-        $('input#customCheckLogin').prop("checked", true);
-    }else if(getCookie("autoCom") == "false"){
+    if(getCookie("autoCom") == "false"){
+        $("form#login_form").trigger("reset");
         $("form#login_form").attr("autocomplete", "off");
         $('input#customCheckLogin').prop("checked", false);
+    }else if(getCookie("autoCom") == "true"){
+        $("form#login_form").attr("autocomplete", "on");
+        $('input#customCheckLogin').prop("checked", true);
     }
 });
