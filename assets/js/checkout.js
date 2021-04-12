@@ -1,7 +1,6 @@
 $(function(){
 
-    
-
+    //warning alert box function
     function warnError(title, message){
         $("div.container.shadow.p-3.mb-5.bg-white.rounded").prepend(
             '<div class="alert alert-warning alert-dismissible fade show" role="alert">'+
