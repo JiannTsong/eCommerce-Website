@@ -23,7 +23,8 @@ $(function() {
         var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
     })();
 
+    //ask notification permission first
     if (Notification.permission !== "denied" && Notification.permission !== "granted") {
-        Notification.requestPermission()
+        Notification.requestPermission();
     }
 });
