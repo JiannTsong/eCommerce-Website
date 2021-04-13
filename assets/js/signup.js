@@ -53,24 +53,11 @@ function signup() {
         }
     }
 
-    /*
-    let testuser = db.collection("users").doc("user.uid");
-    testuser.get().then((doc) => {
-        if (doc.exists) {
-            console.log("Document data:", doc.data());
-        } else {
-            // doc.data() will be undefined in this case
-            console.log("No such document!");
-        }
-    }).catch((error) => {
-        console.log("Error getting document:", error);
-    });*/
-
 }
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
-        // User is signed in. redirect to profile, redirect after 1 second to avoid the firebase have store the user id to extra table
+        // User is signed in. redirect to profile, redirect after 1 second to wait the firebase have store the user id to extra table
         window.setTimeout(function () {
             window.location.href = "./account.html";
         }, 1000);
