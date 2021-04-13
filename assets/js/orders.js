@@ -45,15 +45,13 @@ $(function () {
         } else {
             //console.log(user);
 
-            /*let name, email, photoUrl, uid, emailVerified;
+            let name, email, uid;
             let user = firebase.auth().currentUser;
             if (user != null) {
                 name = user.displayName;
                 email = user.email;
-                photoUrl = user.photoURL;
-                emailVerified = user.emailVerified;
                 uid = user.uid; 
-            }*/
+            }
 
             db.collection("orders").doc(uid).get()
             .then(snapshot => {
