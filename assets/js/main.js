@@ -27,4 +27,5 @@ $(function() {
     if (Notification.permission !== "denied" && Notification.permission !== "granted") {
         Notification.requestPermission();
     }
+
 });

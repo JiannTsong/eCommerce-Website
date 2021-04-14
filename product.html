@@ -343,6 +343,10 @@
     <script>
         $(function() {
             $("div.fb-like").attr("data-href", "https://stygix.azurewebsites.net/product.html?id=" + window.location.href.split("id=")[1]);
+
+            window.setTimeout(function(){
+                $('iframe[src*="tempest.services.disqus.com"]').hide();
+            }, 1000);
         });
     </script>
 </body>
