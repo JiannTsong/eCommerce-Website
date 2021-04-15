@@ -12,6 +12,7 @@ $(function() {
     $.getJSON(aPI).done(function(product) {
         for (let i = 0; i < product.length; i++) {
             if (pid == (i + 1)) {
+                $("head>title").text(product[i].name + " - Stygix Computer Shop");
                 $("#product_title").append('<h4>' + product[i].name + '</h4>');
                 $("#product_price").append('<h5>RM' + product[i].price + '</h5>');
                 $('#stock_available').append('<h6>Stock Available ' + product[i].stock + '</h6>')

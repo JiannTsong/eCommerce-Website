@@ -88,5 +88,6 @@ xmlhttp.send();
         if(!(searchInput == null || searchInput == "")){
           $("#search").val(searchInput.replaceAll('+', ' '));
           searchExecute();
+          $("head>title").text(searchInput + " - Stygix Computer Shop");
         }
     }); 
