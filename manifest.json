@@ -6,7 +6,6 @@
     "theme_color" : "#525f7f",
     "description" : "The Stygix Computer Shop",
     "display": "standalone",
-    "offline_enabled": true,
     "icons" : [
         {
             "src" : "assets/logo/icon.png",
