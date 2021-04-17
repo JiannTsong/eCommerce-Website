@@ -13,9 +13,9 @@
             "sizes" : "250x250"
         },
         {
-            "src" : "assets/logo/StygixWhite.png",
+            "src" : "assets/logo/icon-600.png",
             "type" : "image/png",
-            "sizes" : "497x357",
+            "sizes" : "600x600",
             "purpose": "any maskable"
         },
         {
