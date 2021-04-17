@@ -83,7 +83,7 @@ $(function(){
 
                     let shipAddress = "";
                     db.collection("users").doc(userId).get().then((item) => {
-                        if(item.data().address){
+                        if(item.data().address){//check for shipping address exist in firestore's users or not
                             shipAddress = item.data().address;
 
                             let order = {
@@ -95,6 +95,8 @@ $(function(){
                             }
                             //alert(JSON.stringify(order) + "\n\n" + userId);
                             db.collection("orders").doc(userId).get("order_detail").then((docs) => {
+
+                                //if the order_detail array does not exists in firestore's orders collection
                                 if(!docs.exists){
 
                                     //create document array
@@ -108,8 +110,8 @@ $(function(){
                                     }).then(function(){
                                         localStorage.removeItem("Cart");
 
-                                        //notice user
-                                        if (Notification.permission === "granted") {
+                                        //notice user via web notification
+                                        if (Notification.permission === "granted") {//permission is granted(allowed)
                                             const notification = new Notification("Order #"+order.date, {
                                                 body: 'Successfuly place an order !'
                                             });
@@ -118,7 +120,7 @@ $(function(){
                                                 window.open('orders.html', '_blank').focus();
                                             }
                 
-                                        } else if (Notification.permission !== "denied") {
+                                        } else if (Notification.permission !== "denied") {//permission is not granted or denied(user does not responses to the request)
                                             Notification.requestPermission().then(permission => {
                                                 console.log(permission);
                                                 //show for first time when granted
@@ -132,7 +134,7 @@ $(function(){
                                             });
                                         }
 
-                                        //redirect user
+                                        //redirect user to success page
                                         window.location.href = "checkout_success.html";
                                         //alert("yes checkout");
                                     }).catch((error) => {
@@ -144,9 +146,10 @@ $(function(){
                                         order_detail : firebase.firestore.FieldValue.arrayUnion(order)
                                     })
                                     .then(function(){
+                                            //clear the Cart json array in local Storage
                                             localStorage.removeItem("Cart");
 
-                                            //notice user
+                                            //notice user via web notification
                                             if (Notification.permission === "granted") {
                                                 const notification = new Notification("Order #"+order.date, {
                                                     body: 'Successfuly place an order !'
