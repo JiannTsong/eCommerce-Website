@@ -113,7 +113,7 @@ $(function(){
                                         //notice user via web notification
                                         if (Notification.permission === "granted") {//permission is granted(allowed)
                                             const notification = new Notification("Order #"+order.date, {
-                                                body: 'Successfuly place an order !'
+                                                body: 'Successfuly placed an order !'
                                             });
                 
                                             notification.onclick = (e) => {
@@ -125,7 +125,7 @@ $(function(){
                                                 console.log(permission);
                                                 //show for first time when granted
                                                 const notification = new Notification("Order #"+order.date, {
-                                                    body: 'Successfuly place an order !'
+                                                    body: 'Successfuly placed an order !'
                                                 });
                 
                                                 notification.onclick = (e) => {
@@ -152,7 +152,7 @@ $(function(){
                                             //notice user via web notification
                                             if (Notification.permission === "granted") {
                                                 const notification = new Notification("Order #"+order.date, {
-                                                    body: 'Successfuly place an order !'
+                                                    body: 'Successfuly placed an order !'
                                                 });
                     
                                                 notification.onclick = (e) => {
@@ -164,7 +164,7 @@ $(function(){
                                                     console.log(permission);
                                                     //show for first time when granted
                                                     const notification = new Notification("Order #"+order.date, {
-                                                        body: 'Successfuly place an order !'
+                                                        body: 'Successfuly placed an order !'
                                                     });
                     
                                                     notification.onclick = (e) => {
