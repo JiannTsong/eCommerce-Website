@@ -105,7 +105,7 @@ $(function() {
                     cart.product_ID = wishlistid;
                     cart.product_quantity = 1;
 
-                    alert(cart.product_ID + " " + cart.product_quantity);
+                    //alert(cart.product_ID + " " + cart.product_quantity);
 
                     //push item into array
                     cartArray.push(cart);
