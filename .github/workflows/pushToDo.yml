@@ -1,0 +1,16 @@
+name: "Test Deployment"
+on:
+  push:
+    branches:
+      - "main"
+jobs:
+  staging_deploy:
+    name: "Test Deployment"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3.8.1
+        with:
+          node-version: 18
+      - run: ls -la
+      - run: uname -a
