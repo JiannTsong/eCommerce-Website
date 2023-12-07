@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: testapp
-        image: registry.digitalocean.com/ecommerce2022/ecommerce:latest
+        image: <IMAGE>
         ports:
         - containerPort: 80
 ---
