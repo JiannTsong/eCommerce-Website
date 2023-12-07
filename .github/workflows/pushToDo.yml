@@ -19,10 +19,13 @@ jobs:
         run: doctl registry login --expiry-seconds 1800
       
       - name: Build Image
-        run: docker build . --file=Dockerfile --tag registry.digitalocean.com/ecommerce2022/ecommerce:latest
+        run: docker build . --file=Dockerfile --tag registry.digitalocean.com/ecommerce2022/ecommerce:$(echo $GITHUB_SHA | head -c7)
       
       - name: Push To Registry
-        run: docker push registry.digitalocean.com/ecommerce2022/ecommerce:latest
+        run: docker push registry.digitalocean.com/ecommerce2022/ecommerce:$(echo $GITHUB_SHA | head -c7)
+      
+      - name: Update deployment file
+        run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|registry.digitalocean.com/ecommerce2022/ecommerce:'${TAG}'|' ./deployment.yml
 
       - name: Save DigitalOcean kubeconfig with short-lived credentials
         run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 k8s-1-28-2-do-0-sgp1-1701931652777
