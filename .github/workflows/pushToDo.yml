@@ -14,3 +14,15 @@ jobs:
           node-version: 18
       - run: ls -la
       - run: uname -a
+
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2.5.0
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      
+      - name: Authenticate Docker with Private Registry
+      - run: doctl registry login --expiry-seconds 1800
+      
+      - name: Build Image
+      - run: docker build . --file=Dockerfile --tag registry.digitalocean.com/ecommerce2022/ecommerce:latest
+      - run: docker push registry.digitalocean.com/ecommerce2022/ecommerce:latest
