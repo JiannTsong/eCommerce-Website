@@ -25,11 +25,11 @@ kind: Service
 metadata:
   name: testapp-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: testapp
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 31000
       targetPort: 80
-      nodePort: 31000
