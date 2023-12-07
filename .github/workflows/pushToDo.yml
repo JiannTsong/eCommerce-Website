@@ -16,10 +16,10 @@ jobs:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       
       - name: Authenticate Docker with Private Registry
-      - run: doctl registry login --expiry-seconds 1800
+        run: doctl registry login --expiry-seconds 1800
       
       - name: Build Image
-      - run: docker build . --file=Dockerfile --tag registry.digitalocean.com/ecommerce2022/ecommerce:latest
+        run: docker build . --file=Dockerfile --tag registry.digitalocean.com/ecommerce2022/ecommerce:latest
       
       - name: Push To Registry
-      - run: docker push registry.digitalocean.com/ecommerce2022/ecommerce:latest
+        run: docker push registry.digitalocean.com/ecommerce2022/ecommerce:latest
