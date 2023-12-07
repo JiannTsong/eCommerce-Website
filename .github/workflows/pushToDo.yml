@@ -25,7 +25,7 @@ jobs:
         run: docker push registry.digitalocean.com/ecommerce2022/ecommerce:$(echo $GITHUB_SHA | head -c7)
       
       - name: Update deployment file
-        run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|registry.digitalocean.com/ecommerce2022/ecommerce:'${TAG}'|' ./deployment.yml
+        run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|registry.digitalocean.com/ecommerce2022/ecommerce:'${TAG}'|' ./deployment.yaml
 
       - name: Save DigitalOcean kubeconfig with short-lived credentials
         run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 k8s-1-28-2-do-0-sgp1-1701931652777
