@@ -32,3 +32,9 @@ jobs:
 
       - name: Deploy to DigitalOcean Kubernetes
         run: kubectl apply -f ./deployment.yaml
+      
+      - name: Rolling Update Kubernetes
+        run: kubectl rollout restart
+
+      # - name: Verify Deployment
+      #   run: kubectl rollout status -f deployment.yaml
