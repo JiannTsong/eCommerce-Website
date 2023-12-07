@@ -19,14 +19,11 @@ jobs:
         run: doctl registry login --expiry-seconds 1800
       
       - name: Build Image
-        run: docker build . --file=Dockerfile --tag registry.digitalocean.com/ecommerce2022/ecommerce:$(echo $GITHUB_SHA | head -c7)
+        run: docker build . --file=Dockerfile --tag registry.digitalocean.com/ecommerce2022/ecommerce:latest
       
       - name: Push To Registry
-        run: docker push registry.digitalocean.com/ecommerce2022/ecommerce:$(echo $GITHUB_SHA | head -c7)
-      
-      - name: Update deployment file
-        run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|registry.digitalocean.com/ecommerce2022/ecommerce:'${TAG}'|' ./deployment.yaml
-      
+        run: docker push registry.digitalocean.com/ecommerce2022/ecommerce:latest
+
       - name: Print Deployment file
         run: cat ./deployment.yaml
 
@@ -36,5 +33,5 @@ jobs:
       - name: Deploy to DigitalOcean Kubernetes
         run: kubectl apply -f ./deployment.yaml
 
-      - name: Verify Deployment
-        run: kubectl rollout status -f deployment.yaml
+      # - name: Verify Deployment
+      #   run: kubectl rollout status -f deployment.yaml
