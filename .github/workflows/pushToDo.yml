@@ -9,11 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3.8.1
-        with:
-          node-version: 18
-      - run: ls -la
-      - run: uname -a
 
       - name: Install doctl
         uses: digitalocean/action-doctl@v2.5.0
@@ -25,4 +20,6 @@ jobs:
       
       - name: Build Image
       - run: docker build . --file=Dockerfile --tag registry.digitalocean.com/ecommerce2022/ecommerce:latest
+      
+      - name: Push To Registry
       - run: docker push registry.digitalocean.com/ecommerce2022/ecommerce:latest
