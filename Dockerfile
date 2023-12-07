@@ -1,3 +1,3 @@
 FROM nginx:stable-alpine-slim
-COPY . /var/html/www/
+COPY . /usr/share/nginx/html
 EXPOSE 80
