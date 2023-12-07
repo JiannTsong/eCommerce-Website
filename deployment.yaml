@@ -30,6 +30,6 @@ spec:
     app: testapp
   ports:
     - protocol: TCP
-      port: 30001
+      port: 31000
       targetPort: 80
-      nodePort: 30001
+      nodePort: 31000
