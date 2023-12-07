@@ -23,3 +23,12 @@ jobs:
       
       - name: Push To Registry
         run: docker push registry.digitalocean.com/ecommerce2022/ecommerce:latest
+
+      - name: Save DigitalOcean kubeconfig with short-lived credentials
+        run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 pool-test-k8s-xeash
+
+      - name: Deploy to DigitalOcean Kubernetes
+        run: kubectl apply -f ./deployment.yaml
+
+      - name: Verify Deployment
+        run: kubectl rollout status -f deployment.yaml
